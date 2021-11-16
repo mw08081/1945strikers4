@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : Actor
 {
     [Header("------Player State------")]
+    [SerializeField] Animator anim;
     [SerializeField] Vector3 moveDir;
     [SerializeField] float speed;
     [SerializeField] int power;
@@ -20,6 +21,8 @@ public class Player : Actor
 
     float lastShotTime;
     float lastSubShotTime;
+    
+    float bombCoolDown;
     bool isBomb;
     bool isThrow;
 
@@ -38,11 +41,17 @@ public class Player : Actor
         {
             UpdateMove();
             Attack();
-            //SubAttack();
         }
         ThrowingDownBomb();
+
+        WholeAnimation();
     }
 
+    #region Launch
+    
+    #endregion 
+
+    #region Moving
     void AssignMoveDirection()
     {
         Vector3 dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
@@ -83,10 +92,9 @@ public class Player : Actor
 
         return moveDir;
     }
-
+    #endregion
 
     #region Attack
-
     void Attack()
     {
         if (Input.GetKey(KeyCode.Return) && Time.time - lastShotTime > 0.12f)
@@ -139,7 +147,6 @@ public class Player : Actor
         {
             isBomb = true;
             StartCoroutine("ThrowingBomb");
-            bomb--;
         }
     }
     IEnumerator ThrowingBomb()
@@ -159,13 +166,11 @@ public class Player : Actor
         }
         isBomb = false;
         isThrow = false;
+        bomb--;
     }
-
     #endregion
 
-
     #region Trigger
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("EnemyBullet"))
@@ -220,6 +225,46 @@ public class Player : Actor
         //gameObject.SetActive(false);
         Debug.Log("DEAD");
     }
+    #endregion
 
+    #region Animation
+    void WholeAnimation()
+    {
+        BombAnimation();
+        MovingAnimation();
+    }
+
+    void BombAnimation()
+    {
+        if (Input.GetKeyDown(KeyCode.L) && bomb >= 1)
+        {
+            anim.SetBool("bomb", true);
+            bombCoolDown = 1.4f;
+        }
+        if (anim.GetBool("bomb"))
+        {
+            bombCoolDown -= Time.deltaTime;
+            if (bombCoolDown < 0)
+                anim.SetBool("bomb", false);
+        }
+    }
+    void MovingAnimation()
+    {
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            anim.SetBool("left", true);
+            anim.SetBool("right", false);
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            anim.SetBool("right", true);
+            anim.SetBool("left", false);
+        }
+        else
+        {
+            anim.SetBool("right", false);
+            anim.SetBool("left", false);
+        }
+    }
     #endregion
 }

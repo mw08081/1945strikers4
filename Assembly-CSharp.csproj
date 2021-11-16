@@ -90,6 +90,7 @@
     <Compile Include="Assets\source\cs\System\ScoreSystem.cs" />
     <Compile Include="Assets\source\cs\System\SystemManager.cs" />
     <Compile Include="Assets\source\cs\Bullet\PlayerBullet\Bf109SubAttack.cs" />
+    <Compile Include="Assets\source\cs\Scene\BaseScene.cs" />
     <Compile Include="Assets\Resource\Effect\JMO Assets\WarFX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\source\cs\Item\BouncingItem.cs" />
     <Compile Include="Assets\source\cs\Enemy\EnemyLv3.cs" />
@@ -98,6 +99,10 @@
     <Compile Include="Assets\source\cs\Enemy\EnemyLv4.cs" />
     <Compile Include="Assets\source\cs\UI\TMP\PowerTMP.cs" />
     <Compile Include="Assets\Resource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
+    <Compile Include="Assets\source\cs\Scene\GameDataInfo.cs" />
+    <Compile Include="Assets\source\cs\Scene\TitleScene.cs" />
+    <Compile Include="Assets\source\cs\Scene\LoadingScene.cs" />
+    <Compile Include="Assets\source\cs\Scene\Stage1Scene.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resource\0BG\st1BgResource\Trees_WorldSpace_FREE\WorldSpaceTrees_Doc.txt" />

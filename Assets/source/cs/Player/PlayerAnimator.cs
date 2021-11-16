@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
-    [SerializeField] Animator anim;
     bool isArrived = false;
 
-    float bombCoolDown;
+    
 
     void Start()
     {
@@ -17,34 +16,10 @@ public class PlayerAnimator : MonoBehaviour
     void Update()
     {
         //Bomb Animation
-        if (Input.GetKeyDown(KeyCode.L) && GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().bomb >= 1)
-        {
-            anim.SetBool("bomb", true);
-            bombCoolDown = 1.4f;
-        }
-        if (anim.GetBool("bomb"))
-        {
-            bombCoolDown -= Time.deltaTime;
-            if (bombCoolDown < 0)
-                anim.SetBool("bomb", false);
-        }
+        
 
         //Moving Animation
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            anim.SetBool("left", true);
-            anim.SetBool("right", false);
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            anim.SetBool("right", true);
-            anim.SetBool("left", false);
-        }
-        else
-        {
-            anim.SetBool("right", false);
-            anim.SetBool("left", false);
-        }
+        
         
         //Launch Animation
         if(!isArrived)

@@ -82,7 +82,6 @@ public class SystemManager : MonoBehaviour
     {
         if (instance == null)
             instance = this;
-
     }
 
 
