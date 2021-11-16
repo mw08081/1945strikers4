@@ -53,7 +53,6 @@
     <UnityVersion>2020.3.16f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\source\cs\Player\PlayerAnimator.cs" />
     <Compile Include="Assets\source\cs\BG\SmokeGenerator.cs" />
     <Compile Include="Assets\source\Resource\Item\Models_Bomb\AtomicBomb\RotateCam.cs" />
     <Compile Include="Assets\source\cs\Bullet\Bullet.cs" />
@@ -75,6 +74,8 @@
     <Compile Include="Assets\source\cs\Bullet\PlayerBullet\Bomb.cs" />
     <Compile Include="Assets\source\Resource\Effect\JMO Assets\WarFX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\source\cs\Item\Item.cs" />
+    <Compile Include="Assets\source\cs\Scene\Stage2Scene.cs" />
+    <Compile Include="Assets\source\cs\Scene\GameOverScene.cs" />
     <Compile Include="Assets\source\cs\System\EffectSystem.cs" />
     <Compile Include="Assets\source\cs\Etc\EffectLifeTime.cs" />
     <Compile Include="Assets\source\cs\System\EnemySystem.cs" />
@@ -105,8 +106,7 @@
     <Compile Include="Assets\source\cs\Enemy\EnemyLv4.cs" />
     <Compile Include="Assets\source\cs\UI\TMP\PowerTMP.cs" />
     <Compile Include="Assets\source\Resource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
-    <Compile Include="Assets\source\cs\Scene\GameOverScene.cs" />
-    <Compile Include="Assets\source\cs\Scene\Stage2Scene.cs" />
+    <Compile Include="Assets\source\cs\Etc\Aspect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\source\Resource\0BG\st1BgResource\Trees_WorldSpace_FREE\WorldSpaceTrees_Doc.txt" />
@@ -743,6 +743,9 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -754,9 +757,6 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

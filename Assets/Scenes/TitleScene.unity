@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 39750948}
   - component: {fileID: 39750947}
   - component: {fileID: 39750946}
+  - component: {fileID: 39750950}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -176,7 +177,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1080, y: 1980}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -191,9 +192,9 @@ Canvas:
   m_GameObject: {fileID: 39750945}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 963194227}
+  m_PlaneDistance: 50
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -226,6 +227,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &39750950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39750945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fad38d277bec27545b447ace08cdb980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &93177280
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,15 +266,15 @@ RectTransform:
   m_GameObject: {fileID: 93177280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 11.008563, y: 19.395622, z: 11.008563}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 39750949}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.8156738, y: -9.270508}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: -0.000028371811}
+  m_SizeDelta: {x: 1115, y: 1981}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &93177282
 MonoBehaviour:
@@ -411,7 +424,7 @@ RectTransform:
   m_GameObject: {fileID: 436970199}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.81, y: 1.81, z: 1.81}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 39750949}
   m_RootOrder: 3
@@ -443,11 +456,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 70
+    m_FontSize: 130
     m_FontStyle: 3
     m_BestFit: 0
-    m_MinSize: 6
-    m_MaxSize: 80
+    m_MinSize: 1
+    m_MaxSize: 150
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -533,7 +546,7 @@ RectTransform:
   m_GameObject: {fileID: 478778672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.81, y: 1.81, z: 1.81}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 39750949}
   m_RootOrder: 2
@@ -565,11 +578,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 70
+    m_FontSize: 130
     m_FontStyle: 3
     m_BestFit: 0
-    m_MinSize: 6
-    m_MaxSize: 80
+    m_MinSize: 1
+    m_MaxSize: 130
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -755,7 +768,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 471, y: 1114, z: -749}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -897,7 +910,7 @@ RectTransform:
   m_GameObject: {fileID: 1867030120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.2535, y: 3.2535, z: 3.2535}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 39750949}
   m_RootOrder: 1
@@ -905,7 +918,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -677}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 160, y: 410.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1867030122
 MonoBehaviour:
@@ -929,11 +942,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 3
+    m_MaxSize: 60
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
