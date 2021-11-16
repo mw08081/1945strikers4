@@ -78,9 +78,11 @@ public class Enemy : Actor
     {
         base.OnDead();
         meshRenderer.material.color = originColor;
+        //SystemManager.Instance.ScoreSystem.CalcSc(score);
         SystemManager.Instance.ScoreSystem.CalcSc(score);
 
         if (Random.Range(0.0f, 1.0f) >= (1 - itemDropProbability))
-            SystemManager.Instance.ItemSystem.ServeItem((ItemCode)Random.Range(0, 2), transform.position);
+            SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().ItemSystem.ServeItem((ItemCode)Random.Range(0, 2), transform.position);
+        //SystemManager.Instance.ItemSystem.ServeItem((ItemCode)Random.Range(0, 2), transform.position);
     }
 }

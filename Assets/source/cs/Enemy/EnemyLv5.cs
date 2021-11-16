@@ -92,7 +92,7 @@ public class EnemyLv5 : Enemy
         {
             for (int j = stAngle; j < stAngle + 360; j += 72)
             {
-                GameObject go = SystemManager.Instance.BulletSystem.ServeBullet(attackModelInfos[0]._bulletCode, bulletSpawnPosition[0].position);
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(attackModelInfos[0]._bulletCode, bulletSpawnPosition[0].position);
 
                 Bullet bullet = go.GetComponent<Bullet>();
                 bullet.Fire(attackModelInfos[0]._bulletCode, new Vector3(Mathf.Cos(j * Mathf.Deg2Rad), 0, Mathf.Sin(j * Mathf.Deg2Rad))  , attackModelInfos[0]._bulletSpeed, 100);
@@ -112,7 +112,7 @@ public class EnemyLv5 : Enemy
         {
             for (int j = stAngle; j < finAngle; j += 5)
             {
-                GameObject go = SystemManager.Instance.BulletSystem.ServeBullet(attackModelInfos[1]._bulletCode, bulletSpawnPosition[0].position);
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(attackModelInfos[1]._bulletCode, bulletSpawnPosition[0].position);
 
                 Bullet bullet = go.GetComponent<Bullet>();
                 bullet.Fire(attackModelInfos[1]._bulletCode, new Vector3(Mathf.Cos(j * Mathf.Deg2Rad), 0, Mathf.Sin(j * Mathf.Deg2Rad)), attackModelInfos[1]._bulletSpeed, 100);
@@ -127,7 +127,7 @@ public class EnemyLv5 : Enemy
         {
             for (int j = 0; j < 2; j++)
             {
-                GameObject go = SystemManager.Instance.BulletSystem.ServeBullet(attackModelInfos[2]._bulletCode, bulletSpawnPosition[j + 1].position);
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(attackModelInfos[2]._bulletCode, bulletSpawnPosition[j + 1].position);
 
                 Bullet bullet = go.GetComponent<Bullet>();
                 bullet.Fire(attackModelInfos[2]._bulletCode, (playerTransform.position - bulletSpawnPosition[j + 1].position).normalized, attackModelInfos[2]._bulletSpeed, 100);
@@ -143,7 +143,7 @@ public class EnemyLv5 : Enemy
         {
             for (int j = 0; j < 2; j++)
             {
-                GameObject go = SystemManager.Instance.BulletSystem.ServeBullet(attackModelInfos[3]._bulletCode, bulletSpawnPosition[j + 3].position);
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(attackModelInfos[3]._bulletCode, bulletSpawnPosition[j + 3].position);
 
                 Bullet bullet = go.GetComponent<Bullet>();
                 bullet.Fire(attackModelInfos[3]._bulletCode, (playerTransform.position - bulletSpawnPosition[j + 3].position).normalized, attackModelInfos[3]._bulletSpeed, 100);
@@ -168,7 +168,7 @@ public class EnemyLv5 : Enemy
         int stAngle = 0;
         for (int j = stAngle; j < 360 + stAngle; j += 5)
         {
-            GameObject go = SystemManager.Instance.BulletSystem.ServeBullet(BulletCode.enemyBulletM2, bulletSpawnPosition[0].position);
+            GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.enemyBulletM2, bulletSpawnPosition[0].position);
 
             Bullet bullet = go.GetComponent<Bullet>();
             bullet.Fire(BulletCode.enemyBulletM2, new Vector3(Mathf.Cos(j * Mathf.Deg2Rad), 0, Mathf.Sin(j * Mathf.Deg2Rad)), 40, 100);
@@ -181,7 +181,7 @@ public class EnemyLv5 : Enemy
     protected override void OnDead()
     {
         base.OnDead();
-        SystemManager.Instance.EffectSystem.ServeEffect(EffectCode.tres, transform.position);
+        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().EffectSystem.ServeEffect(EffectCode.tres, transform.position);
 
         StartCoroutine("FadeOutDestroy");
     }
@@ -197,6 +197,7 @@ public class EnemyLv5 : Enemy
 
             yield return new WaitForSeconds(0.01f);
         }
+        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().isBoseDead = true;
         Destroy(gameObject);
     }
 }

@@ -19,25 +19,34 @@ public class Player : Actor
     [SerializeField] float subBulletSpeed;
     [SerializeField] float subDmg;
 
+    bool isArrived;
+    bool isInvincibility;
+
     float lastShotTime;
     float lastSubShotTime;
     
     float bombCoolDown;
     bool isBomb;
     bool isThrow;
+    
 
     public override void Initializing()
     {
+        Launch();
         base.hp = 3;
 
-        isBomb = false;
+        //isInvincibility = false;
+        isArrived = false;
+
         lastShotTime = Time.time;
+
+        isBomb = false;
     }
 
     protected override void Updating()
     {
         AssignMoveDirection();
-        if(!isBomb)
+        if(!isBomb && !isDead)
         {
             UpdateMove();
             Attack();
@@ -48,7 +57,56 @@ public class Player : Actor
     }
 
     #region Launch
-    
+    void Launch()
+    {
+        isDead = true;
+        StartCoroutine("LaunchMotion");
+        StartCoroutine("LaunchEffect");
+    }
+
+    IEnumerator LaunchMotion()
+    {
+        isInvincibility = true;
+        Vector3 dist = new Vector3(0, -3, 0);
+        while(Vector3.Distance(transform.position, dist) > 0.3f)
+        {
+            transform.position = Vector3.Lerp(transform.position, new Vector3(0, -3, 0), 0.05f);
+
+            yield return new WaitForSeconds(0.01f);
+        }
+        isDead = false;
+        yield return new WaitForSeconds(2f);
+
+        isInvincibility = false;
+    }
+    IEnumerator LaunchEffect()
+    {
+        yield return new WaitForSeconds(0.1f);
+        MeshRenderer meshRenderer = GetComponentInChildren<MeshRenderer>();
+
+        Color originColor = meshRenderer.material.color;
+        Color effectColor = new Color(255, 76, 76, 255);
+
+        while(isInvincibility)
+        {
+            if (meshRenderer.material.color.g != 76)
+                meshRenderer.material.color = effectColor;
+            else
+                meshRenderer.material.color = originColor;
+
+            yield return new WaitForSeconds(0.07f);
+        }
+        meshRenderer.material.color = originColor;
+    }
+
+    void ReLaunch()
+    {
+        transform.position = new Vector3(0, -3, -15);
+        Launch();
+        
+        isArrived = false;
+        isInvincibility = true;
+    }
     #endregion 
 
     #region Moving
@@ -105,7 +163,7 @@ public class Player : Actor
                 if (power == 2)
                     tmp = i + 1;
 
-                GameObject go = SystemManager.Instance.BulletSystem.ServeBullet(BulletCode.player1Bullet, firePosition[tmp].position);
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1Bullet, firePosition[tmp].position);
 
                 Bullet bullet = go.GetComponent<Bullet>();
                 bullet.Fire(BulletCode.player1Bullet, Vector3.forward, bulletSpeed, dmg);
@@ -127,7 +185,7 @@ public class Player : Actor
 
                     for (int i = 0; i < 2; i++)
                     {
-                        GameObject go = SystemManager.Instance.BulletSystem.ServeBullet(BulletCode.player1SubBullet, firePosition[i + 3].position);
+                        GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1SubBullet, firePosition[i + 3].position);
 
                         Bullet bullet = go.GetComponent<Bullet>();
                         bullet.Fire(BulletCode.player1SubBullet, dir.normalized, bulletSpeed, dmg);
@@ -158,7 +216,7 @@ public class Player : Actor
             if (i > 60 && !isThrow)
             {
                 isThrow = true;
-                GameObject go = SystemManager.Instance.BulletSystem.ServeBullet(BulletCode.bomb, transform.position);
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.bomb, transform.position);
                 Bullet bullet = go.GetComponent<Bullet>();
                 bullet.Fire(BulletCode.bomb, Vector3.forward, 4, 2000);
             }
@@ -178,6 +236,10 @@ public class Player : Actor
             Bullet bullet = other.gameObject.GetComponent<Bullet>();
             OnBulletHitted(bullet.dmg);
         }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            OnCrash();
+        }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Item"))
         {
             GetItem(other.GetComponent<Item>());
@@ -191,7 +253,7 @@ public class Player : Actor
             case ItemCode.powerUp:
                 if (power < 3)
                     power++;
-                SystemManager.Instance.TmpSystem.ServePowerUpTmp(transform.position);
+                SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().TmpSystem.ServePowerUpTmp(transform.position);
                 break;
             case ItemCode.bomb:
                 if (bomb < 3)
@@ -206,7 +268,15 @@ public class Player : Actor
 
     protected override void OnBulletHitted(float dmg)
     {
-        base.OnBulletHitted(dmg);
+        //if (!isInvincibility)
+        //    base.OnBulletHitted(dmg);
+        Debug.Log("Dead");
+    }
+    protected override void OnCrash()
+    {
+        //if (!isInvincibility)
+        //    base.DecreaseHp(1);
+        Debug.Log("Dead");
     }
     protected override void DecreaseHp(float dmg)
     {
@@ -220,10 +290,13 @@ public class Player : Actor
     }
     protected override void OnDead()
     {
-        //base.OnDead();
+        base.OnDead();
+        hp--;
+        SystemManager.Instance.SaveGameData(hp);
+        ReLaunch();
 
-        //gameObject.SetActive(false);
-        Debug.Log("DEAD");
+        if (hp <= 0)
+            Debug.Log("GAMEOVER!!");
     }
     #endregion
 
@@ -266,5 +339,6 @@ public class Player : Actor
             anim.SetBool("left", false);
         }
     }
+    
     #endregion
 }

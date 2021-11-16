@@ -19,18 +19,20 @@ public class PlayerStatePanel : MonoBehaviour
     void Update()
     {
         score.text = SystemManager.Instance.ScoreSystem.Score.ToString();
-        bombCnt.text = SystemManager.Instance.Player.bomb.ToString();
+        bombCnt.text = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().Player.bomb.ToString();
 
-        cnt = (int)SystemManager.Instance.Player.hp;
+        cnt = (int)SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().Player.hp;
+        SetLifeColorAlphaZero();
     }
 
-    void SetColorAlphaZero()
+    void SetLifeColorAlphaZero()
     {
         int tmp = 3 - cnt;
 
         for (int i = 0; i < tmp; i++)
         {
-            lifes[i].gameObject.SetActive(false);
+            if(lifes[i].IsActive())
+                lifes[i].gameObject.SetActive(false);
         }
     }
 }

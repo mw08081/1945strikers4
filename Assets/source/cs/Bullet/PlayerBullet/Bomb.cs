@@ -16,7 +16,7 @@ public class Bomb : Bullet
 
     protected override void Explosive()
     {
-        SystemManager.Instance.EffectSystem.ServeEffect(EffectCode.dos, transform.position);
+        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().EffectSystem.ServeEffect(EffectCode.dos, transform.position);
 
         Enemy[] enemies = GameObject.FindObjectsOfType<Enemy>();
         for(int i = 0; i < enemies.Length; i++)

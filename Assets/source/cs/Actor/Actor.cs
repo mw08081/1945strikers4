@@ -48,10 +48,9 @@ public class Actor : MonoBehaviour
     
     protected virtual void DecreaseHp(float dmg)
     {
-        //if(dmg == 1)
-            //OnDead();
-        //else if (hp <= dmg && !isDead)
-        if (hp <= dmg && !isDead)
+        if (dmg == 1)
+            OnDead();
+        else if (hp <= dmg && !isDead)
         {
             hp = 0;
             OnDead();
@@ -63,8 +62,6 @@ public class Actor : MonoBehaviour
     protected virtual void OnDead()
     {
         isDead = true;
-        SystemManager.Instance.EffectSystem.ServeEffect(EffectCode.uno, transform.position);
-        //Player > effect & reLaunch()
-        //Enemy > effect & ReturnObject()
+        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().EffectSystem.ServeEffect(EffectCode.uno, transform.position);
     }
 }

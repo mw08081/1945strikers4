@@ -12,62 +12,6 @@ public class SystemManager : MonoBehaviour
             return instance;
         }
     }
-    public float gameStartTime;
-    public float gameElapedTime;
-
-    [SerializeField] Player player;
-    public Player Player
-    {
-        get
-        {
-            return player;
-        }
-    }
-
-    [SerializeField] BulletSystem bulletSystem;
-    public BulletSystem BulletSystem
-    {
-        get
-        {
-            return bulletSystem;
-        }
-    }
-
-    [SerializeField] EnemySystem enemySystem;
-    public EnemySystem EnemySystem
-    {
-        get
-        {
-            return enemySystem;
-        }
-    }
-
-    [SerializeField] EffectSystem effectSystem;
-    public EffectSystem EffectSystem
-    {
-        get
-        {
-            return effectSystem;
-        }
-    }
-
-    [SerializeField] ItemSystem itemSystem;
-    public ItemSystem ItemSystem
-    {
-        get
-        {
-            return itemSystem;
-        }
-    }
-
-    [SerializeField] TmpSystem tmpSystem;
-    public TmpSystem TmpSystem
-    {
-        get
-        {
-            return tmpSystem;
-        }
-    }
 
     ScoreSystem scoreSystem = new ScoreSystem();
     public ScoreSystem ScoreSystem
@@ -77,21 +21,36 @@ public class SystemManager : MonoBehaviour
             return scoreSystem;
         }
     }
+    public float PlayerHp { get; set; }
+
+    public BaseScene CurrentScene { get; set; }
+
+    public T GetCurrentSceneT<T>()
+        where T : BaseScene
+    {
+        return CurrentScene as T;
+    }
 
     private void Awake()
     {
         if (instance == null)
             instance = this;
+        DontDestroyOnLoad(this);
     }
 
 
     void Start()
     {
-        gameStartTime = Time.time;
+
     }
 
     void Update()
     {
-        gameElapedTime = Time.time - gameStartTime;
+
+    }
+
+    public void SaveGameData(float _hp)
+    {
+        PlayerHp = _hp;
     }
 }

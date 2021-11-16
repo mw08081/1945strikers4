@@ -119,7 +119,7 @@ MonoBehaviour:
   dmg: 0
   score: 1000
   itemDropProbability: 0
-  lifeTime: 40
+  lifeTime: 30
   bulletSpawnPosition:
   - {fileID: 473592011501429325}
   - {fileID: 2723331159421706664}
@@ -147,7 +147,6 @@ MonoBehaviour:
     lastAttackTime: 0
     _bulletCode: 6
     _bulletSpeed: 20
-  moveArea: {x: 0, y: 0, z: 0}
 --- !u!1 &1759297729857114119
 GameObject:
   m_ObjectHideFlags: 0

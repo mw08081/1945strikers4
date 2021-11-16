@@ -36,6 +36,6 @@ public class PowerTMP : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         powerUpTmp.faceColor = originColor;
-        SystemManager.Instance.TmpSystem.ReturnPowerUpTmp(powerUpTmp);
+        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().TmpSystem.ReturnPowerUpTmp(powerUpTmp);
     }
 }

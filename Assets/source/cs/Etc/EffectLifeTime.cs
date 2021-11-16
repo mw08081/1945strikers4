@@ -35,6 +35,6 @@ public class EffectLifeTime : MonoBehaviour
     void ReturnGameObject()
     {
         isPlay = false;
-        SystemManager.Instance.EffectSystem.ReturnEffect(effectCode, gameObject);
+        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().EffectSystem.ReturnEffect(effectCode, gameObject);
     }
 }

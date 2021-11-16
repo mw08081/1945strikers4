@@ -39,7 +39,9 @@ public class EnemyLv1 : Enemy
     {
         if(Time.time - lastAttackTime > attackInterval && Random.Range(0.0f, 1.0f) > (1 - attackProbability))
         {
-            GameObject go = SystemManager.Instance.BulletSystem.ServeBullet(BulletCode.enemyBulletM1, bulletSpawnPosition.position);
+            //GameObject go = SystemManager.Instance.BulletSystem.ServeBullet(BulletCode.enemyBulletM1, bulletSpawnPosition.position);
+            GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().
+                BulletSystem.ServeBullet(BulletCode.enemyBulletM1, bulletSpawnPosition.position);
 
             Bullet bullet = go.GetComponent<Bullet>();
             bullet.Fire(BulletCode.enemyBulletM1, Vector3.forward * -1, bulletSpeed, dmg);
@@ -51,14 +53,16 @@ public class EnemyLv1 : Enemy
     void ReturnGameObject()
     {
         gameObject.SetActive(false);
-        SystemManager.Instance.EnemySystem.ReturnEnemy(EnemyCode.lv1, gameObject);
+        //SystemManager.Instance.EnemySystem.ReturnEnemy(EnemyCode.lv1, gameObject);
+        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().EnemySystem.ReturnEnemy(EnemyCode.lv1, gameObject);
     }
 
     protected override void OnDead()
     {
         base.OnDead();
         gameObject.SetActive(false);
-        SystemManager.Instance.EnemySystem.ReturnEnemy(EnemyCode.lv1, gameObject);
+        //SystemManager.Instance.EnemySystem.ReturnEnemy(EnemyCode.lv1, gameObject);
+        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().EnemySystem.ReturnEnemy(EnemyCode.lv1, gameObject);
 
     }
 }

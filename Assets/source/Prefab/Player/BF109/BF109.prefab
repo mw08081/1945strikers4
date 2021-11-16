@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2775495955438037627}
   - component: {fileID: 1092438985298605985}
   - component: {fileID: 8871981750518545517}
-  - component: {fileID: 8434373612153143395}
   m_Layer: 10
   m_Name: BF109
   m_TagString: Player
@@ -83,6 +82,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
+  anim: {fileID: 0}
+  moveDir: {x: 0, y: 0, z: 0}
   speed: 11
   power: 1
   bomb: 0
@@ -115,19 +116,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8434373612153143395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180969222675100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac516ce24d1fe9149a86eec929dcae7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 8871981750518545517}
 --- !u!1 &1414821043619122
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +146,7 @@ Transform:
   m_LocalScale: {x: 0.036676705, y: 0.03667669, z: 0.0366767}
   m_Children: []
   m_Father: {fileID: 5985601236350724766}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33772214465108332
 MeshFilter:
@@ -241,7 +229,7 @@ Transform:
   m_LocalScale: {x: 0.01, y: 0.009999997, z: 0.009999998}
   m_Children: []
   m_Father: {fileID: 5985601236350724766}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33251335319206206
 MeshFilter:
@@ -520,8 +508,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4182743429654620}
   - {fileID: 4085614379006344}
+  - {fileID: 4182743429654620}
   - {fileID: 4522685906699256}
   m_Father: {fileID: 4749351841315700}
   m_RootOrder: 0

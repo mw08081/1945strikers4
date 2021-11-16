@@ -22,9 +22,6 @@ public class PlayerAnimator : MonoBehaviour
         
         
         //Launch Animation
-        if(!isArrived)
-            transform.position = Vector3.Lerp(transform.position, new Vector3(0, -3, 0), 0.05f);
-        if (transform.position.z > -0.1f && !isArrived)
-            isArrived = true;
+        
     }
 }

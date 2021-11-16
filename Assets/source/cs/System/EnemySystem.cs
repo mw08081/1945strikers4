@@ -77,8 +77,8 @@ public class EnemySystem : MonoBehaviour
 
     void Update()
     {
-        elapsedTime = Time.time - SystemManager.Instance.gameStartTime;
-
+        elapsedTime = Time.time - SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().gameStartTime;
+     
         if (elapsedTime > boseGeneratingTime)
             GenerateBose();
         else if (elapsedTime > enemyGeneratingTime)
