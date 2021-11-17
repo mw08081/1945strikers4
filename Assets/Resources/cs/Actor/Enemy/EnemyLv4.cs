@@ -19,7 +19,7 @@ public class EnemyLv4 : Enemy
     float lastAttackTimeModel1;
     float lastAttackTimeModel2;
 
-    public override void Initializing()
+    protected override void Initializing()
     {
         moveArea = new Vector3(Random.Range(-2.0f, 3.0f), -3.0f, Random.Range(5.0f, 13.5f));
 

@@ -25,7 +25,7 @@ public class EnemyLv5 : Enemy
     Transform playerTransform;
     bool isArived = false;
     
-    public override void Initializing()
+    protected override void Initializing()
     {
         base.Initializing();
         

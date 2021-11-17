@@ -14,7 +14,7 @@ public class Enemy : Actor
     Color originColor;
     Color dmgedColor;
 
-    public override void Initializing()
+    protected override void Initializing()
     {
         meshRenderer = GetComponent<MeshRenderer>();
         if (meshRenderer == null)

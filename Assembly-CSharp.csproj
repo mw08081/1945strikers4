@@ -110,7 +110,10 @@
     <Compile Include="Assets\Resources\cs\UI\TMP\TmpSystem.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLv4.cs" />
     <Compile Include="Assets\Resources\cs\UI\TMP\PowerTMP.cs" />
+    <Compile Include="Assets\tmp.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
+    <Compile Include="Assets\Resources\cs\Actor\Player\F5U.cs" />
+    <Compile Include="Assets\Resources\cs\Actor\Player\BF109.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BaseResource\0BG\st1BgResource\Trees_WorldSpace_FREE\WorldSpaceTrees_Doc.txt" />

@@ -14,7 +14,7 @@ public class EnemyLv1 : Enemy
     float attackProbability = 0.9f;
     float lastAttackTime = 0;
 
-    public override void Initializing()
+    protected override void Initializing()
     {
         base.Initializing();
         attackInterval = Random.Range(1.0f, 1.7f);

@@ -25,7 +25,7 @@ public class Actor : MonoBehaviour
         Updating();
     }
 
-    public virtual void Initializing()
+    protected virtual void Initializing()
     {
 
     }

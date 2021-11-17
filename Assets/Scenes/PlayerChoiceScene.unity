@@ -260,7 +260,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b8d5572465e376344aa8b0d4306ecfaa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d271733139c48e459fe719f79321776, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -736,7 +736,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ee8e1fd6f0f36d6408bf85ba0a3e7a2a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df562cb9d45684f49b5d4f55a2eb2e2d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1049,7 +1049,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d29852431f0851e4086f219d4511c3ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 280bc66c9e03fed49a44c93b86a3f42f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1689,9 +1689,9 @@ MonoBehaviour:
   playerChoiceImg: {fileID: 544324079}
   playerChoiceImg2: {fileID: 584368039}
   playerChoiceSpritList:
-  - {fileID: 21300000, guid: d29852431f0851e4086f219d4511c3ea, type: 3}
-  - {fileID: 21300000, guid: ee8e1fd6f0f36d6408bf85ba0a3e7a2a, type: 3}
-  - {fileID: 21300000, guid: b8d5572465e376344aa8b0d4306ecfaa, type: 3}
+  - {fileID: 21300000, guid: 280bc66c9e03fed49a44c93b86a3f42f, type: 3}
+  - {fileID: 21300000, guid: df562cb9d45684f49b5d4f55a2eb2e2d, type: 3}
+  - {fileID: 21300000, guid: 2d271733139c48e459fe719f79321776, type: 3}
   playerChoiceSprit2List:
   - {fileID: 21300000, guid: c8ae9c556beef3743abc32e5bf9bd31a, type: 3}
   - {fileID: 21300000, guid: 5e07e54cb500813499fbe89999e5a4a3, type: 3}
@@ -1753,7 +1753,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d29852431f0851e4086f219d4511c3ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 280bc66c9e03fed49a44c93b86a3f42f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

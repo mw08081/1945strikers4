@@ -14598,7 +14598,9 @@ MonoBehaviour:
   gameStartTime: 0
   gameElapedTime: 0
   PlayerPrefab:
-  - {fileID: 1180969222675100, guid: d8f0ef2d9884a63479f8a8bad2d75ce2, type: 3}
+  - {fileID: 6589735678442155214, guid: 08606219267cb6d468d37d6bdaf2a6ad, type: 3}
+  - {fileID: 9138441653975040611, guid: 3c5c96fce067ad848a9cd1656c9709ea, type: 3}
+  - {fileID: 4824120697992270152, guid: 60ed75f166061c04d9f83845726d3084, type: 3}
   player: {fileID: 0}
   bulletSystem: {fileID: 1030799653}
   enemySystem: {fileID: 1606344875}
@@ -24122,7 +24124,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d29852431f0851e4086f219d4511c3ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 280bc66c9e03fed49a44c93b86a3f42f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -33690,7 +33692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d29852431f0851e4086f219d4511c3ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 280bc66c9e03fed49a44c93b86a3f42f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -38292,7 +38294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefabList:
-  - {fileID: 7371209096222920402, guid: 6e1b09aaeab8f8d4e83ee1d13bbfc1ee, type: 3}
+  - {fileID: 9210678587784420677, guid: b636d243a8a384548b9d4d907a9304e8, type: 3}
   - {fileID: 7535248706683283617, guid: 40ff9c1337b1d11489099d9cf3d6ef6f, type: 3}
   - {fileID: 7371209096222920402, guid: 6e1b09aaeab8f8d4e83ee1d13bbfc1ee, type: 3}
   - {fileID: 7535248706683283617, guid: 40ff9c1337b1d11489099d9cf3d6ef6f, type: 3}
@@ -63873,7 +63875,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d29852431f0851e4086f219d4511c3ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 280bc66c9e03fed49a44c93b86a3f42f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

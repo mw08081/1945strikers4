@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,36 +8,25 @@ public class Player : Actor
     [SerializeField] Animator anim;
     [SerializeField] Vector3 moveDir;
     [SerializeField] float speed;
-    [SerializeField] int power;
+    [SerializeField] protected int power;
     [SerializeField] public int bomb;
 
-    [Header("----Attack Info----")]
-    [SerializeField] Transform[] firePosition;
-    [SerializeField] float bulletSpeed;
-    [SerializeField] float dmg;
-    [SerializeField] float subBulletSpeed;
-    [SerializeField] float subDmg;
-
-    bool isArrived;
+    //bool isArrived;
     bool isInvincibility;
 
-    float lastShotTime;
-    float lastSubShotTime;
-    
-    float bombCoolDown;
-    bool isBomb;
-    bool isThrow;
-    
+    //float lastShotTime;
+    //float lastSubShotTime;
 
-    public override void Initializing()
+    float bombCoolDown;
+    protected bool isBomb;
+
+    protected override void Initializing()
     {
         Launch();
         base.hp = 3;
 
         //isInvincibility = false;
-        isArrived = false;
-
-        lastShotTime = Time.time;
+        //isArrived = false;
 
         isBomb = false;
     }
@@ -81,21 +69,21 @@ public class Player : Actor
     IEnumerator LaunchEffect()
     {
         yield return new WaitForSeconds(0.1f);
-        MeshRenderer meshRenderer = GetComponentInChildren<MeshRenderer>();
+        Renderer renderer = GetComponentInChildren<Renderer>();
 
-        Color originColor = meshRenderer.material.color;
+        Color originColor = renderer.material.color;
         Color effectColor = new Color(255, 76, 76, 255);
 
         while(isInvincibility)
         {
-            if (meshRenderer.material.color.g != 76)
-                meshRenderer.material.color = effectColor;
+            if (renderer.material.color.g != 76)
+                renderer.material.color = effectColor;
             else
-                meshRenderer.material.color = originColor;
+                renderer.material.color = originColor;
 
             yield return new WaitForSeconds(0.07f);
         }
-        meshRenderer.material.color = originColor;
+        renderer.material.color = originColor;
     }
 
     void ReLaunch()
@@ -103,7 +91,7 @@ public class Player : Actor
         transform.position = new Vector3(0, -3, -15);
         Launch();
         
-        isArrived = false;
+        //isArrived = false;
         isInvincibility = true;
     }
     #endregion 
@@ -152,79 +140,9 @@ public class Player : Actor
     #endregion
 
     #region Attack
-    void Attack()
-    {
-        if (Input.GetKey(KeyCode.Return) && Time.time - lastShotTime > 0.12f)
-        {
-            for (int i = 0; i < power; i++)
-            {
-                int tmp = i;
-                if (power == 2)
-                    tmp = i + 1;
-
-                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1Bullet, firePosition[tmp].position);
-
-                Bullet bullet = go.GetComponent<Bullet>();
-                bullet.Fire(BulletCode.player1Bullet, Vector3.forward, bulletSpeed, dmg);
-            }
-            lastShotTime = Time.time;
-        }
-        SubAttack();
-    }
-    void SubAttack()
-    {
-        if (Input.GetKey(KeyCode.Return) && Time.time - lastSubShotTime > 0.25)
-        {
-            try
-            {
-                GameObject enemy = GameObject.FindObjectOfType<Enemy>().gameObject;
-                if (enemy != null)
-                {
-                    Vector3 dir = enemy.transform.position - transform.position;
-
-                    for (int i = 0; i < 2; i++)
-                    {
-                        GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1SubBullet, firePosition[i + 3].position);
-
-                        Bullet bullet = go.GetComponent<Bullet>();
-                        bullet.Fire(BulletCode.player1SubBullet, dir.normalized, bulletSpeed, dmg);
-                    }
-                }
-                lastSubShotTime = Time.time;
-            }
-            catch (NullReferenceException e)
-            {
-                Debug.LogWarning(e.Message);
-            }
-        }
-    }
-    void ThrowingDownBomb()
-    {
-        if (Input.GetKeyDown(KeyCode.L) && bomb >= 1 && !isBomb)
-        {
-            isBomb = true;
-            StartCoroutine("ThrowingBomb");
-        }
-    }
-    IEnumerator ThrowingBomb()
-    {
-        for (int i = 0; i < 360; i += 3)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y + Mathf.Sin(i * Mathf.Deg2Rad) * 0.25f, transform.position.z + Mathf.Cos(i * Mathf.Deg2Rad) * 0.25f);
-
-            if (i > 60 && !isThrow)
-            {
-                isThrow = true;
-                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.bomb, transform.position);
-                Bullet bullet = go.GetComponent<Bullet>();
-                bullet.Fire(BulletCode.bomb, Vector3.forward, 4, 2000);
-            }
-            yield return new WaitForSeconds(0.02f);
-        }
-        isBomb = false;
-        isThrow = false;
-        bomb--;
-    }
+    protected virtual void Attack() { }
+    protected virtual void SubAttack() { }
+    protected virtual void ThrowingDownBomb() { }
     #endregion
 
     #region Trigger
@@ -269,13 +187,13 @@ public class Player : Actor
     {
         //if (!isInvincibility)
         //    base.OnBulletHitted(dmg);
-        Debug.Log("Dead");
+        Debug.Log("OnBulletDead");
     }
     protected override void OnCrash()
     {
         //if (!isInvincibility)
         //    base.DecreaseHp(1);
-        Debug.Log("Dead");
+        Debug.Log("OnCrashDead");
     }
     protected override void DecreaseHp(float dmg)
     {
@@ -284,8 +202,6 @@ public class Player : Actor
             power--;
         else
             base.DecreaseHp(1);
-
-        //hpBar °¨¼Ò
     }
     protected override void OnDead()
     {

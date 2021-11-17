@@ -71,10 +71,9 @@ public class Stage1Scene : BaseScene
         gameStartTime = Time.time;
         isBoseDead = false;
 
-        //GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.PlayerPrefabIndex]);
-        GameObject playerGameObject = Instantiate(PlayerPrefab[0]);             //Because not created index1, 2 GameObject
+        GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.PlayerPrefabIndex]);
+        playerGameObject.transform.position = new Vector3(0, -3, -15);
         player = playerGameObject.GetComponent<Player>();
-        //player.Launch();
     }
 
     protected override void Updating()
