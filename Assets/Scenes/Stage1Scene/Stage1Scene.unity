@@ -57191,7 +57191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c14b724deb0ceb4cbdbdcbe71d35f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boseGeneratingTime: 3
+  boseGeneratingTime: 61
   enemyGeneratingTime: 3
   enemyPrefabList:
   - {fileID: 3556364991437050246, guid: c6815b5b41ea5a241b14169c1240c25c, type: 3}

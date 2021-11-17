@@ -11,7 +11,7 @@ public class TitleScene : BaseScene
 
     protected override void Updating()
     {
-        if(Input.anyKey)
+        if(Input.GetKeyDown(KeyCode.F1))
             SceneController.Instance.ChangeLoadingScene(SceneNameCont.PlayerchoiceScene);
     }
 }

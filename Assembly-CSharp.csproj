@@ -64,6 +64,7 @@
     <Compile Include="Assets\source\cs\Player\Player.cs" />
     <Compile Include="Assets\source\cs\UI\PlayerStatePanel.cs" />
     <Compile Include="Assets\source\cs\BG\BackGround.cs" />
+    <Compile Include="Assets\source\cs\Etc\Aspect.cs" />
     <Compile Include="Assets\source\Resource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo.cs" />
     <Compile Include="Assets\source\Resource\Effect\JMO Assets\WarFX\Scripts\WFX_LightFlicker.cs" />
     <Compile Include="Assets\source\cs\Scene\Stage1Scene.cs" />
@@ -91,11 +92,11 @@
     <Compile Include="Assets\source\cs\Enemy\Enemy.cs" />
     <Compile Include="Assets\source\Resource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_Wall.cs" />
     <Compile Include="Assets\source\cs\Scene\LoadingScene.cs" />
-    <Compile Include="Assets\source\cs\Scene\TitleScene.cs" />
+    <Compile Include="Assets\source\cs\Scene\TitleScene\TitleScene.cs" />
     <Compile Include="Assets\source\cs\Enemy\EnemyLv2.cs" />
     <Compile Include="Assets\source\cs\System\ScoreSystem.cs" />
     <Compile Include="Assets\source\cs\System\SystemManager.cs" />
-    <Compile Include="Assets\source\cs\Scene\PlayerChoiceScene.cs" />
+    <Compile Include="Assets\source\cs\Scene\PlayerChoiceScene\PlayerChoiceScene.cs" />
     <Compile Include="Assets\source\cs\Bullet\PlayerBullet\Bf109SubAttack.cs" />
     <Compile Include="Assets\source\cs\Scene\BaseScene.cs" />
     <Compile Include="Assets\source\Resource\Effect\JMO Assets\WarFX\Scripts\CFX_AutoDestructShuriken.cs" />
@@ -106,7 +107,9 @@
     <Compile Include="Assets\source\cs\Enemy\EnemyLv4.cs" />
     <Compile Include="Assets\source\cs\UI\TMP\PowerTMP.cs" />
     <Compile Include="Assets\source\Resource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
-    <Compile Include="Assets\source\cs\Etc\Aspect.cs" />
+    <Compile Include="Assets\source\cs\Scene\PlayerChoiceScene\Player1Choice.cs" />
+    <Compile Include="Assets\source\cs\Scene\TitleScene\InSertCoinBlinking.cs" />
+    <Compile Include="Assets\source\cs\Scene\PlayerChoiceScene\PlayerChoiceImg.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\source\Resource\0BG\st1BgResource\Trees_WorldSpace_FREE\WorldSpaceTrees_Doc.txt" />
