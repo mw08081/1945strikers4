@@ -57,13 +57,12 @@ public class Player : Actor
     }
 
     #region Launch
-    void Launch()
+    public void Launch()
     {
         isDead = true;
         StartCoroutine("LaunchMotion");
         StartCoroutine("LaunchEffect");
     }
-
     IEnumerator LaunchMotion()
     {
         isInvincibility = true;

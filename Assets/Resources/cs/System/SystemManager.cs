@@ -13,6 +13,8 @@ public class SystemManager : MonoBehaviour
         }
     }
 
+    public int PlayerPrefabIndex { get; set; }
+
     ScoreSystem scoreSystem = new ScoreSystem();
     public ScoreSystem ScoreSystem
     {

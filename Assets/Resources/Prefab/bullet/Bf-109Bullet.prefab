@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7371209096222920403}
   - component: {fileID: 4500792969773055433}
   m_Layer: 12
-  m_Name: Bullet
+  m_Name: Bf-109Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

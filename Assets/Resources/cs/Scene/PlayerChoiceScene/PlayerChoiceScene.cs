@@ -34,7 +34,7 @@ public class PlayerChoiceScene : BaseScene
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            Debug.Log(player1Choice.index);
+            SystemManager.Instance.PlayerPrefabIndex = player1Choice.index;
             SceneController.Instance.ChangeLoadingScene(SceneNameCont.Stage1Scene);
         }
             

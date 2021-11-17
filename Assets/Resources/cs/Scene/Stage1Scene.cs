@@ -7,6 +7,8 @@ public class Stage1Scene : BaseScene
     public float gameStartTime;
     public float gameElapedTime;
 
+    [SerializeField] GameObject[] PlayerPrefab;
+
     [SerializeField] Player player;
     public Player Player
     {
@@ -67,7 +69,12 @@ public class Stage1Scene : BaseScene
     {
         SystemManager.Instance.CurrentScene = this;
         gameStartTime = Time.time;
-        isBoseDead = false; 
+        isBoseDead = false;
+
+        //GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.PlayerPrefabIndex]);
+        GameObject playerGameObject = Instantiate(PlayerPrefab[0]);             //Because not created index1, 2 GameObject
+        player = playerGameObject.GetComponent<Player>();
+        //player.Launch();
     }
 
     protected override void Updating()

@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  anim: {fileID: 0}
+  anim: {fileID: 8871981750518545517}
   moveDir: {x: 0, y: 0, z: 0}
   speed: 11
   power: 1
@@ -107,7 +107,7 @@ Animator:
   m_GameObject: {fileID: 1180969222675100}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d26f9b966e5f8884fbecf5173a608111, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

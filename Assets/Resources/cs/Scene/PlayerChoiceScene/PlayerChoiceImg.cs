@@ -23,6 +23,7 @@ public class PlayerChoiceImg : MonoBehaviour
     [SerializeField] Sprite[] playerChoiceSprit2List;
 
     int index;
+    int i;
     
     private void Start()
     {
@@ -32,12 +33,15 @@ public class PlayerChoiceImg : MonoBehaviour
     public void UpdatePlayerChoice(int _index)
     {
         index = _index;
-        StartCoroutine("PrintingInfo");
+        //StartCoroutine("PrintingInfo");
+        for (i = 0; i < 7; i++)
+            StartCoroutine("PrintInfo");
 
         playerChoiceImg.sprite = playerChoiceSpritList[index];
         playerChoiceImg2.sprite = playerChoiceSprit2List[index];
     }
 
+    /*
     IEnumerator PrintingInfo()
     {
         int i = 0;
@@ -55,6 +59,21 @@ public class PlayerChoiceImg : MonoBehaviour
             }
             i++;
             yield return new WaitForSeconds(0.001f);
+        }
+    }
+    */
+    IEnumerator PrintInfo()
+    {
+        int substirngCnt = 0;
+        int tmp = i;
+
+        while (substirngCnt < playerChoiceTxtCont[tmp, index].Length)
+        {
+            playerChoiceTxt[tmp].text = playerChoiceTxtCont[tmp, index].Substring(0, substirngCnt + 1);
+
+            substirngCnt++;
+
+            yield return new WaitForSeconds(0.03f);
         }
     }
 }

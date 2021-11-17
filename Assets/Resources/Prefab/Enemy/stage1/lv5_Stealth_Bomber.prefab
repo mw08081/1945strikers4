@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  maxHp: 5000
+  maxHp: 7000
   speed: 0
   dmg: 0
   score: 1000
