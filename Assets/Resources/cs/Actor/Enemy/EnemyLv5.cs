@@ -187,13 +187,13 @@ public class EnemyLv5 : Enemy
     }
     IEnumerator FadeOutDestroy()
     {
-        Color _color = meshRenderer.material.color;
+        Color _color = renderer.material.color;
         while(_color.a > 0)
         {
-            _color = meshRenderer.material.color;
+            _color = renderer.material.color;
             _color.a -= 0.005f;
 
-            meshRenderer.material.color = _color;
+            renderer.material.color = _color;
 
             yield return new WaitForSeconds(0.01f);
         }

@@ -774,7 +774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   maxHp: 50
-  speed: 9
+  speed: 11
   dmg: 100
   score: 200
   itemDropProbability: 0.1

@@ -40,14 +40,13 @@ public class Bullet : MonoBehaviour
         bulletSpeed = _bulletSpeed;
         dmg = _dmg;
         moveDir = _moveDir;
-
+        
         isFired = true;
         generateTime = Time.time;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        //SystemManager.Instance.EffectSystem.ServeEffect(EffectCode.cero, transform.position);
         SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().EffectSystem.ServeEffect(EffectCode.cero, transform.position);
 
         gameObject.SetActive(false);
@@ -63,7 +62,6 @@ public class Bullet : MonoBehaviour
         Resize();
 
         gameObject.SetActive(false);
-        //SystemManager.Instance.BulletSystem.ReturnBullet(bulletCode, gameObject);
         SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ReturnBullet(bulletCode, gameObject);
     }
 

@@ -6,9 +6,12 @@ public enum BulletCode : int
 {
     player1Bullet = 0,
     player1SubBullet,
+    player1SubBullet2,
+    player1Bomb,
     player2Bullet,
     player2SubBullet,
-    bomb,
+    player2SubBullet2,
+    player2Bomb,
     enemyBulletM1,
     enemyBulletM2,
     enemyBulletM3,
@@ -17,13 +20,42 @@ public enum BulletCode : int
 public class BulletSystem : MonoBehaviour
 {
     [Header("----BulletPrefab Data----")]
-    [SerializeField] GameObject[] bulletPrefabList;
+    //[SerializeField] GameObject[] bulletPrefabList;
+
+    Dictionary<string, GameObject> bulletPrefabCache = new Dictionary<string, GameObject>();
 
     //Queue<GameObject> playerBulletQueue = new Queue<GameObject>();
     List<Queue<GameObject>> bulletQueueList = new List<Queue<GameObject>>();
 
+    string[,] playerBulletResourcePath = new string[,]
+    {
+        {"Prefab/Bullet/BF109Bullet/BF109Bullet", "Prefab/Bullet/P-38Bullet/P-38Bullet", "Prefab/Bullet/F5UBullet/F5UBullet"},
+        {"Prefab/Bullet/BF109Bullet/BF109SubBullet", "Prefab/Bullet/P-38Bullet/P-38SubBullet", "Prefab/Bullet/F5UBullet/F5USubBullet"},
+        {"Prefab/Bullet/BF109Bullet/BF109SubBullet2", "Prefab/Bullet/P-38Bullet/P-38SubBullet2", "Prefab/Bullet/F5UBullet/F5USubBullet2"},
+        {"Prefab/Bullet/BF109Bullet/BF109Bomb", "Prefab/Bullet/P-38Bullet/P-38Bomb", "Prefab/Bullet/F5UBullet/F5UBomb"},
+    };
+    string[,] bulletMakingInfo = new string[,]
+    {
+        {"30", "null" },
+        {"30", "null" },
+        {"15", "null" },
+        {"2", "null" },
+        {"0", "null" },
+        {"0", "null" },
+        {"0", "null" },
+        {"0", "null" },
+        {"30", "Prefab/Bullet/EnemyBullet/EnemyBulletM1" },
+        {"30", "Prefab/Bullet/EnemyBullet/EnemyBulletM2" },
+        {"6", "Prefab/Bullet/EnemyBullet/EnemyBulletM3" },
+    };
+
+    
+
     void Start()
     {
+        for (int i = 0; i < 4; i++)
+            bulletMakingInfo[i, 1] = playerBulletResourcePath[i, SystemManager.Instance.PlayerPrefabIndex];
+        
         SettingBullet();
     }
 
@@ -32,41 +64,40 @@ public class BulletSystem : MonoBehaviour
 
     }
 
+    #region ####BulletCache####
+    GameObject PrefabLoad(string resourcePath)
+    {
+        GameObject go = null;
+
+        if (bulletPrefabCache.ContainsKey(resourcePath))
+        {
+            go = bulletPrefabCache[resourcePath];
+        }
+        else
+        {
+            go = Resources.Load<GameObject>(resourcePath);
+            if(!go)
+            {
+                Debug.LogError("Load Error!");
+                return null;
+            }
+            bulletPrefabCache.Add(resourcePath, go);
+        }
+        GameObject instantiateGo = Instantiate(go, transform);
+
+        return instantiateGo;
+    }
+    #endregion
+
     #region ####BulletSetting####
     void SettingBullet()
     {
-        for (int i = 0; i < bulletPrefabList.Length; i++)
+        for (int i = 0; i < bulletMakingInfo.Length / 2; i++)
         {
-            int cnt;
-            switch (i)
-            {
-                case 0:
-                case 1:
-                    cnt = 30;
-                    break;
-                case 2:
-                case 3:
-                    cnt = 0;
-                    break;
-                case 4:
-                    cnt = 6;
-                    break;
-                case 5:
-                case 6:
-                    cnt = 30;
-                    break;
-                case 7:
-                    cnt = 6;
-                    break;
-                default:
-                    cnt = 5;
-                    break;
-            }
-
             bulletQueueList.Add(new Queue<GameObject>());
-            for (int j = 0; j < cnt; j++)
+            for (int j = 0; j < int.Parse(bulletMakingInfo[i, 0]); j++)
             {
-                GameObject go = Instantiate(bulletPrefabList[i], transform); 
+                GameObject go = PrefabLoad(bulletMakingInfo[i,1]);
                 go.SetActive(false);
 
                 bulletQueueList[i].Enqueue(go);
@@ -78,9 +109,13 @@ public class BulletSystem : MonoBehaviour
     #region ####ServeBullet####
     public GameObject ServeBullet(/*Owner owner, */BulletCode bulletCode, Vector3 servePosition)
     {
-       
         if (bulletQueueList[(int)bulletCode].Count == 0)
-            bulletQueueList[(int)bulletCode].Enqueue(Instantiate(bulletPrefabList[(int)bulletCode], transform));
+        {
+            GameObject go = PrefabLoad(bulletMakingInfo[(int)bulletCode, 1]);
+            go.SetActive(false);
+
+            bulletQueueList[(int)bulletCode].Enqueue(go);
+        }
 
         GameObject bullet = bulletQueueList[(int)bulletCode].Dequeue();       
 

@@ -262,7 +262,7 @@ MonoBehaviour:
   - {fileID: 8189755356336618517}
   - {fileID: 3979841334350177661}
   bulletSpeed: 23
-  dmg: 23
+  dmg: 12.5
   subBulletSpeed: 20
   subDmg: 20
 --- !u!95 &3622874949159719675

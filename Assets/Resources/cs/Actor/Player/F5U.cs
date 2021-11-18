@@ -70,7 +70,7 @@ public class F5U : Player
             }
             lastShotTime = Time.time;
         }
-        //SubAttack();
+        SubAttack();
     }
     protected override void SubAttack()
     {
@@ -88,7 +88,7 @@ public class F5U : Player
                         GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1SubBullet, firePosition[i + 3].position);
 
                         Bullet bullet = go.GetComponent<Bullet>();
-                        bullet.Fire(BulletCode.player1SubBullet, dir.normalized, bulletSpeed, dmg);
+                        bullet.Fire(BulletCode.player1SubBullet, dir.normalized, subBulletSpeed, subDmg);
                     }
                 }
                 lastSubShotTime = Time.time;

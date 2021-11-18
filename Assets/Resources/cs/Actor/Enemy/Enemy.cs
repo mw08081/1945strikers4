@@ -10,17 +10,17 @@ public class Enemy : Actor
     [SerializeField] int score;
     [SerializeField] float itemDropProbability;
 
-    protected MeshRenderer meshRenderer;
+    protected Renderer renderer;
     Color originColor;
     Color dmgedColor;
 
     protected override void Initializing()
     {
-        meshRenderer = GetComponent<MeshRenderer>();
-        if (meshRenderer == null)
-            meshRenderer = GetComponentInChildren<MeshRenderer>();
+        renderer = GetComponent<Renderer>();
+        if (renderer == null)
+            renderer = GetComponentInChildren<Renderer>();
 
-        originColor = meshRenderer.material.GetColor("_Color"); //meshRenderer.material.color;
+        originColor = renderer.material.GetColor("_Color"); //meshRenderer.material.color;
         dmgedColor = new Color(255, 76, 76, 255);
 
         hp = maxHp;
@@ -49,12 +49,12 @@ public class Enemy : Actor
         {
             if (!isDmged)
             {
-                meshRenderer.material.color = dmgedColor;
+                renderer.material.color = dmgedColor;
                 isDmged = true;
             }
             else
             {
-                meshRenderer.material.color = originColor;
+                renderer.material.color = originColor;
                 isDmged = false;
             }
             yield return new WaitForSeconds(0.05f);
@@ -77,12 +77,10 @@ public class Enemy : Actor
     protected override void OnDead()
     {
         base.OnDead();
-        meshRenderer.material.color = originColor;
-        //SystemManager.Instance.ScoreSystem.CalcSc(score);
+        renderer.material.color = originColor;
         SystemManager.Instance.ScoreSystem.CalcSc(score);
 
         if (Random.Range(0.0f, 1.0f) >= (1 - itemDropProbability))
             SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().ItemSystem.ServeItem((ItemCode)Random.Range(0, 2), transform.position);
-        //SystemManager.Instance.ItemSystem.ServeItem((ItemCode)Random.Range(0, 2), transform.position);
     }
 }
