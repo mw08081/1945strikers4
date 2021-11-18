@@ -36,17 +36,17 @@ public class BulletSystem : MonoBehaviour
     };
     string[,] bulletMakingInfo = new string[,]
     {
-        {"30", "null" },
-        {"30", "null" },
-        {"15", "null" },
-        {"2", "null" },
-        {"0", "null" },
-        {"0", "null" },
-        {"0", "null" },
-        {"0", "null" },
-        {"30", "Prefab/Bullet/EnemyBullet/EnemyBulletM1" },
-        {"30", "Prefab/Bullet/EnemyBullet/EnemyBulletM2" },
-        {"6", "Prefab/Bullet/EnemyBullet/EnemyBulletM3" },
+        {"30", "null" },                                        //0
+        {"30", "null" },                                        //1
+        {"15", "null" },                                        //2
+        {"2", "null" },                                        //3
+        {"0", "null" },                                        //4
+        {"0", "null" },                                        //5
+        {"0", "null" },                                        //6
+        {"0", "null" },                                        //7
+        {"30", "Prefab/Bullet/EnemyBullet/EnemyBulletM1" },    //8
+        {"30", "Prefab/Bullet/EnemyBullet/EnemyBulletM2" },    //9
+        {"6", "Prefab/Bullet/EnemyBullet/EnemyBulletM3" },    //10
     };
 
     
