@@ -63,7 +63,7 @@ public class Enemy : Actor
 
     protected override void OnCrash()
     {
-        DecreaseHp(4000);
+        DecreaseHp(1250);
     }
     public void OnBomb(float val)
     {

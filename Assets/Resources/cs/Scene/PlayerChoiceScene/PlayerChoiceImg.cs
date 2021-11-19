@@ -8,7 +8,7 @@ public class PlayerChoiceImg : MonoBehaviour
     [SerializeField] Text[] playerChoiceTxt;
     string[, ] playerChoiceTxtCont = new string[,] 
     { 
-        { "BF-109 MesserSchmitt", "P-38 LIGHTNING", "F5U - FlyingPancake" },
+        { "BF109 - MesserSchmitt", "P38 - LIGHTNING", "F5U - FlyingPancake" },
         { "1", "1", "1" },
         { "9.02m", "11.53m", "11.1m" },
         { "9.93m", "15.85m", "8.72m" },

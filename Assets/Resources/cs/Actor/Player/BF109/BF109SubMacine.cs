@@ -12,7 +12,6 @@ public class BF109SubMacine : MonoBehaviour
     [SerializeField] Material[] bulletMatList;
 
     int subMachineCode;
-    Vector3 originPos;
     bool inCorout;
 
 
@@ -75,12 +74,6 @@ public class BF109SubMacine : MonoBehaviour
     IEnumerator SubSpecial()
     {
         float startTime = Time.time;
-        Color[] colorList = new Color[]
-        {
-            new Color(0, 255, 245),
-            new Color(0, 255, 169),
-            new Color(18, 255, 0),
-        };
         int colorIndex = 0;
 
         while (Time.time - startTime < 8.0f)
@@ -116,6 +109,7 @@ public class BF109SubMacine : MonoBehaviour
         float xDiff = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().Player.transform.position.x;
         float zDiff = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().Player.transform.position.z + 3;
         float distance = 0;
+        
         while (inCorout)
         {
             if (subMachineCode == 0)

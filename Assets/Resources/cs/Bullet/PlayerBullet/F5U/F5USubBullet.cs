@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class F5USubAttack : Bullet
+public class F5USubBullet : Bullet
 {
     protected override void Special()
     {

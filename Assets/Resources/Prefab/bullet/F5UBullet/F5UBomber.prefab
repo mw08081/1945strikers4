@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 356201883518666413}
   - component: {fileID: -2325094660633692569}
   m_Layer: 16
-  m_Name: F5UBomb
+  m_Name: F5UBomber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

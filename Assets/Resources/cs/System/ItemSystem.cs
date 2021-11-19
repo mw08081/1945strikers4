@@ -23,9 +23,9 @@ public class ItemSystem : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
-            ServeItem(ItemCode.powerUp, new Vector3(0, -3, 10));
-        //if(Input.GetKeyDown(KeyCode.E))
-        //    ServeItem(ItemCode.bomb, new Vector3(0, -3, 0));
+            ServeItem(ItemCode.powerUp, new Vector3(0, -3, 0));
+        if (Input.GetKeyDown(KeyCode.E))
+            ServeItem(ItemCode.bomb, new Vector3(0, -3, 0));
     }
 
     void InitializingItemSystem()

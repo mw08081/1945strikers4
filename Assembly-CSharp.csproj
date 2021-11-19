@@ -55,13 +55,14 @@
   <ItemGroup>
     <Compile Include="Assets\Resources\cs\BG\SmokeGenerator.cs" />
     <Compile Include="Assets\BaseResource\Item\Models_Bomb\AtomicBomb\RotateCam.cs" />
-    <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\Bf109\BF109Bomb.cs" />
+    <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\BF109\BF109Bomb.cs" />
     <Compile Include="Assets\Resources\cs\Bullet\Bullet.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_DeleteAfterDelay.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Scripts\CFX_LightIntensityFade.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Actor.cs" />
+    <Compile Include="Assets\Resources\cs\Actor\Player\F5U\F5USubMachine.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Player\Player.cs" />
     <Compile Include="Assets\Resources\cs\UI\PlayerStatePanel.cs" />
     <Compile Include="Assets\Resources\cs\BG\BackGround.cs" />
@@ -81,7 +82,6 @@
     <Compile Include="Assets\Resources\cs\System\EffectSystem.cs" />
     <Compile Include="Assets\Resources\cs\Etc\EffectLifeTime.cs" />
     <Compile Include="Assets\Resources\cs\System\EnemySystem.cs" />
-    <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\F5U\F5USubAttack.cs" />
     <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\F5U\F5UBomb.cs" />
     <Compile Include="Assets\Resources\cs\UI\BasePanel.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Player\F5U\F5U.cs" />
@@ -104,7 +104,6 @@
     <Compile Include="Assets\Resources\cs\System\ScoreSystem.cs" />
     <Compile Include="Assets\Resources\cs\System\SystemManager.cs" />
     <Compile Include="Assets\Resources\cs\Scene\PlayerChoiceScene\PlayerChoiceScene.cs" />
-    <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\Bf109\Bf109SubAttack.cs" />
     <Compile Include="Assets\Resources\cs\Scene\TitleScene\InSertCoinBlinking.cs" />
     <Compile Include="Assets\Resources\cs\Scene\BaseScene.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Scripts\CFX_AutoDestructShuriken.cs" />
@@ -115,7 +114,11 @@
     <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLv4.cs" />
     <Compile Include="Assets\Resources\cs\UI\TMP\PowerTMP.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
-    <Compile Include="Assets\Resources\cs\Actor\Player\F5U\F5USubMachine.cs" />
+    <Compile Include="Assets\Resources\cs\Actor\Player\P38\P38.cs" />
+    <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\BF109\BF109SubBullet.cs" />
+    <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\F5U\F5USubBullet.cs" />
+    <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\P38\P38Bomb.cs" />
+    <Compile Include="Assets\Resources\cs\Actor\Player\P38\P38SubMachine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BaseResource\0BG\st1BgResource\Trees_WorldSpace_FREE\WorldSpaceTrees_Doc.txt" />

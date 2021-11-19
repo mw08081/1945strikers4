@@ -7,7 +7,6 @@ public class BF109 : Player
 {
     [Header("----BF109 Info----")]
     [SerializeField] GameObject subMachinePrefab;
-    [SerializeField] Transform[] subMachineSpawnPos;
     [SerializeField] Transform[] firePosition;
 
     [SerializeField] float bulletSpeed;
@@ -17,11 +16,11 @@ public class BF109 : Player
 
     float lastShotTime;
     float lastSubShotTime;
-    public float lastSubSpecialShotTime;
 
     GameObject[] subMachine = new GameObject[2];
-
+    public float lastSubSpecialShotTime;
     public bool isSubSpecialIn;
+    
     bool isThrow;
 
     protected override void Initializing()
@@ -37,8 +36,6 @@ public class BF109 : Player
         subMachine[1] = Instantiate(subMachinePrefab);
         subMachine[1].transform.position = transform.position + new Vector3(2.8f, 0, 0);
         subMachine[0].GetComponent<BF109SubMacine>().SubMachineCodeSet(1);
-
-
     }
 
     protected override void Attack()
@@ -64,7 +61,6 @@ public class BF109 : Player
     {
         if(Input.GetKey(KeyCode.Return) && Time.time - lastSubSpecialShotTime > 10.0f)
         {
-
             isSubSpecialIn = true;
             lastSubSpecialShotTime = 0;
 
@@ -77,33 +73,6 @@ public class BF109 : Player
             for (int i = 0; i < subMachine.Length; i++)
                 subMachine[i].GetComponent<BF109SubMacine>().SubAttack(subBulletSpeed, subDmg);
             lastSubShotTime = Time.time;
-
-
-            /*
-            try
-            {
-                GameObject enemy = GameObject.FindObjectOfType<Enemy>().gameObject;
-                Vector3 dir;
-                if (enemy == null)
-                    dir = Vector3.forward;
-                else
-                    dir = enemy.transform.position;
-
-                for (int i = 0; i < 2; i++)
-                {
-                    GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
-                        .ServeBullet(BulletCode.player1SubBullet, firePosition[i + 5].position);
-
-                    Bullet bullet = go.GetComponentInChildren<Bullet>();
-                    bullet.Fire(BulletCode.player1SubBullet, (dir - firePosition[i + 5].position).normalized, subBulletSpeed, subDmg);
-                }
-                lastSubShotTime = Time.time;
-            }
-            catch (NullReferenceException e)
-            {
-                Debug.LogWarning(e.Message);
-            }
-            */
         }
     }
 
@@ -126,7 +95,7 @@ public class BF109 : Player
                 isThrow = true;
                 GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1Bomb, transform.position);
                 Bullet bullet = go.GetComponent<Bullet>();
-                bullet.Fire(BulletCode.player1Bomb, Vector3.forward, 4, 2000);
+                bullet.Fire(BulletCode.player1Bomb, Vector3.forward, 4, 1300);
             }
             yield return new WaitForSeconds(0.02f);
         }

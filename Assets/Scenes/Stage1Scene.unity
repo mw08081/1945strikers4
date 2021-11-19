@@ -5738,6 +5738,8 @@ MonoBehaviour:
     cnt: 10
   - effectPrefab: {fileID: 100002, guid: 14581a7f1eaca794b8f7227bfd42b910, type: 3}
     cnt: 3
+  - effectPrefab: {fileID: 100012, guid: 15221f8dd36fc4745a00d8cd128d12f9, type: 3}
+    cnt: 10
   - effectPrefab: {fileID: 100006, guid: 9012087b46b7660489450afea853a8cf, type: 3}
     cnt: 0
 --- !u!4 &186351187

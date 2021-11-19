@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerLifeSpriteSet : MonoBehaviour
 {
     [SerializeField] Image[] lifes;
-    string[] paths = new string[] { "UI_Img/Bf109", "UI_Img/p-38", "UI_Img/FlyingPancake" };
+    string[] paths = new string[] { "UI_Img/BF109", "UI_Img/P38", "UI_Img/FlyingPancake" };
 
     void Start()
     {

@@ -17,6 +17,7 @@ public class Bullet : MonoBehaviour
     private void OnEnable()
     {
         Initializing();
+        generateTime = Time.time;
     }
     protected virtual void Initializing() { }
 

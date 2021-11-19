@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7073595084742691005}
   - component: {fileID: 7752116060917663927}
-  - component: {fileID: 904139923313657025}
   - component: {fileID: 7676192717739856279}
   - component: {fileID: 703846872845883257}
+  - component: {fileID: 3340244484568292779}
+  - component: {fileID: 3304692013332139696}
   m_Layer: 10
-  m_Name: P-38
+  m_Name: P38
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: df562cb9d45684f49b5d4f55a2eb2e2d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -85,29 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &904139923313657025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9138441653975040611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 583faa7465e5e5f4699c890f20a33693, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 3
-  anim: {fileID: 0}
-  moveDir: {x: 0, y: 0, z: 0}
-  speed: 10
-  power: 1
-  bomb: 3
-  firePosition: []
-  bulletSpeed: 20
-  dmg: 25
-  subBulletSpeed: 20
-  subDmg: 20
 --- !u!54 &7676192717739856279
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -137,3 +115,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.5, y: 4.000001, z: 1.0302727}
   m_Center: {x: 0, y: -9.893795e-18, z: -0.020326918}
+--- !u!114 &3340244484568292779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9138441653975040611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e946971db49b664f855203cd06a2111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 3
+  anim: {fileID: 3304692013332139696}
+  moveDir: {x: 0, y: 0, z: 0}
+  speed: 10.5
+  power: 1
+  bomb: 1
+  firePosition: []
+  bulletSpeed: 0
+  dmg: 0
+  subBulletSpeed: 0
+  subDmg: 0
+--- !u!95 &3304692013332139696
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9138441653975040611}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fd11dcd720cde374798563540569c535, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

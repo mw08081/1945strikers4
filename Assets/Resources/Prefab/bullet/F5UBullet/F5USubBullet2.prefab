@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4382822344128148492}
   - component: {fileID: 2450883219959957438}
   - component: {fileID: 7241401593683843591}
-  - component: {fileID: 4820350600416480780}
+  - component: {fileID: 2086870084572544009}
   m_Layer: 12
   m_Name: F5USubBullet2
   m_TagString: Untagged
@@ -145,7 +145,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4820350600416480780
+--- !u!114 &2086870084572544009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8135393175458728234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c53996789ab4bf4398d07759f43faf0, type: 3}
+  m_Script: {fileID: 11500000, guid: a1d43ac6169abf347b5cc39e09493272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 0

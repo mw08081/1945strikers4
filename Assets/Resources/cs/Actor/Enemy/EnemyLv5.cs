@@ -21,7 +21,7 @@ public class EnemyLv5 : Enemy
     [SerializeField] Transform[] bulletSpawnPosition;
     [SerializeField] AttackModelInfo[] attackModelInfos;
     
-    Vector3 moveArea;
+    public Vector3 moveArea;
     Transform playerTransform;
     bool isArived = false;
     
@@ -181,7 +181,7 @@ public class EnemyLv5 : Enemy
     protected override void OnDead()
     {
         base.OnDead();
-        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().EffectSystem.ServeEffect(EffectCode.tres, transform.position);
+        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().EffectSystem.ServeEffect(EffectCode.quatro, transform.position);
 
         StartCoroutine("FadeOutDestroy");
     }

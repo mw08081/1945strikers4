@@ -15,6 +15,7 @@ public enum EffectCode : int
     uno,
     dos,
     tres,
+    quatro,
 }
 
 public class EffectSystem : MonoBehaviour

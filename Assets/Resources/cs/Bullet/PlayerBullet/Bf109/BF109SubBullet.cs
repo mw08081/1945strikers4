@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bf109SubAttack : Bullet
+public class BF109SubBullet : Bullet
 {
     protected override void Special()
     {

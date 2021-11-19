@@ -29,10 +29,10 @@ public class BulletSystem : MonoBehaviour
 
     string[,] playerBulletResourcePath = new string[,]
     {
-        {"Prefab/Bullet/BF109Bullet/BF109Bullet", "Prefab/Bullet/P-38Bullet/P-38Bullet", "Prefab/Bullet/F5UBullet/F5UBullet"},
-        {"Prefab/Bullet/BF109Bullet/BF109SubBullet", "Prefab/Bullet/P-38Bullet/P-38SubBullet", "Prefab/Bullet/F5UBullet/F5USubBullet"},
-        {"Prefab/Bullet/BF109Bullet/BF109SubBullet2", "Prefab/Bullet/P-38Bullet/P-38SubBullet2", "Prefab/Bullet/F5UBullet/F5USubBullet2"},
-        {"Prefab/Bullet/BF109Bullet/BF109Bomb", "Prefab/Bullet/P-38Bullet/P-38Bomb", "Prefab/Bullet/F5UBullet/F5UBomb"},
+        {"Prefab/Bullet/BF109Bullet/BF109Bullet", "Prefab/Bullet/P38Bullet/P38Bullet", "Prefab/Bullet/F5UBullet/F5UBullet"},
+        {"Prefab/Bullet/BF109Bullet/BF109SubBullet", "Prefab/Bullet/P38Bullet/P38SubBullet", "Prefab/Bullet/F5UBullet/F5USubBullet"},
+        {"Prefab/Bullet/BF109Bullet/BF109SubBullet2", "Prefab/Bullet/P38Bullet/P38Bomb", "Prefab/Bullet/F5UBullet/F5USubBullet2"},
+        {"Prefab/Bullet/BF109Bullet/BF109Bomb", "Prefab/Bullet/P38Bullet/P38Bomber", "Prefab/Bullet/F5UBullet/F5UBomber"},
     };
     string[,] bulletMakingInfo = new string[,]
     {
