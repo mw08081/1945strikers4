@@ -49,8 +49,6 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().EffectSystem.ServeEffect(EffectCode.cero, transform.position);
-
-        gameObject.SetActive(false);
         Explosive();
 
         ReturnGameObject();
@@ -58,12 +56,12 @@ public class Bullet : MonoBehaviour
 
     protected virtual void Explosive() { } //For Bullet - Bomb
 
-    public void ReturnGameObject()
+    public virtual void ReturnGameObject()
     {
         Resize();
-
-        gameObject.SetActive(false);
+        
         SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ReturnBullet(bulletCode, gameObject);
+        gameObject.SetActive(false);
     }
 
     protected virtual void Resize() { } //For Bullet - EnemyBullet_B

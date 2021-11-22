@@ -32,6 +32,8 @@ public class Enemy : Actor
             OnBulletHitted(other.gameObject.GetComponent<Bullet>().dmg);
         else if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
             OnCrash();
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Bomb"))
+            OnBulletHitted(500);
     }
 
     protected override void OnBulletHitted(float dmg)

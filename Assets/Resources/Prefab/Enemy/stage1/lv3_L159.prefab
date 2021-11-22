@@ -225,7 +225,7 @@ MonoBehaviour:
   speed: 10
   dmg: 100
   score: 500
-  itemDropProbability: 0.3
+  itemDropProbability: 0.19
   bulletSpawnPosition:
   - {fileID: 857961833387736059}
   - {fileID: 8344184422295447268}

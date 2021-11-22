@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 4077806853734732}
   - component: {fileID: 6927365739529927365}
   - component: {fileID: 4156481174217823581}
+  - component: {fileID: 1056339165887868235}
   - component: {fileID: 1770650087267593023}
   m_Layer: 14
   m_Name: P38Bomb
@@ -308,6 +309,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.7901177, y: 2.37129, z: 5.541814}
   m_Center: {x: 0.016099015, y: 1.1261231, z: -1.3867373}
+--- !u!65 &1056339165887868235
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553276295976632}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.47, y: -6.92, z: 31.93}
+  m_Center: {x: 0, y: 1.13, z: -14.57}
 --- !u!114 &1770650087267593023
 MonoBehaviour:
   m_ObjectHideFlags: 0

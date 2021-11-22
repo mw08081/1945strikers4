@@ -32,7 +32,7 @@ public class BulletSystem : MonoBehaviour
         {"Prefab/Bullet/BF109Bullet/BF109Bullet", "Prefab/Bullet/P38Bullet/P38Bullet", "Prefab/Bullet/F5UBullet/F5UBullet"},
         {"Prefab/Bullet/BF109Bullet/BF109SubBullet", "Prefab/Bullet/P38Bullet/P38SubBullet", "Prefab/Bullet/F5UBullet/F5USubBullet"},
         {"Prefab/Bullet/BF109Bullet/BF109SubBullet2", "Prefab/Bullet/P38Bullet/P38Bomb", "Prefab/Bullet/F5UBullet/F5USubBullet2"},
-        {"Prefab/Bullet/BF109Bullet/BF109Bomb", "Prefab/Bullet/P38Bullet/P38Bomber", "Prefab/Bullet/F5UBullet/F5UBomber"},
+        {"Prefab/Bullet/BF109Bullet/BF109Bomb", "Prefab/Bullet/P38Bullet/P38Bomber/P38Bomber", "Prefab/Bullet/F5UBullet/F5UBomber"},
     };
     string[,] bulletMakingInfo = new string[,]
     {

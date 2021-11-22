@@ -49,9 +49,13 @@ public class P38 : Player
     {
         if (Input.GetKey(KeyCode.Return) && Time.time - lastShotTime > 0.12f)
         {
-            for (int i = 0; i < power; i++)
+            for (int i = 0; i < power * 2; i++)
             {
+                if (i == 5) break;
+
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1Bullet, firePosition[i].position);
                 
+                go.GetComponent<Bullet>().Fire(BulletCode.player1Bullet, Vector3.forward, bulletSpeed, dmg);
             }
             lastShotTime = Time.time;
         }

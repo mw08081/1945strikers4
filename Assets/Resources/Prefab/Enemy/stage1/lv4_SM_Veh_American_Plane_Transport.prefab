@@ -539,12 +539,13 @@ MonoBehaviour:
   speed: 0
   dmg: 0
   score: 750
-  itemDropProbability: 0.45
+  itemDropProbability: 0.25
   bulletSpawnPosition:
   - {fileID: 1029755961840787662}
   - {fileID: 1557965112889130409}
   - {fileID: 3489904232788863902}
   bulletSpeed: 16
+  moveArea: {x: 0, y: 0, z: 0}
 --- !u!1 &1559553773442016
 GameObject:
   m_ObjectHideFlags: 0

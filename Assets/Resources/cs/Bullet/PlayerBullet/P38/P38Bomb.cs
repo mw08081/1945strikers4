@@ -5,6 +5,7 @@ using UnityEngine;
 public class P38Bomb : Bullet
 {
     Rigidbody bombRb;
+    [SerializeField] BulletCode b;
 
     protected override void Initializing()
     {
@@ -18,6 +19,11 @@ public class P38Bomb : Bullet
     protected override void Explosive()
     {
         SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().EffectSystem.ServeEffect(EffectCode.tres, transform.position);
+
+    }
+
+    void InvokeDestroy()
+    {
 
     }
 }

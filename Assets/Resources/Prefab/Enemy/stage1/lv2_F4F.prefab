@@ -47,8 +47,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.650138, y: 1.9386733, z: 8.883528}
-  m_Center: {x: 0.7715312, y: 0.03162091, z: 0.075249664}
+  m_Size: {x: 6.650138, y: 3.6086452, z: 8.883528}
+  m_Center: {x: 0.7715312, y: -0.06714006, z: 0.075249664}
 --- !u!54 &627792688180939011
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
   speed: 10
   dmg: 100
   score: 350
-  itemDropProbability: 0.15
+  itemDropProbability: 0.12
   bulletSpawnPosition:
   - {fileID: 2943090254793809286}
   - {fileID: 2692031625983746398}
