@@ -69,8 +69,9 @@
     <Compile Include="Assets\Resources\cs\Etc\Aspect.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Scripts\WFX_LightFlicker.cs" />
+    <Compile Include="Assets\Resources\cs\Actor\Player\P38\P38SubMachine.cs" />
+    <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\BF109\BF109SubBullet.cs" />
     <Compile Include="Assets\Resources\cs\Scene\Stage1Scene.cs" />
-    <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLv1.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Spawn System\CFX_SpawnSystem.cs" />
     <Compile Include="Assets\BaseResource\0BG\st1BgResource\Water (Basic)\Scripts\WaterBasic.cs" />
     <Compile Include="Assets\Resources\cs\UI\PlayerLifeSpriteSet.cs" />
@@ -89,9 +90,12 @@
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
     <Compile Include="Assets\Resources\cs\Scene\SceneSystem\SceneController.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Player\BF109\BF109SubMacine.cs" />
+    <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\F5U\F5USubBullet.cs" />
+    <Compile Include="Assets\Resources\cs\Actor\Player\P38\P38.cs" />
     <Compile Include="Assets\Resources\cs\Bullet\EnemyBullet\EnemyBullet_R.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLv5.cs" />
+    <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\P38\P38Bomb.cs" />
     <Compile Include="Assets\Resources\cs\Bullet\EnemyBullet\EnemyBullet_B.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Enemy\Enemy.cs" />
@@ -100,7 +104,6 @@
     <Compile Include="Assets\Resources\cs\Scene\LoadingScene.cs" />
     <Compile Include="Assets\Resources\cs\Scene\PlayerChoiceScene\Player1Choice.cs" />
     <Compile Include="Assets\Resources\cs\Scene\TitleScene\TitleScene.cs" />
-    <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLv2.cs" />
     <Compile Include="Assets\Resources\cs\System\ScoreSystem.cs" />
     <Compile Include="Assets\Resources\cs\System\SystemManager.cs" />
     <Compile Include="Assets\Resources\cs\Scene\PlayerChoiceScene\PlayerChoiceScene.cs" />
@@ -114,11 +117,7 @@
     <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLv4.cs" />
     <Compile Include="Assets\Resources\cs\UI\TMP\PowerTMP.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
-    <Compile Include="Assets\Resources\cs\Actor\Player\P38\P38.cs" />
-    <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\BF109\BF109SubBullet.cs" />
-    <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\F5U\F5USubBullet.cs" />
-    <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\P38\P38Bomb.cs" />
-    <Compile Include="Assets\Resources\cs\Actor\Player\P38\P38SubMachine.cs" />
+    <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLvU2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BaseResource\0BG\st1BgResource\Trees_WorldSpace_FREE\WorldSpaceTrees_Doc.txt" />

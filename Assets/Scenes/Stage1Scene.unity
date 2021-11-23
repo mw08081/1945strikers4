@@ -42519,6 +42519,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179804103}
   m_Mesh: {fileID: 4300000, guid: db23667b10d69ce478b6313b3f4df245, type: 3}
+--- !u!1 &1179877704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1179877705}
+  m_Layer: 0
+  m_Name: formationSpawnPosRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1179877705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179877704}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13, y: -3, z: 16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1606344876}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1185298029
 GameObject:
   m_ObjectHideFlags: 0
@@ -46545,6 +46575,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299869540}
   m_Mesh: {fileID: 4300000, guid: db23667b10d69ce478b6313b3f4df245, type: 3}
+--- !u!1 &1300139450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1300139451}
+  m_Layer: 0
+  m_Name: formationSpawnPosLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1300139451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300139450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13, y: -3, z: 16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1606344876}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1303669728
 GameObject:
   m_ObjectHideFlags: 0
@@ -57057,8 +57117,8 @@ MonoBehaviour:
   boseGeneratingTime: 61
   enemyGeneratingTime: 3
   enemyPrefabList:
-  - {fileID: 3556364991437050246, guid: c6815b5b41ea5a241b14169c1240c25c, type: 3}
-  - {fileID: 1180969222675100, guid: cd3e3c564634c1147abc6c2114bb911e, type: 3}
+  - {fileID: 8820540885735213155, guid: 81cff90a4aca74645933d560cf43963d, type: 3}
+  - {fileID: 7563219355798503490, guid: 636e7b48a98a08240b6f0ef0d7e1b370, type: 3}
   - {fileID: 4722848161958046634, guid: a2d8aefaf6a1bf14b9af5c437bc1e1ce, type: 3}
   - {fileID: 1366743620984186, guid: 126d81349741754428b3099a3631fead, type: 3}
   - {fileID: 196804, guid: 5d3550101caf3184d8ca900f0221ab06, type: 3}
@@ -57066,6 +57126,10 @@ MonoBehaviour:
   - {fileID: 1225176745}
   - {fileID: 1947276927}
   - {fileID: 1936594241}
+  formationSpawnPositions:
+  - {fileID: 1300139451}
+  - {fileID: 1179877705}
+  - {fileID: 1225176745}
 --- !u!4 &1606344876
 Transform:
   m_ObjectHideFlags: 0
@@ -57080,6 +57144,8 @@ Transform:
   - {fileID: 1947276927}
   - {fileID: 1936594241}
   - {fileID: 1225176745}
+  - {fileID: 1300139451}
+  - {fileID: 1179877705}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

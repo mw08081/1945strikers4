@@ -26,6 +26,7 @@ public class P38SubMachine : MonoBehaviour
     float flipCoolDown;
     bool isFlip;
     Vector3 refV;
+    int angle;
 
     [Header("----Attack Info----")]
     [SerializeField] Transform[] firePos;
@@ -72,28 +73,31 @@ public class P38SubMachine : MonoBehaviour
     {
         transform.position += Vector3.forward * speed * Time.deltaTime;
 
-        if(Time.time - lastBombDropTime > 0.5f)
+        if (Time.time - lastBombDropTime > 0.5f)
         {
             GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1SubBullet2, transform.position);
             go.GetComponent<Bullet>().Fire(BulletCode.player1SubBullet2, Vector3.forward, 0, 0);
             lastBombDropTime = Time.time;
         }
 
-        if (Vector3.Distance(transform.position, originPos) > 30.0f)
+        if (Vector3.Distance(transform.position, originPos) > 25.0f)
             status = Status.Flip;
     }
     void UpdateMoveStatusFlip()
     {
-        //anim.SetBool("flip", true);
-        //flipCoolDown -= Time.deltaTime;
-        //if(flipCoolDown < 0f)
-        //    anim.SetBool("flip", false);
+        anim.SetBool("flip", true);
+        flipCoolDown -= Time.deltaTime;
+        if (flipCoolDown < 0f)
+            anim.SetBool("flip", false);
 
         if (!isFlip)
             StartCoroutine("FlipAnimating");
-
-        refV = Vector3.zero;
-        transform.position = Vector3.SmoothDamp(transform.position, attackPos, ref refV, 0.1f);
+        
+        if (angle > 300)
+        {
+            refV = Vector3.zero;
+            transform.position = Vector3.SmoothDamp(transform.position, attackPos, ref refV, 0.1f);
+        }
 
         if (Vector3.Distance(transform.position, attackPos) < 0.1f)
         {
@@ -104,11 +108,15 @@ public class P38SubMachine : MonoBehaviour
     IEnumerator FlipAnimating()
     {
         isFlip = true;
-        for (int angle = 0; angle < 360; angle+=3)
+        for (angle = 0; angle < 360; angle++)
         {
-            Vector3 flipPos = new Vector3(0, Mathf.Sin(angle * Mathf.Deg2Rad), Mathf.Cos(angle * Mathf.Deg2Rad));
-            transform.position = flipPos * 7 * Time.deltaTime;
+            //Vector3 flipPos = new Vector3(0, Mathf.Sin(angle * Mathf.Deg2Rad), Mathf.Cos(angle * Mathf.Deg2Rad));
+            //transform.position += flipPos * 5 * Time.deltaTime;
+
+            transform.position = new Vector3(transform.position.x, transform.position.y + Mathf.Sin(angle * Mathf.Deg2Rad) * 0.1f , transform.position.z + Mathf.Cos(angle * Mathf.Deg2Rad) * 0.1f);
+
             
+
             yield return new WaitForSeconds(0.008f);
         }
     }
@@ -121,7 +129,7 @@ public class P38SubMachine : MonoBehaviour
         try
         {
             Transform enemyTransform = GameObject.FindObjectOfType<Enemy>().transform;
-            
+
             for (int i = 0; i < 2; i++)
             {
                 GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1SubBullet, firePos[i].position);

@@ -9,7 +9,7 @@ public class EnemyLv4 : Enemy
     [SerializeField] float bulletSpeed;
     Transform playerTransform;
 
-    public Vector3 moveArea;
+    Vector3 moveArea;
     Vector3 OutPosition;
     bool isOut;
     float lifeTime;

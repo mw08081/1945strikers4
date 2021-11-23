@@ -99,8 +99,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 52.614075, y: 8.314605, z: 8.135132}
-  m_Center: {x: -0.0000031789143, y: 0.8298075, z: 0.90899915}
+  m_Size: {x: 52.614075, y: 8.314605, z: 6.93046}
+  m_Center: {x: -0.0000031789143, y: 0.8298075, z: -2.1514907}
 --- !u!114 &4437644547733614881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +147,7 @@ MonoBehaviour:
     lastAttackTime: 0
     _bulletCode: 9
     _bulletSpeed: 20
+  moveArea: {x: 0, y: 0, z: 0}
 --- !u!1 &1759297729857114119
 GameObject:
   m_ObjectHideFlags: 0
