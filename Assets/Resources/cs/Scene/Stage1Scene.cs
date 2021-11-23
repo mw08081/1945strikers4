@@ -79,9 +79,22 @@ public class Stage1Scene : BaseScene
         gameStartTime = Time.time;
         isBoseDead = false;
 
-        GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player1PrefabIndex]);
-        playerGameObject.transform.position = new Vector3(0, -3, -15);
-        player = playerGameObject.GetComponent<Player>();
+        if(SystemManager.Instance.isForDos)
+        {
+            //GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player1PrefabIndex]);
+            //playerGameObject.transform.position = new Vector3(-3, -3, -15);
+            //player = playerGameObject.GetComponent<Player>();
+
+            //playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player2PrefabIndex]);
+            //playerGameObject.transform.position = new Vector3(3, -3, -15);
+            //player2 = playerGameObject.GetComponent<Player>();
+        }
+        else
+        {
+            GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player1PrefabIndex]);
+            playerGameObject.transform.position = new Vector3(0, -3, -15);
+            player = playerGameObject.GetComponent<Player>();
+        }
     }
 
     protected override void Updating()
