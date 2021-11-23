@@ -40,10 +40,10 @@ public class BulletSystem : MonoBehaviour
         {"30", "null" },                                        //1
         {"15", "null" },                                        //2
         {"2", "null" },                                        //3
-        {"0", "null" },                                        //4
-        {"0", "null" },                                        //5
-        {"0", "null" },                                        //6
-        {"0", "null" },                                        //7
+        {"30", "Prefab/Bullet/BF109Bullet/BF109Bullet" },      //4
+        {"30", "Prefab/Bullet/BF109Bullet/BF109SubBullet" },   //5
+        {"15", "Prefab/Bullet/BF109Bullet/BF109SubBullet2" },  //6
+        {"2", "Prefab/Bullet/BF109Bullet/BF109Bomb" },         //7
         {"30", "Prefab/Bullet/EnemyBullet/EnemyBulletM1" },    //8
         {"30", "Prefab/Bullet/EnemyBullet/EnemyBulletM2" },    //9
         {"6", "Prefab/Bullet/EnemyBullet/EnemyBulletM3" },    //10
@@ -54,7 +54,7 @@ public class BulletSystem : MonoBehaviour
     void Start()
     {
         for (int i = 0; i < 4; i++)
-            bulletMakingInfo[i, 1] = playerBulletResourcePath[i, SystemManager.Instance.PlayerPrefabIndex];
+            bulletMakingInfo[i, 1] = playerBulletResourcePath[i, SystemManager.Instance.Player1PrefabIndex];
         
         SettingBullet();
     }

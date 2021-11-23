@@ -96,6 +96,7 @@
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLv5.cs" />
     <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\P38\P38Bomb.cs" />
+    <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLvU2.cs" />
     <Compile Include="Assets\Resources\cs\Bullet\EnemyBullet\EnemyBullet_B.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Enemy\Enemy.cs" />
@@ -108,7 +109,7 @@
     <Compile Include="Assets\Resources\cs\System\SystemManager.cs" />
     <Compile Include="Assets\Resources\cs\Scene\PlayerChoiceScene\PlayerChoiceScene.cs" />
     <Compile Include="Assets\Resources\cs\Scene\TitleScene\InSertCoinBlinking.cs" />
-    <Compile Include="Assets\Resources\cs\Scene\BaseScene.cs" />
+    <Compile Include="Assets\Resources\cs\Scene\SceneSystem\BaseScene.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\Resources\cs\Item\BouncingItem.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLv3.cs" />
@@ -117,7 +118,7 @@
     <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLv4.cs" />
     <Compile Include="Assets\Resources\cs\UI\TMP\PowerTMP.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
-    <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLvU2.cs" />
+    <Compile Include="Assets\Resources\cs\Scene\PlayerChoiceScene\Player2Choice.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BaseResource\0BG\st1BgResource\Trees_WorldSpace_FREE\WorldSpaceTrees_Doc.txt" />

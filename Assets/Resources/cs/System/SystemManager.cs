@@ -13,7 +13,9 @@ public class SystemManager : MonoBehaviour
         }
     }
 
-    public int PlayerPrefabIndex { get; set; }
+    public int Player1PrefabIndex { get; set; }
+    public int Player2PrefabIndex { get; set; }
+    public bool isForDos { get; set; }
 
     ScoreSystem scoreSystem = new ScoreSystem();
     public ScoreSystem ScoreSystem

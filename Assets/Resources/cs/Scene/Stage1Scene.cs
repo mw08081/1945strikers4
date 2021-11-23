@@ -17,6 +17,14 @@ public class Stage1Scene : BaseScene
             return player;
         }
     }
+    [SerializeField] Player player2;
+    public Player Player2
+    {
+        get
+        {
+            return player2;
+        }
+    }
 
     [SerializeField] BulletSystem bulletSystem;
     public BulletSystem BulletSystem
@@ -71,7 +79,7 @@ public class Stage1Scene : BaseScene
         gameStartTime = Time.time;
         isBoseDead = false;
 
-        GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.PlayerPrefabIndex]);
+        GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player1PrefabIndex]);
         playerGameObject.transform.position = new Vector3(0, -3, -15);
         player = playerGameObject.GetComponent<Player>();
     }

@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class Player1Choice : MonoBehaviour
+public class Player2Choice : MonoBehaviour
 {
-    [SerializeField] Image playerChoiceImg;
-    [SerializeField] Sprite player1SelectedSprite;
     [SerializeField] float movingDistance;
     public int index;
     bool isSelected;
@@ -50,12 +47,6 @@ public class Player1Choice : MonoBehaviour
 
                 SystemManager.Instance.GetCurrentSceneT<PlayerChoiceScene>().PlayerChoiceImg.UpdatePlayerChoice(index);
             }
-        }
-
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            isSelected = true;
-            playerChoiceImg.sprite = player1SelectedSprite;
         }
     }
 }

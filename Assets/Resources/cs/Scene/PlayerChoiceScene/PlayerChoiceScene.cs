@@ -14,6 +14,14 @@ public class PlayerChoiceScene : BaseScene
             return player1Choice;
         }
     }
+    [SerializeField] Player2Choice player2Choice;
+    public Player2Choice Player2Choice
+    {
+        get
+        {
+            return player2Choice;
+        }
+    }
     [SerializeField] PlayerChoiceImg playerChoiceImg;
     public PlayerChoiceImg PlayerChoiceImg
     {
@@ -22,27 +30,51 @@ public class PlayerChoiceScene : BaseScene
             return playerChoiceImg;
         }
     }
-    public bool isDos;
+    public bool isForDos;
+    int playerCnt = 0;
 
     protected override void Initializing()
     {
-        isDos = false;
+        isForDos = false;
         SystemManager.Instance.CurrentScene = this;
     }
 
     protected override void Updating()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            SystemManager.Instance.PlayerPrefabIndex = player1Choice.index;
-            SceneController.Instance.ChangeLoadingScene(SceneNameCont.Stage1Scene);
-        }
-            
-    }
-
-    void InsertPlayer2()
-    {
         if (Input.GetKeyDown(KeyCode.F2))
-            isDos = true;
+        {
+            isForDos = true;
+            SystemManager.Instance.isForDos = true;
+        }
+        
+        if(isForDos)
+        {
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                if(playerCnt == 0)
+                {
+                    SystemManager.Instance.Player1PrefabIndex = player1Choice.index;
+                    Player2Choice.gameObject.SetActive(true);
+                    playerCnt++;
+                }
+                else
+                {
+                    SystemManager.Instance.Player2PrefabIndex = player2Choice.index;
+                    SceneController.Instance.ChangeLoadingScene(SceneNameCont.Stage1Scene);
+                }
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                SystemManager.Instance.Player1PrefabIndex = player1Choice.index;
+                SceneController.Instance.ChangeLoadingScene(SceneNameCont.Stage1Scene);
+            }
+        }
+        
+
+        
+            
     }
 }

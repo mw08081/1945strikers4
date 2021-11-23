@@ -11,6 +11,6 @@ public class PlayerLifeSpriteSet : MonoBehaviour
     void Start()
     {
         for (int i = 0; i < lifes.Length; i++)
-            lifes[i].sprite = Resources.Load<Sprite>(paths[SystemManager.Instance.PlayerPrefabIndex]);
+            lifes[i].sprite = Resources.Load<Sprite>(paths[SystemManager.Instance.Player1PrefabIndex]);
     }
 }
