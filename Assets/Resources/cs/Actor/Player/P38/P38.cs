@@ -47,7 +47,7 @@ public class P38 : Player
 
     protected override void Attack()
     {
-        if (Input.GetKey(KeyCode.Return) && Time.time - lastShotTime > 0.12f)
+        if (Input.GetKey(attackKeyCode) && Time.time - lastShotTime > 0.12f)
         {
             for (int i = 0; i < power * 2; i++)
             {
@@ -65,7 +65,7 @@ public class P38 : Player
     /*
     protected override void SubAttack()
     {
-        if (Input.GetKey(KeyCode.Return) && Time.time - lastSubShotTime > 0.15f)
+        if (Input.GetKey(attackKeyCode) && Time.time - lastSubShotTime > 0.15f)
         {
             
             lastSubShotTime = Time.time;
@@ -75,7 +75,7 @@ public class P38 : Player
 
     protected override void ThrowingDownBomb()
     {
-        if (Input.GetKeyDown(KeyCode.L) && bomb >= 1 && !isBomb)
+        if (Input.GetKeyDown(bombKeyCode) && bomb >= 1 && !isBomb)
         {
             for (int i = 0; i < bomberPos.Length / 2; i++)
             {

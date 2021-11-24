@@ -20,8 +20,25 @@ public class Player : Actor
     float bombCoolDown;
     protected bool isBomb;
 
+    protected bool isP1;
+    protected KeyCode leftMoveKeyCode;
+    protected KeyCode rightMoveKeyCode;
+    protected KeyCode forwardMoveKeyCode;
+    protected KeyCode backMoveKeyCode;
+    protected KeyCode attackKeyCode;
+    protected KeyCode bombKeyCode;
+
     protected override void Initializing()
     {
+        isP1 = true;
+        attackKeyCode = KeyCode.Return;
+        bombKeyCode = KeyCode.Quote;
+        if (SystemManager.Instance.isForDos && (SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().Player != null))
+        {
+            isP1 = false;
+            attackKeyCode = KeyCode.F;
+            bombKeyCode = KeyCode.G;
+        }
         Launch();
         base.hp = 3;
 
@@ -99,8 +116,30 @@ public class Player : Actor
     #region Moving
     void AssignMoveDirection()
     {
-        Vector3 dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        moveDir = dir;
+        if (isP1)
+        {
+            if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.DownArrow))
+            {
+                Vector3 dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+                moveDir = dir;
+            }
+            else
+            {
+                moveDir = Vector3.zero;
+            }
+        }
+        else
+        {
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S))
+            {
+                Vector3 dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+                moveDir = dir;
+            }
+            else
+            {
+                moveDir = Vector3.zero;
+            }
+        }
     }
     void UpdateMove()
     {
@@ -224,7 +263,7 @@ public class Player : Actor
 
     void BombAnimation()
     {
-        if (Input.GetKeyDown(KeyCode.L) && bomb >= 1)
+        if (Input.GetKeyDown(bombKeyCode) && bomb >= 1)
         {
             anim.SetBool("bomb", true);
             bombCoolDown = 1.4f;

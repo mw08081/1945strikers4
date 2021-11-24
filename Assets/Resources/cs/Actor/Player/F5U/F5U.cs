@@ -35,7 +35,7 @@ public class F5U : Player
 
     protected override void Attack()
     {
-        if (Input.GetKey(KeyCode.Return) && Time.time - lastShotTime > 0.09f)
+        if (Input.GetKey(attackKeyCode) && Time.time - lastShotTime > 0.09f)
         {
             for (int i = 0; i < power * 2; i++)
             {
@@ -74,7 +74,7 @@ public class F5U : Player
     }
     protected override void SubAttack()
     {
-        if (Input.GetKey(KeyCode.Return) && Time.time - lastSubShotTime > 0.25)
+        if (Input.GetKey(attackKeyCode) && Time.time - lastSubShotTime > 0.25)
         {
             try
             {
@@ -101,7 +101,7 @@ public class F5U : Player
     }
     protected override void ThrowingDownBomb()
     {
-        if (Input.GetKeyDown(KeyCode.L) && bomb >= 1 && !isBomb)
+        if (Input.GetKeyDown(bombKeyCode) && bomb >= 1 && !isBomb)
         {
             F5UBomb bomber = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1Bomb, new Vector3(-4.39f, -3, -10f)).GetComponent<F5UBomb>();
             bomber.SetAppearDistPos(BulletCode.player1Bomb, -4.39f);
