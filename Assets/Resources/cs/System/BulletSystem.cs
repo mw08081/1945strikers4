@@ -55,7 +55,11 @@ public class BulletSystem : MonoBehaviour
     {
         for (int i = 0; i < 4; i++)
             bulletMakingInfo[i, 1] = playerBulletResourcePath[i, SystemManager.Instance.Player1PrefabIndex];
-        
+
+        for (int i = 0; i < 4; i++)
+            bulletMakingInfo[i + 4, 1] = playerBulletResourcePath[i, SystemManager.Instance.Player2PrefabIndex];
+
+
         SettingBullet();
     }
 

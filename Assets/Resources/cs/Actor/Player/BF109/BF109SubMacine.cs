@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class BF109SubMacine : MonoBehaviour
 {
+    BF109 myPlayer;
+
     [SerializeField] Vector3 moveDir;
     [SerializeField] float speed;
     [SerializeField] Transform firePos;
@@ -17,7 +19,7 @@ public class BF109SubMacine : MonoBehaviour
 
     private void Start()
     {
-
+        myPlayer = FindObjectOfType<BF109>();
     }
 
     private void Update()
@@ -25,11 +27,9 @@ public class BF109SubMacine : MonoBehaviour
         if(!inCorout)
         {
             if(subMachineCode == 0)
-                transform.position = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>()
-                    .Player.transform.position + new Vector3(-2.8f, 0, 0);
+                transform.position = myPlayer.gameObject.transform.position + new Vector3(-2.8f, 0, 0);
             else
-                transform.position = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>()
-                    .Player.transform.position + new Vector3(2.8f, 0, 0);
+                transform.position = myPlayer.gameObject.transform.position + new Vector3(2.8f, 0, 0);
         }
     }
 
@@ -52,10 +52,9 @@ public class BF109SubMacine : MonoBehaviour
             for (int i = 0; i < 2; i++)
             {
                 GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
-                    .ServeBullet(BulletCode.player1SubBullet, firePos.position);
-
+                    .ServeBullet((myPlayer.isP1 ? BulletCode.player1SubBullet : BulletCode.player2SubBullet), firePos.position);
                 Bullet bullet = go.GetComponentInChildren<Bullet>();
-                bullet.Fire(BulletCode.player1SubBullet, (dir - firePos.position).normalized, _subBulletSpeed, _subBulletDmg);
+                bullet.Fire((myPlayer.isP1 ? BulletCode.player1SubBullet : BulletCode.player2SubBullet), (dir - firePos.position).normalized, _subBulletSpeed, _subBulletDmg);
             }
         }
         catch (NullReferenceException e)
@@ -79,7 +78,7 @@ public class BF109SubMacine : MonoBehaviour
         while (Time.time - startTime < 8.0f)
         {
             GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>()
-                .BulletSystem.ServeBullet(BulletCode.player1SubBullet2, firePos.position);
+                .BulletSystem.ServeBullet((myPlayer.isP1 ? BulletCode.player1SubBullet2 : BulletCode.player2SubBullet2), firePos.position);
 
             MeshRenderer[] bulletMeshRenderer =  go.GetComponentsInChildren<MeshRenderer>();
             for (int i = 0; i < bulletMeshRenderer.Length; i++)
@@ -92,16 +91,15 @@ public class BF109SubMacine : MonoBehaviour
                 colorIndex = 0;
 
             Bullet bullet = go.GetComponent<Bullet>();
-            bullet.Fire(BulletCode.player1SubBullet2, Vector3.forward, 30, 15);
+            bullet.Fire((myPlayer.isP1 ? BulletCode.player1SubBullet2 : BulletCode.player2SubBullet2), Vector3.forward, 30, 15);
 
             yield return new WaitForSeconds(0.08f);
         }
 
-        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().Player.GetComponentInChildren<BF109>().isSubSpecialIn = false;
+        myPlayer.isSubSpecialIn = false;
         
         inCorout = false;
-        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().Player
-            .GetComponent<BF109>().lastSubSpecialShotTime = Time.time;
+        myPlayer.lastSubSpecialShotTime = Time.time;
     }
 
     IEnumerator DrawCircle()

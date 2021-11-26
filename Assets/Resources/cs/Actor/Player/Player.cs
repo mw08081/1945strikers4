@@ -5,17 +5,14 @@ using UnityEngine;
 public class Player : Actor
 {
     [Header("------Player State------")]
+    public bool isP1 = true;
     [SerializeField] Animator anim;
     [SerializeField] Vector3 moveDir;
-    [SerializeField] float speed;
+    public float speed;
     [SerializeField] protected int power;
     [SerializeField] public int bomb;
 
-    //bool isArrived;
     bool isInvincibility;
-
-    //float lastShotTime;
-    //float lastSubShotTime;
 
     float bombCoolDown;
     protected bool isBomb;
@@ -25,21 +22,17 @@ public class Player : Actor
         Launch();
         base.hp = 3;
 
-        //isInvincibility = false;
-        //isArrived = false;
-
         isBomb = false;
     }
 
     protected override void Updating()
     {
-        AssignMoveDirection();
         if(!isBomb && !isDead)
         {
             UpdateMove();
-            Attack();
+            //Attack();
         }
-        ThrowingDownBomb();
+        //ThrowingDownBomb();
 
         WholeAnimation();
     }
@@ -97,10 +90,9 @@ public class Player : Actor
     #endregion 
 
     #region Moving
-    void AssignMoveDirection()
+    public void AssignMoveDirection(Vector3 _dir)
     {
-        Vector3 dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        moveDir = dir;
+        moveDir = _dir;
     }
     void UpdateMove()
     {
@@ -143,6 +135,15 @@ public class Player : Actor
     protected virtual void Attack() { }
     protected virtual void SubAttack() { }
     protected virtual void ThrowingDownBomb() { }
+
+    public void CallAttackFunc()
+    {
+        Attack();
+    }
+    public void CallThrowingDownBomb()
+    {
+        ThrowingDownBomb();
+    }
     #endregion
 
     #region Trigger

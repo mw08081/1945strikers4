@@ -47,15 +47,16 @@ public class P38 : Player
 
     protected override void Attack()
     {
-        if (Input.GetKey(KeyCode.Return) && Time.time - lastShotTime > 0.12f)
+        if (Time.time - lastShotTime > 0.12f)
         {
             for (int i = 0; i < power * 2; i++)
             {
                 if (i == 5) break;
 
-                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1Bullet, firePosition[i].position);
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+                    .ServeBullet((isP1 ? BulletCode.player1Bullet : BulletCode.player2Bullet), firePosition[i].position);
                 
-                go.GetComponent<Bullet>().Fire(BulletCode.player1Bullet, Vector3.forward, bulletSpeed, dmg);
+                go.GetComponent<Bullet>().Fire((isP1 ? BulletCode.player1Bullet : BulletCode.player2Bullet), Vector3.forward, bulletSpeed, dmg);
             }
             lastShotTime = Time.time;
         }
@@ -75,11 +76,12 @@ public class P38 : Player
 
     protected override void ThrowingDownBomb()
     {
-        if (Input.GetKeyDown(KeyCode.L) && bomb >= 1 && !isBomb)
+        if (bomb >= 1 && !isBomb)
         {
             for (int i = 0; i < bomberPos.Length / 2; i++)
             {
-                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1Bomb, bomberPos[i, 0]);
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+                    .ServeBullet((isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), bomberPos[i, 0]);
                 go.GetComponent<P38SubMachine>().SettingPos(bomberPos[i, 0], bomberPos[i, 1]);
             }
                 

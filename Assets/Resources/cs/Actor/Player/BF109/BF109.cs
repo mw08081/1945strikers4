@@ -40,7 +40,7 @@ public class BF109 : Player
 
     protected override void Attack()
     {
-        if (Input.GetKey(KeyCode.Return) && Time.time - lastShotTime > 0.12f)
+        if (Time.time - lastShotTime > 0.12f)
         {
             for (int i = 0; i < power; i++)
             {
@@ -48,10 +48,11 @@ public class BF109 : Player
                 if (power == 2)
                     tmp = i + 1;
 
-                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1Bullet, firePosition[tmp].position);
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+                        .ServeBullet((isP1 ? BulletCode.player1Bullet : BulletCode.player2Bullet), firePosition[tmp].position);
 
                 Bullet bullet = go.GetComponent<Bullet>();
-                bullet.Fire(BulletCode.player1Bullet, Vector3.forward, bulletSpeed, dmg);
+                bullet.Fire((isP1 ? BulletCode.player1Bullet : BulletCode.player2Bullet), Vector3.forward, bulletSpeed, dmg);
             }
             lastShotTime = Time.time;
         }
@@ -59,7 +60,7 @@ public class BF109 : Player
     }
     protected override void SubAttack()
     {
-        if(Input.GetKey(KeyCode.Return) && Time.time - lastSubSpecialShotTime > 10.0f)
+        if(Time.time - lastSubSpecialShotTime > 10.0f)
         {
             isSubSpecialIn = true;
             lastSubSpecialShotTime = 0;
@@ -68,7 +69,7 @@ public class BF109 : Player
                 subMachine[i].GetComponent<BF109SubMacine>().SubSpecialAttack();
             lastSubSpecialShotTime = Time.time + 2;
         }
-        else if (Input.GetKey(KeyCode.Return) && Time.time - lastSubShotTime > 0.15f && !isSubSpecialIn)
+        else if (Time.time - lastSubShotTime > 0.15f && !isSubSpecialIn)
         {
             for (int i = 0; i < subMachine.Length; i++)
                 subMachine[i].GetComponent<BF109SubMacine>().SubAttack(subBulletSpeed, subDmg);
@@ -78,7 +79,7 @@ public class BF109 : Player
 
     protected override void ThrowingDownBomb()
     {
-        if (Input.GetKeyDown(KeyCode.L) && bomb >= 1 && !isBomb)
+        if (bomb >= 1 && !isBomb)
         {
             isBomb = true;
             StartCoroutine("ThrowingBomb");
@@ -93,9 +94,9 @@ public class BF109 : Player
             if (i > 60 && !isThrow)
             {
                 isThrow = true;
-                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1Bomb, transform.position);
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet((isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), transform.position);
                 Bullet bullet = go.GetComponent<Bullet>();
-                bullet.Fire(BulletCode.player1Bomb, Vector3.forward, 4, 1300);
+                bullet.Fire((isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), Vector3.forward, 4, 1300);
             }
             yield return new WaitForSeconds(0.02f);
         }

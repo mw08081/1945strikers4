@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class F5USubMachine : MonoBehaviour
 {
+    F5U myPlayer;
+
     Vector3 dir;
     float lastShotTime;
     [SerializeField] float speed;
@@ -12,6 +14,7 @@ public class F5USubMachine : MonoBehaviour
 
     private void OnEnable()
     {
+        myPlayer = FindObjectOfType<F5U>();
         lastShotTime = 0;
     }
 
@@ -42,8 +45,9 @@ public class F5USubMachine : MonoBehaviour
     {
         if(Time.time - lastShotTime > 0.15f)
         {
-            GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1SubBullet2, transform.position);
-            go.GetComponent<Bullet>().Fire(BulletCode.player1SubBullet2, dir.normalized, speed, dmg);
+            GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+                .ServeBullet((myPlayer.isP1 ? BulletCode.player1SubBullet2 : BulletCode.player2SubBullet2), transform.position);
+            go.GetComponent<Bullet>().Fire((myPlayer.isP1 ? BulletCode.player1SubBullet2 : BulletCode.player2SubBullet2), dir.normalized, speed, dmg);
 
             lastShotTime = Time.time;
         }

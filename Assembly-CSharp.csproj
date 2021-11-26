@@ -65,6 +65,7 @@
     <Compile Include="Assets\Resources\cs\Actor\Player\F5U\F5USubMachine.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Player\Player.cs" />
     <Compile Include="Assets\Resources\cs\UI\PlayerStatePanel.cs" />
+    <Compile Include="Assets\Resources\cs\Scene\PlayerChoiceScene\Player2Choice.cs" />
     <Compile Include="Assets\Resources\cs\BG\BackGround.cs" />
     <Compile Include="Assets\Resources\cs\Etc\Aspect.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo.cs" />
@@ -118,7 +119,8 @@
     <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLv4.cs" />
     <Compile Include="Assets\Resources\cs\UI\TMP\PowerTMP.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
-    <Compile Include="Assets\Resources\cs\Scene\PlayerChoiceScene\Player2Choice.cs" />
+    <Compile Include="Assets\Resources\cs\Actor\Player\Player1Controller.cs" />
+    <Compile Include="Assets\Resources\cs\Actor\Player\Player2Controller.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BaseResource\0BG\st1BgResource\Trees_WorldSpace_FREE\WorldSpaceTrees_Doc.txt" />

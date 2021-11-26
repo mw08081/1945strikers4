@@ -35,11 +35,12 @@ public class F5U : Player
 
     protected override void Attack()
     {
-        if (Input.GetKey(KeyCode.Return) && Time.time - lastShotTime > 0.09f)
+        if (Time.time - lastShotTime > 0.09f)
         {
             for (int i = 0; i < power * 2; i++)
             {
-                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1Bullet, firePosition[i].position);
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+                    .ServeBullet((isP1 ? BulletCode.player1Bullet : BulletCode.player2Bullet), firePosition[i].position);
 
                 Bullet bullet = go.GetComponent<Bullet>();
 
@@ -66,7 +67,7 @@ public class F5U : Player
                         aim = Vector3.forward;
                         break;
                 }
-                bullet.Fire(BulletCode.player1Bullet, aim, bulletSpeed, dmg);
+                bullet.Fire((isP1 ? BulletCode.player1Bullet : BulletCode.player2Bullet), aim, bulletSpeed, dmg);
             }
             lastShotTime = Time.time;
         }
@@ -74,7 +75,7 @@ public class F5U : Player
     }
     protected override void SubAttack()
     {
-        if (Input.GetKey(KeyCode.Return) && Time.time - lastSubShotTime > 0.25)
+        if (Time.time - lastSubShotTime > 0.25)
         {
             try
             {
@@ -85,10 +86,11 @@ public class F5U : Player
 
                     for (int i = 0; i < 2; i++)
                     {
-                        GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1SubBullet, firePosition[i + 3].position);
+                        GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+                            .ServeBullet((isP1 ? BulletCode.player1SubBullet : BulletCode.player2SubBullet), firePosition[i + 3].position);
 
                         Bullet bullet = go.GetComponent<Bullet>();
-                        bullet.Fire(BulletCode.player1SubBullet, dir.normalized, subBulletSpeed, subDmg);
+                        bullet.Fire((isP1 ? BulletCode.player1SubBullet : BulletCode.player2SubBullet), dir.normalized, subBulletSpeed, subDmg);
                     }
                 }
                 lastSubShotTime = Time.time;
@@ -101,13 +103,15 @@ public class F5U : Player
     }
     protected override void ThrowingDownBomb()
     {
-        if (Input.GetKeyDown(KeyCode.L) && bomb >= 1 && !isBomb)
+        if (bomb >= 1 && !isBomb)
         {
-            F5UBomb bomber = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1Bomb, new Vector3(-4.39f, -3, -10f)).GetComponent<F5UBomb>();
-            bomber.SetAppearDistPos(BulletCode.player1Bomb, -4.39f);
+            F5UBomb bomber = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+                .ServeBullet((isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), new Vector3(-4.39f, -3, -10f)).GetComponent<F5UBomb>();
+            bomber.SetAppearDistPos((isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), -4.39f);
 
-            bomber = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.player1Bomb, new Vector3(3.81f, -3, -10.4f)).GetComponent<F5UBomb>();
-            bomber.SetAppearDistPos(BulletCode.player1Bomb, 3.81f);
+            bomber = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+                .ServeBullet((isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), new Vector3(3.81f, -3, -10.4f)).GetComponent<F5UBomb>();
+            bomber.SetAppearDistPos((isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), 3.81f);
 
             bomb--;
         }

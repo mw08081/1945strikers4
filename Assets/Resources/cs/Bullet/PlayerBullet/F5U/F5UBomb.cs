@@ -94,7 +94,7 @@ public class F5UBomb : MonoBehaviour
         if (Vector3.Distance(transform.position, outDisPos) < 0.1f)
         {
             gameObject.SetActive(false);
-            SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ReturnBullet(BulletCode.player1Bomb, gameObject);
+            SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ReturnBullet(bulletCode, gameObject);
         }
     }
 

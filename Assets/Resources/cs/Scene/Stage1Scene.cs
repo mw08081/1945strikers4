@@ -81,17 +81,23 @@ public class Stage1Scene : BaseScene
 
         if(SystemManager.Instance.isForDos)
         {
-            //GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player1PrefabIndex]);
-            //playerGameObject.transform.position = new Vector3(-3, -3, -15);
-            //player = playerGameObject.GetComponent<Player>();
+            GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player1PrefabIndex]);
+            playerGameObject.AddComponent<Player1Controller>();
+            playerGameObject.transform.position = new Vector3(0, -3, -15);
+            player = playerGameObject.GetComponent<Player>();
+            player.isP1 = true;
+            
 
-            //playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player2PrefabIndex]);
-            //playerGameObject.transform.position = new Vector3(3, -3, -15);
-            //player2 = playerGameObject.GetComponent<Player>();
+            playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player2PrefabIndex]);
+            playerGameObject.AddComponent<Player2Controller>();
+            playerGameObject.transform.position = new Vector3(0, -3, -15);
+            player2 = playerGameObject.GetComponent<Player>();
+            player2.isP1 = false;
         }
         else
         {
             GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player1PrefabIndex]);
+            playerGameObject.AddComponent < Player1Controller>();
             playerGameObject.transform.position = new Vector3(0, -3, -15);
             player = playerGameObject.GetComponent<Player>();
         }
