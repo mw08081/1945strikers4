@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : Actor
 {
     [Header("------Player State------")]
-    public bool isP1 = true;
+    public bool isP1;
     [SerializeField] Animator anim;
     [SerializeField] Vector3 moveDir;
     public float speed;
@@ -19,6 +19,7 @@ public class Player : Actor
 
     protected override void Initializing()
     {
+        isP1 = true;
         Launch();
         base.hp = 3;
 
