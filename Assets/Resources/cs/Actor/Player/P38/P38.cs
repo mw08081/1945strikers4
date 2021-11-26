@@ -62,11 +62,11 @@ public class P38 : Player
         }
     }
 
-    //This Striker dont have SubAttack
+    //This Striker doesn't have SubAttack
     /*
     protected override void SubAttack()
     {
-        if (Input.GetKey(KeyCode.Return) && Time.time - lastSubShotTime > 0.15f)
+        if (Input.GetKey(attackKeyCode) && Time.time - lastSubShotTime > 0.15f)
         {
             
             lastSubShotTime = Time.time;
