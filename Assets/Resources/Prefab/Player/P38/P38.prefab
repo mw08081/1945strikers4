@@ -314,9 +314,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
-  anim: {fileID: 3304692013332139696}
+  isP1: 0
   moveDir: {x: 0, y: 0, z: 0}
-  speed: 10.5
+  speed: 12
   power: 1
   bomb: 1
   firePosition:

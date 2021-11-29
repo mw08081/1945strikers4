@@ -21,7 +21,7 @@ public class Player1Controller : MonoBehaviour
         if (Input.GetKey(KeyCode.Return))
             myPlayer.CallAttackFunc();
 
-        if (Input.GetKey(KeyCode.Quote))
+        if (Input.GetKeyDown(KeyCode.Quote))
             myPlayer.CallThrowingDownBomb();
     }
 

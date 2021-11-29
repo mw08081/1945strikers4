@@ -114,6 +114,7 @@ public class F5U : Player
             bomber.SetAppearDistPos((isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), 3.81f);
 
             bomb--;
+            Debug.Log("bomb--");
         }
     }
 }

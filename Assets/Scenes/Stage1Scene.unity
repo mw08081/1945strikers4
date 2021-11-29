@@ -4662,7 +4662,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 672, y: -52.599976}
+  m_AnchoredPosition: {x: 672, y: -37}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &138956906
@@ -4692,7 +4692,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 100
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
@@ -6490,7 +6490,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206281544}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1704312437}
@@ -6498,7 +6498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 453, y: -877}
+  m_AnchoredPosition: {x: 453, y: -841}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &206281546
@@ -6528,15 +6528,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 300
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '3
-
-'
+  m_Text: 0
 --- !u!222 &206281547
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22036,6 +22034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64ad4b8fb791c134eb8d1a045144564e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isP1: 1
   lifes:
   - {fileID: 1810570495}
   - {fileID: 694587030}
@@ -33271,6 +33270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64ad4b8fb791c134eb8d1a045144564e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isP1: 0
   lifes:
   - {fileID: 880263350}
   - {fileID: 1906813639}
@@ -44732,6 +44732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396094375721f5f46b84fbecde70dc9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isP1: 1
   score: {fileID: 1673714548}
   lifes:
   - {fileID: 1810570495}
@@ -44764,7 +44765,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220401326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1217772931}
@@ -44772,7 +44773,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 453, y: -877}
+  m_AnchoredPosition: {x: 453, y: -841}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1220401328
@@ -44802,13 +44803,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 300
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '3
+  m_Text: '0
 
 '
 --- !u!222 &1220401329
@@ -59221,7 +59222,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673714546}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1217772931}
@@ -59229,7 +59230,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 672, y: -52.599976}
+  m_AnchoredPosition: {x: 672, y: -37}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1673714548
@@ -59259,7 +59260,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 100
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
@@ -60196,6 +60197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396094375721f5f46b84fbecde70dc9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isP1: 0
   score: {fileID: 138956906}
   lifes:
   - {fileID: 880263350}

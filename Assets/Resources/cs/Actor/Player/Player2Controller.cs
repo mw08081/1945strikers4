@@ -21,7 +21,7 @@ public class Player2Controller : MonoBehaviour
         if(Input.GetKey(KeyCode.F))
             myPlayer.CallAttackFunc();
 
-        if (Input.GetKey(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.G))
             myPlayer.CallThrowingDownBomb();
     }
 
