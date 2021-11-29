@@ -109,8 +109,17 @@ public class Stage1Scene : BaseScene
 
         if (isBoseDead || gameElapedTime > 100)
             NextStage();
-        if (player.hp <= 0)
-            GameOver();
+
+        if (SystemManager.Instance.isForDos)
+        {
+            if (player.hp <= 0 && player2.hp <= 0)
+                GameOver();
+        }
+        else
+        {
+            if (player.hp <= 0)
+                GameOver();
+        }
     }
 
     void NextStage()

@@ -6,7 +6,6 @@ public class Player : Actor
 {
     [Header("------Player State------")]
     public bool isP1;
-    [SerializeField] Animator anim;
     [SerializeField] Vector3 moveDir;
     public float speed;
     [SerializeField] protected int power;
@@ -29,18 +28,14 @@ public class Player : Actor
     protected override void Updating()
     {
         if(!isBomb && !isDead)
-        {
             UpdateMove();
-            //Attack();
-        }
-        //ThrowingDownBomb();
-
-        WholeAnimation();
     }
 
     #region Launch
     public void Launch()
     {
+        if (hp < 1)
+            return;
         isDead = true;
         StartCoroutine("LaunchMotion");
         StartCoroutine("LaunchEffect");
@@ -187,14 +182,14 @@ public class Player : Actor
 
     protected override void OnBulletHitted(float dmg)
     {
-        //if (!isInvincibility)
-        //    base.OnBulletHitted(dmg);
+        if (!isInvincibility)
+            base.OnBulletHitted(dmg);
         Debug.Log("OnBulletDead");
     }
     protected override void OnCrash()
     {
-        //if (!isInvincibility)
-        //    base.DecreaseHp(1);
+        if (!isInvincibility)
+            base.DecreaseHp(1);
         Debug.Log("OnCrashDead");
     }
     protected override void DecreaseHp(float dmg)
@@ -217,45 +212,5 @@ public class Player : Actor
     }
     #endregion
 
-    #region Animation
-    void WholeAnimation()
-    {
-        BombAnimation();
-        MovingAnimation();
-    }
-
-    void BombAnimation()
-    {
-        if (Input.GetKeyDown(KeyCode.L) && bomb >= 1)
-        {
-            anim.SetBool("bomb", true);
-            bombCoolDown = 1.4f;
-        }
-        if (anim.GetBool("bomb"))
-        {
-            bombCoolDown -= Time.deltaTime;
-            if (bombCoolDown < 0)
-                anim.SetBool("bomb", false);
-        }
-    }
-    void MovingAnimation()
-    {
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            anim.SetBool("left", true);
-            anim.SetBool("right", false);
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            anim.SetBool("right", true);
-            anim.SetBool("left", false);
-        }
-        else
-        {
-            anim.SetBool("right", false);
-            anim.SetBool("left", false);
-        }
-    }
     
-    #endregion
 }

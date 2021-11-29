@@ -57,6 +57,10 @@ public class PlayerChoiceScene : BaseScene
                     Player2Choice.gameObject.SetActive(true);
                     playerCnt++;
                 }
+                else if(playerCnt == 1 && SystemManager.Instance.Player1PrefabIndex == player2Choice.index)
+                {
+                    return;
+                }
                 else
                 {
                     SystemManager.Instance.Player2PrefabIndex = player2Choice.index;

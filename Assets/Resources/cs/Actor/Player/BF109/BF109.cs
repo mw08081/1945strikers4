@@ -82,6 +82,7 @@ public class BF109 : Player
         if (bomb >= 1 && !isBomb)
         {
             isBomb = true;
+            bomb--;
             StartCoroutine("ThrowingBomb");
         }
     }
@@ -102,6 +103,5 @@ public class BF109 : Player
         }
         isBomb = false;
         isThrow = false;
-        bomb--;
     }
 }

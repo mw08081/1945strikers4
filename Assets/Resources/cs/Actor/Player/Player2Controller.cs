@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Player2Controller : MonoBehaviour
 {
+    Animator anim;
     Player myPlayer;
+    float bombCoolDown;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         myPlayer = GetComponent<Player>();
     }
 
     void Update()
     {
+        WholeAnimation();
         UpdateMoveDir();
         if(Input.GetKey(KeyCode.F))
             myPlayer.CallAttackFunc();
@@ -42,4 +46,46 @@ public class Player2Controller : MonoBehaviour
 
         myPlayer.AssignMoveDirection(movedir);
     }
+
+    #region Animation
+    void WholeAnimation()
+    {
+        BombAnimation();
+        MovingAnimation();
+    }
+
+    void BombAnimation()
+    {
+        if (Input.GetKeyDown(KeyCode.G) && myPlayer.bomb >= 1)
+        {
+            anim.SetBool("bomb", true);
+            bombCoolDown = 1.4f;
+        }
+        if (anim.GetBool("bomb"))
+        {
+            bombCoolDown -= Time.deltaTime;
+            if (bombCoolDown < 0)
+                anim.SetBool("bomb", false);
+        }
+    }
+    void MovingAnimation()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            anim.SetBool("left", true);
+            anim.SetBool("right", false);
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            anim.SetBool("right", true);
+            anim.SetBool("left", false);
+        }
+        else
+        {
+            anim.SetBool("right", false);
+            anim.SetBool("left", false);
+        }
+    }
+
+    #endregion
 }

@@ -11,7 +11,8 @@ public class GameOverScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scTxt.text = SystemManager.Instance.ScoreSystem.Score.ToString();
+        //scTxt.text = SystemManager.Instance.ScoreSystem.Score.ToString();
+        Debug.Log(SystemManager.Instance.ScoreSystem.Player1Score + " " + SystemManager.Instance.ScoreSystem.Player2Score);
     }
 
     // Update is called once per frame
