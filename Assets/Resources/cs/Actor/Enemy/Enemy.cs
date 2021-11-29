@@ -14,6 +14,8 @@ public class Enemy : Actor
     Color originColor;
     Color dmgedColor;
 
+    bool isHittedByP1;
+
     protected override void Initializing()
     {
         renderer = GetComponent<Renderer>();
@@ -29,7 +31,15 @@ public class Enemy : Actor
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("PlayerBullet"))
+        {
             OnBulletHitted(other.gameObject.GetComponent<Bullet>().dmg);
+
+            Bullet playerBullet = other.GetComponent<Bullet>();
+            if (playerBullet.bulletCode == BulletCode.player1Bullet || playerBullet.bulletCode == BulletCode.player1SubBullet || playerBullet.bulletCode == BulletCode.player1SubBullet2 || playerBullet.bulletCode == BulletCode.player1Bomb)
+                isHittedByP1 = true;
+            else
+                isHittedByP1 = false;
+            }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
             OnCrash();
         else if (other.gameObject.layer == LayerMask.NameToLayer("Bomb"))
@@ -80,7 +90,9 @@ public class Enemy : Actor
     {
         base.OnDead();
         renderer.material.color = originColor;
-        //SystemManager.Instance.ScoreSystem.CalcSc(score);
+        
+        SystemManager.Instance.ScoreSystem.CalcSc(isHittedByP1, score);
+
 
         if (Random.Range(0.0f, 1.0f) >= (1 - itemDropProbability))
             SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().ItemSystem.ServeItem((ItemCode)Random.Range(0, 2), transform.position);

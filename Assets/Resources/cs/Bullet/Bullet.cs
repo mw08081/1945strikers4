@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     bool isFired = false;
 
     //[Header("----Bullet Info----")]
-    BulletCode bulletCode;
+    public BulletCode bulletCode;
     protected Vector3 moveDir;
     protected float bulletSpeed;
     protected float generateTime;
