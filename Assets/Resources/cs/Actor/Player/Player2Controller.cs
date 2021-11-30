@@ -16,13 +16,16 @@ public class Player2Controller : MonoBehaviour
 
     void Update()
     {
-        WholeAnimation();
-        UpdateMoveDir();
-        if(Input.GetKey(KeyCode.F))
-            myPlayer.CallAttackFunc();
+        if(!myPlayer.isDead)
+        {
+            WholeAnimation();
+            UpdateMoveDir();
+            if (Input.GetKey(KeyCode.F))
+                myPlayer.CallAttackFunc();
 
-        if (Input.GetKeyDown(KeyCode.G))
-            myPlayer.CallThrowingDownBomb();
+            if (Input.GetKeyDown(KeyCode.G))
+                myPlayer.CallThrowingDownBomb();
+        }
     }
 
     void UpdateMoveDir()

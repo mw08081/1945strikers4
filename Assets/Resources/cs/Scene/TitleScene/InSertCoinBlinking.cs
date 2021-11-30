@@ -6,20 +6,28 @@ using TMPro;
 public class InSertCoinBlinking : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI blinkingTxt;
-    bool isOn = true;
+    
+    [SerializeField] Color originFace;
+    [SerializeField] Color originOutline;
+    [SerializeField] Color effectFace;
+    [SerializeField] Color effectOutline;
+    
+    [SerializeField] float onStayTime;
+    [SerializeField] float offStayTime;
+    [SerializeField] float delayTime;
+    [SerializeField] bool isOn;
 
     void Start()
     {
+        blinkingTxt.faceColor = originFace;
+        blinkingTxt.outlineColor = originOutline;
+
         StartCoroutine("Blinking");
     }
 
     IEnumerator Blinking()
     {
-        Color originFace = new Color(255, 255, 255, 255);
-        Color originOutline = new Color(0, 0, 0, 255);
-
-        Color effectFace = new Color(255, 255, 255, 0);
-        Color effectOutline = new Color(0, 0, 0, 0);
+        yield return new WaitForSeconds(delayTime);
 
         while (true)
         {
@@ -29,7 +37,7 @@ public class InSertCoinBlinking : MonoBehaviour
                 blinkingTxt.outlineColor = effectOutline;
                 
                 isOn = false;
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(offStayTime);
             }
             else
             {
@@ -37,7 +45,7 @@ public class InSertCoinBlinking : MonoBehaviour
                 blinkingTxt.outlineColor = originOutline;
 
                 isOn = true;
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(onStayTime);
             }
         }
     }

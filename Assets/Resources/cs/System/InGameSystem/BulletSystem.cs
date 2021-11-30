@@ -55,11 +55,18 @@ public class BulletSystem : MonoBehaviour
     {
         for (int i = 0; i < 4; i++)
             bulletMakingInfo[i, 1] = playerBulletResourcePath[i, SystemManager.Instance.Player1PrefabIndex];
-
-        for (int i = 0; i < 4; i++)
-            bulletMakingInfo[i + 4, 1] = playerBulletResourcePath[i, SystemManager.Instance.Player2PrefabIndex];
-
-
+        
+        if(SystemManager.Instance.isForDos)                                                             //If isFTP, Instantiate using Player2PrefabIndex
+        {
+            for (int i = 0; i < 4; i++)
+                bulletMakingInfo[i + 4, 1] = playerBulletResourcePath[i, SystemManager.Instance.Player2PrefabIndex];
+        }
+        else
+        {
+            if(SystemManager.Instance.Player1PrefabIndex == 0)                                          //Prepare AfterInputFTP
+                for (int i = 0; i < 4; i++)                                                                     //when P1 is BF109, set p2BulletModel to F5U
+                    bulletMakingInfo[i + 4, 1] = playerBulletResourcePath[i, 2];
+        }
         SettingBullet();
     }
 

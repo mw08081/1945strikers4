@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 896140367}
   - component: {fileID: 896140369}
   m_Layer: 5
-  m_Name: InsertCoin!
+  m_Name: INSERTCOINS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -636,6 +636,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blinkingTxt: {fileID: 896140367}
+  originFace: {r: 1, g: 1, b: 1, a: 1}
+  originOutline: {r: 0, g: 0, b: 0, a: 1}
+  effectFace: {r: 1, g: 1, b: 1, a: 0}
+  effectOutline: {r: 0, g: 0, b: 0, a: 0}
+  onStayTime: 1
+  offStayTime: 0.5
+  delayTime: 0
+  isOn: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

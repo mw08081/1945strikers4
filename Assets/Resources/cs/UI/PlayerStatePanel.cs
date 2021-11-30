@@ -51,7 +51,7 @@ public class PlayerStatePanel : MonoBehaviour
             }
             else
             {
-                score.text = "Insert Coin!";
+                score.text = "INSERT COIN!!";
                 return;
             }
             

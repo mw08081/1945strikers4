@@ -16,13 +16,20 @@ public class Player1Controller : MonoBehaviour
 
     void Update()
     {
-        WholeAnimation();
-        UpdateMoveDir();
-        if (Input.GetKey(KeyCode.Return))
-            myPlayer.CallAttackFunc();
+        if(!myPlayer.isDead)
+        {
+            WholeAnimation();
+            UpdateMoveDir();
+            if (Input.GetKey(KeyCode.Return))
+            {
+                myPlayer.CallAttackFunc();
+                //SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().AudioSystem.Gene();
+            }
+                
 
-        if (Input.GetKeyDown(KeyCode.Quote))
-            myPlayer.CallThrowingDownBomb();
+            if (Input.GetKeyDown(KeyCode.Quote))
+                myPlayer.CallThrowingDownBomb();
+        }
     }
 
     void UpdateMoveDir()

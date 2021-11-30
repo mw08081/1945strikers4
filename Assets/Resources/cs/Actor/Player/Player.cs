@@ -13,7 +13,6 @@ public class Player : Actor
 
     bool isInvincibility;
 
-    float bombCoolDown;
     protected bool isBomb;
 
     protected override void Initializing()
@@ -204,7 +203,7 @@ public class Player : Actor
     {
         base.OnDead();
         hp--;
-        SystemManager.Instance.SaveGameData(hp);
+        //SystemManager.Instance.SaveGameData(hp);
         ReLaunch();
 
         if (hp <= 0)

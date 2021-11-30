@@ -26,6 +26,7 @@ public class SystemManager : MonoBehaviour
         }
     }
     public float PlayerHp { get; set; }
+    public float Player2Hp { get; set; }
 
     public BaseScene CurrentScene { get; set; }
 
@@ -45,7 +46,7 @@ public class SystemManager : MonoBehaviour
 
     void Start()
     {
-
+        
     }
 
     void Update()
@@ -53,8 +54,17 @@ public class SystemManager : MonoBehaviour
 
     }
 
-    public void SaveGameData(float _hp)
+    public void SaveGameData(float _hp1, float _hp2)
     {
-        PlayerHp = _hp;
+        PlayerHp = _hp1;
+        Player2Hp = _hp2;
+    }
+
+    public void SetP2PrefabIndex()
+    {
+        if (Player1PrefabIndex != 0)
+            Player2PrefabIndex = 0;
+        else
+            Player2PrefabIndex = 2;
     }
 }

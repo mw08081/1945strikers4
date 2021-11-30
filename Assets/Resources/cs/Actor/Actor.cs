@@ -6,7 +6,7 @@ public class Actor : MonoBehaviour
 {
     [Header("----Actor state----")]
     public float hp;
-    protected bool isDead;
+    public bool isDead;
 
     void Start()
     {

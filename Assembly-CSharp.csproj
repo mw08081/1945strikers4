@@ -65,6 +65,8 @@
     <Compile Include="Assets\Resources\cs\Actor\Player\F5U\F5USubMachine.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Player\Player.cs" />
     <Compile Include="Assets\Resources\cs\UI\PlayerStatePanel.cs" />
+    <Compile Include="Assets\Resources\cs\System\ScoreData.cs" />
+    <Compile Include="Assets\Resources\cs\System\InGameSystem\AudioSystem.cs" />
     <Compile Include="Assets\Resources\cs\Scene\PlayerChoiceScene\Player2Choice.cs" />
     <Compile Include="Assets\Resources\cs\BG\BackGround.cs" />
     <Compile Include="Assets\Resources\cs\Etc\Aspect.cs" />
@@ -81,13 +83,14 @@
     <Compile Include="Assets\Resources\cs\Item\Item.cs" />
     <Compile Include="Assets\Resources\cs\Scene\Stage2Scene.cs" />
     <Compile Include="Assets\Resources\cs\Scene\GameOverScene.cs" />
-    <Compile Include="Assets\Resources\cs\System\EffectSystem.cs" />
+    <Compile Include="Assets\Resources\cs\Actor\Player\Player2Controller.cs" />
+    <Compile Include="Assets\Resources\cs\System\InGameSystem\EffectSystem.cs" />
     <Compile Include="Assets\Resources\cs\Etc\EffectLifeTime.cs" />
-    <Compile Include="Assets\Resources\cs\System\EnemySystem.cs" />
+    <Compile Include="Assets\Resources\cs\System\InGameSystem\EnemySystem.cs" />
     <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\F5U\F5UBomb.cs" />
     <Compile Include="Assets\Resources\cs\UI\BasePanel.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Player\F5U\F5U.cs" />
-    <Compile Include="Assets\Resources\cs\System\ItemSystem.cs" />
+    <Compile Include="Assets\Resources\cs\System\InGameSystem\ItemSystem.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
     <Compile Include="Assets\Resources\cs\Scene\SceneSystem\SceneController.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Player\BF109\BF109SubMacine.cs" />
@@ -98,6 +101,7 @@
     <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLv5.cs" />
     <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\P38\P38Bomb.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLvU2.cs" />
+    <Compile Include="Assets\Resources\cs\Actor\Player\Player1Controller.cs" />
     <Compile Include="Assets\Resources\cs\Bullet\EnemyBullet\EnemyBullet_B.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Enemy\Enemy.cs" />
@@ -106,7 +110,7 @@
     <Compile Include="Assets\Resources\cs\Scene\LoadingScene.cs" />
     <Compile Include="Assets\Resources\cs\Scene\PlayerChoiceScene\Player1Choice.cs" />
     <Compile Include="Assets\Resources\cs\Scene\TitleScene\TitleScene.cs" />
-    <Compile Include="Assets\Resources\cs\System\ScoreSystem.cs" />
+    <Compile Include="Assets\Resources\cs\System\InGameSystem\ScoreSystem.cs" />
     <Compile Include="Assets\Resources\cs\System\SystemManager.cs" />
     <Compile Include="Assets\Resources\cs\Scene\PlayerChoiceScene\PlayerChoiceScene.cs" />
     <Compile Include="Assets\Resources\cs\Scene\TitleScene\InSertCoinBlinking.cs" />
@@ -114,13 +118,12 @@
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\Resources\cs\Item\BouncingItem.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLv3.cs" />
-    <Compile Include="Assets\Resources\cs\System\BulletSystem.cs" />
-    <Compile Include="Assets\Resources\cs\UI\TMP\TmpSystem.cs" />
+    <Compile Include="Assets\Resources\cs\System\InGameSystem\BulletSystem.cs" />
+    <Compile Include="Assets\Resources\cs\System\InGameSystem\TmpSystem.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLv4.cs" />
     <Compile Include="Assets\Resources\cs\UI\TMP\PowerTMP.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
-    <Compile Include="Assets\Resources\cs\Actor\Player\Player1Controller.cs" />
-    <Compile Include="Assets\Resources\cs\Actor\Player\Player2Controller.cs" />
+    <Compile Include="Assets\Resources\cs\UI\BestStrikersPanel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BaseResource\0BG\st1BgResource\Trees_WorldSpace_FREE\WorldSpaceTrees_Doc.txt" />

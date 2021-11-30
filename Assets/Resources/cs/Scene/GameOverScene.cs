@@ -4,20 +4,37 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class GameOverScene : MonoBehaviour
+public class GameOverScene : BaseScene
 {
-    [SerializeField] Text scTxt;
-
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] ScoreData scoreData;
+    public ScoreData ScoreData
     {
-        //scTxt.text = SystemManager.Instance.ScoreSystem.Score.ToString();
-        Debug.Log(SystemManager.Instance.ScoreSystem.Player1Score + " " + SystemManager.Instance.ScoreSystem.Player2Score);
+        get { return scoreData; }
+    }
+ 
+    protected override void Initializing()
+    {
+        SystemManager.Instance.CurrentScene = this;
+
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Updating()
     {
-        
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            ClearGameData();
+            SceneController.Instance.ChangeLoadingScene(SceneNameCont.PlayerchoiceScene);
+        }
+            
     }
+
+    void ClearGameData()
+    {
+        SystemManager.Instance.ScoreSystem.ClearScore();
+        SystemManager.Instance.isForDos = false;
+
+        SystemManager.Instance.Player1PrefabIndex = 2;
+        SystemManager.Instance.Player2PrefabIndex = 0;
+    }
+
 }

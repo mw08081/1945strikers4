@@ -15,4 +15,10 @@ public class ScoreSystem
             Player2Score += val;
     }
 
+    public void ClearScore()
+    {
+        Player1Score = 0;
+        Player2Score = 0;
+    }
+
 }

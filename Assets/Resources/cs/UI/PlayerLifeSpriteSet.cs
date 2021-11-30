@@ -10,8 +10,11 @@ public class PlayerLifeSpriteSet : MonoBehaviour
     [SerializeField] Image[] lifes;
     string[] paths = new string[] { "UI_Img/BF109", "UI_Img/P38", "UI_Img/FlyingPancake" };
 
+    bool isP2OriginStatus;
+
     void Start()
     {
+        
         if(SystemManager.Instance.isForDos)
         {
             if (isP1)
@@ -27,7 +30,8 @@ public class PlayerLifeSpriteSet : MonoBehaviour
         }
         else
         {
-            if(isP1)
+            isP2OriginStatus = false;
+            if (isP1)
             {
                 for (int i = 0; i < lifes.Length; i++)
                     lifes[i].sprite = Resources.Load<Sprite>(paths[SystemManager.Instance.Player1PrefabIndex]);
@@ -37,9 +41,21 @@ public class PlayerLifeSpriteSet : MonoBehaviour
                 for (int i = 0; i < lifes.Length; i++)
                     lifes[i].gameObject.SetActive(false);
             }
-            
         }
-        
-            
+    }
+
+    private void Update()
+    {
+        if (!isP2OriginStatus && SystemManager.Instance.isForDos && !isP1)
+        {
+            isP2OriginStatus = true;
+
+            for (int i = 0; i < lifes.Length; i++)
+            {
+                lifes[i].gameObject.SetActive(true);
+                lifes[i].sprite = Resources.Load<Sprite>(paths[SystemManager.Instance.Player2PrefabIndex]);
+            }
+                
+        }
     }
 }

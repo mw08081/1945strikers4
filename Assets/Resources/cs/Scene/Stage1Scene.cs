@@ -71,6 +71,15 @@ public class Stage1Scene : BaseScene
         }
     }
 
+    [SerializeField] AudioSystem audioSystem;
+    public AudioSystem AudioSystem
+    {
+        get
+        {
+            return audioSystem;
+        }
+    }
+
     public bool isBoseDead;
     
     protected override void Initializing()
@@ -120,11 +129,29 @@ public class Stage1Scene : BaseScene
             if (player.hp <= 0)
                 GameOver();
         }
+
+        if(Input.GetKeyDown(KeyCode.F2) && !SystemManager.Instance.isForDos)
+        {
+            SystemManager.Instance.isForDos = true;
+
+            GenerateP2InGame();
+        }
+    }
+
+    void GenerateP2InGame()
+    {
+        SystemManager.Instance.SetP2PrefabIndex();
+
+        GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player2PrefabIndex]);
+        playerGameObject.AddComponent<Player2Controller>();
+        playerGameObject.transform.position = new Vector3(0, -3, -15);
+        player2 = playerGameObject.GetComponent<Player>();
+        player2.isP1 = false;
     }
 
     void NextStage()
     {
-        SystemManager.Instance.SaveGameData(player.hp);
+        //SystemManager.Instance.SaveGameData(player.hp);
         SceneController.Instance.ChangeLoadingScene(SceneNameCont.Stage2Scene);
     }
 
