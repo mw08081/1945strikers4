@@ -23,6 +23,7 @@ public class BestStrikersPanel : MonoBehaviour
     int P1UpdateIndex;
     int P2UpdateIndex;
     bool isP1Update;
+    bool isP2Update;
 
     int tmpIndex;
 
@@ -41,18 +42,17 @@ public class BestStrikersPanel : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F12))
             ResetData();
 
-        if(P1UpdateIndex != -1)
+        if(!isP1Update && P1UpdateIndex != -1)
             UpdatePlayerName();
 
-        if (isP1Update && P2UpdateIndex != -1)
+        if (isP1Update && !isP2Update && P2UpdateIndex != -1)
             UpdatePlayerName();
         
     }
 
     void UpdatePlayerName()
     {
-        Debug.Log(tmpIndex);
-
+        
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (playerNameTmp[tmpIndex] == '-')
@@ -70,11 +70,21 @@ public class BestStrikersPanel : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            if (playerNameTmp[tmpIndex] == '-')
+                return;
+
             tmpIndex++;
 
             if (tmpIndex == 3)
             {
+                if (isP1Update)
+                {
+                    isP2Update = true;
+                    PlayerPrefs.SetString(keyArr[0, P1UpdateIndex], textMeshProUGUIs[P1UpdateIndex * 2].text);
+                    return;
+                }
                 isP1Update = true;
+
                 PlayerPrefs.SetString(keyArr[0, P1UpdateIndex], textMeshProUGUIs[P1UpdateIndex * 2].text);
                 
                 playerNameTmp = new char[3] { '-', '-', '-' };
@@ -90,6 +100,9 @@ public class BestStrikersPanel : MonoBehaviour
     public void SaveData()
     {
         int player1ScoreTmp = SystemManager.Instance.ScoreSystem.Player1Score;
+        if (player1ScoreTmp == 0)
+            return;
+
         if (PlayerPrefs.GetInt("5thScore") <= player1ScoreTmp)
         {
             for (int i = 0; i < 5; i++)
@@ -111,10 +124,11 @@ public class BestStrikersPanel : MonoBehaviour
             }
         }
 
-
         if (SystemManager.Instance.isForDos && (PlayerPrefs.GetInt("5thScore") <= SystemManager.Instance.ScoreSystem.Player2Score))
         {
             int player2ScoreTmp = SystemManager.Instance.ScoreSystem.Player2Score;
+            if (player2ScoreTmp == 0)
+                return;
 
             for (int i = 0; i < 5; i++)
             {
