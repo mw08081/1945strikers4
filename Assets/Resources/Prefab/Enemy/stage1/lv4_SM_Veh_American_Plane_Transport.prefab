@@ -535,6 +535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
+  isDead: 0
   maxHp: 1250
   speed: 0
   dmg: 0
@@ -544,8 +545,7 @@ MonoBehaviour:
   - {fileID: 1029755961840787662}
   - {fileID: 1557965112889130409}
   - {fileID: 3489904232788863902}
-  bulletSpeed: 16
-  moveArea: {x: 0, y: 0, z: 0}
+  bulletSpeed: 11
 --- !u!1 &1559553773442016
 GameObject:
   m_ObjectHideFlags: 0

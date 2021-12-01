@@ -1454,6 +1454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
+  isDead: 0
   maxHp: 50
   speed: 11
   dmg: 100
@@ -1463,7 +1464,7 @@ MonoBehaviour:
   formationCode: 0
   bulletSpawnPosition:
   - {fileID: 7874717151270021799}
-  bulletSpeed: 17
+  bulletSpeed: 12
   attackIntervalMax: 1
   attackIntervalMin: 1.7
   attackProbability: 0.9

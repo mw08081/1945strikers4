@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
+  isDead: 0
   maxHp: 600
   speed: 10
   dmg: 100
@@ -231,7 +232,7 @@ MonoBehaviour:
   - {fileID: 8344184422295447268}
   - {fileID: 3726412785415816123}
   - {fileID: 2627158433365124931}
-  bulletSpeed: 15
+  bulletSpeed: 10
 --- !u!1 &8013515564101321421
 GameObject:
   m_ObjectHideFlags: 0

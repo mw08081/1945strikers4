@@ -16,8 +16,11 @@ public class EnemySystem : MonoBehaviour
     [SerializeField] float boseGeneratingTime;
     [SerializeField] float enemyGeneratingTime;
     [SerializeField] GameObject[] enemyPrefabList;
+    [SerializeField] bool[] isEnemyGeneration;
     [SerializeField] Transform[] enemySpawnPosition;
     [SerializeField] Transform[] formationSpawnPositions;
+
+    
 
     List<Queue<GameObject>> enemyQueueList = new List<Queue<GameObject>>();
 
@@ -87,6 +90,9 @@ public class EnemySystem : MonoBehaviour
     {
         for (int i = 0; i < enemySpawnInfo.GetLength(1); i++)
         {
+            if (!isEnemyGeneration[i])
+                continue;
+
             if(Time.time - enemySpawnInfo[1, i] > enemySpawnInfo[0, i]                  //row(1) : lastSpawnTime    //row(2) : spawnInterval
                 && Random.Range(0.0f, 1.0f) > (1 - enemySpawnInfo[4, i]))               //row(4) : spawnProbability
             {

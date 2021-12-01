@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
+  isDead: 0
   maxHp: 7000
   speed: 0
   dmg: 0
@@ -131,22 +132,22 @@ MonoBehaviour:
     attackInterval: 3
     lastAttackTime: 0
     _bulletCode: 8
-    _bulletSpeed: 23
+    _bulletSpeed: 20
   - attackModelName: AttackModelB
     attackInterval: 5
     lastAttackTime: 0
     _bulletCode: 9
-    _bulletSpeed: 20
+    _bulletSpeed: 17
   - attackModelName: AttackModelC
     attackInterval: 5
     lastAttackTime: 0
     _bulletCode: 10
-    _bulletSpeed: 10
+    _bulletSpeed: 7
   - attackModelName: AttackModelD
     attackInterval: 3
     lastAttackTime: 0
     _bulletCode: 9
-    _bulletSpeed: 20
+    _bulletSpeed: 17
   moveArea: {x: 0, y: 0, z: 0}
 --- !u!1 &1759297729857114119
 GameObject:
