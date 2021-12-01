@@ -25,17 +25,17 @@ public class PlayerStatePanel : MonoBehaviour
             if (isP1)
             {
                 score.text = SystemManager.Instance.ScoreSystem.Player1Score.ToString();
-                bombCnt.text = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().Player.bomb.ToString();
+                bombCnt.text = SystemManager.Instance.GetCurrentSceneT<InGameScene>().Player.bomb.ToString();
 
-                cnt = (int)SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().Player.hp;
+                cnt = (int)SystemManager.Instance.GetCurrentSceneT<InGameScene>().Player.hp;
                 SetLifeColorAlphaZero();
             }
             else
             {
                 score.text = SystemManager.Instance.ScoreSystem.Player2Score.ToString();
-                bombCnt.text = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().Player2.bomb.ToString();
+                bombCnt.text = SystemManager.Instance.GetCurrentSceneT<InGameScene>().Player2.bomb.ToString();
 
-                cnt = (int)SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().Player2.hp;
+                cnt = (int)SystemManager.Instance.GetCurrentSceneT<InGameScene>().Player2.hp;
                 SetLifeColorAlphaZero();
             }
         }
@@ -44,9 +44,9 @@ public class PlayerStatePanel : MonoBehaviour
             if (isP1)
             {
                 score.text = SystemManager.Instance.ScoreSystem.Player1Score.ToString();
-                bombCnt.text = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().Player.bomb.ToString();
+                bombCnt.text = SystemManager.Instance.GetCurrentSceneT<InGameScene>().Player.bomb.ToString();
 
-                cnt = (int)SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().Player.hp;
+                cnt = (int)SystemManager.Instance.GetCurrentSceneT<InGameScene>().Player.hp;
                 SetLifeColorAlphaZero();
             }
             else

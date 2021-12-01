@@ -31,12 +31,12 @@ public class F5UBomb : MonoBehaviour
     private void OnEnable()
     {
         state = Status.Appear;
-        playerPosZ = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().Player.transform.position.z + 2;
-        appearDisPos = new Vector3(transform.position.x, -3, playerPosZ);
 
         lifeTime = stayTime;
         isAttackAdmission = false;
 
+        playerPosZ = SystemManager.Instance.GetCurrentSceneT<InGameScene>().Player.transform.position.z + 2;
+        appearDisPos = new Vector3(transform.position.x, -3, playerPosZ);
         outDisPos = new Vector3(transform.position.x, -3, 22);
     }
 
@@ -94,7 +94,7 @@ public class F5UBomb : MonoBehaviour
         if (Vector3.Distance(transform.position, outDisPos) < 0.1f)
         {
             gameObject.SetActive(false);
-            SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ReturnBullet(bulletCode, gameObject);
+            SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem.ReturnBullet(bulletCode, gameObject);
         }
     }
 

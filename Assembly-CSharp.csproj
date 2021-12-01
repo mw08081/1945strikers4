@@ -61,6 +61,7 @@
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Scripts\CFX_LightIntensityFade.cs" />
+    <Compile Include="Assets\Resources\cs\UI\BestStrikersPanel.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Actor.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Player\F5U\F5USubMachine.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Player\Player.cs" />
@@ -74,14 +75,12 @@
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Scripts\WFX_LightFlicker.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Player\P38\P38SubMachine.cs" />
     <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\BF109\BF109SubBullet.cs" />
-    <Compile Include="Assets\Resources\cs\Scene\Stage1Scene.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Spawn System\CFX_SpawnSystem.cs" />
     <Compile Include="Assets\BaseResource\0BG\st1BgResource\Water (Basic)\Scripts\WaterBasic.cs" />
     <Compile Include="Assets\Resources\cs\UI\PlayerLifeSpriteSet.cs" />
     <Compile Include="Assets\Resources\cs\Scene\PlayerChoiceScene\PlayerChoiceImg.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\Resources\cs\Item\Item.cs" />
-    <Compile Include="Assets\Resources\cs\Scene\Stage2Scene.cs" />
     <Compile Include="Assets\Resources\cs\Scene\GameOverScene.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Player\Player2Controller.cs" />
     <Compile Include="Assets\Resources\cs\System\InGameSystem\EffectSystem.cs" />
@@ -123,7 +122,7 @@
     <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLv4.cs" />
     <Compile Include="Assets\Resources\cs\UI\TMP\PowerTMP.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
-    <Compile Include="Assets\Resources\cs\UI\BestStrikersPanel.cs" />
+    <Compile Include="Assets\Resources\cs\Scene\InGameScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BaseResource\0BG\st1BgResource\Trees_WorldSpace_FREE\WorldSpaceTrees_Doc.txt" />

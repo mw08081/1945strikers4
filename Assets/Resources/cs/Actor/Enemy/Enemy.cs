@@ -95,6 +95,6 @@ public class Enemy : Actor
 
 
         if (Random.Range(0.0f, 1.0f) >= (1 - itemDropProbability))
-            SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().ItemSystem.ServeItem((ItemCode)Random.Range(0, 2), transform.position);
+            SystemManager.Instance.GetCurrentSceneT<InGameScene>().ItemSystem.ServeItem((ItemCode)Random.Range(0, 2), transform.position);
     }
 }

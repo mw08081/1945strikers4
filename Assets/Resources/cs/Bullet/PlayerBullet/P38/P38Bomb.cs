@@ -18,7 +18,7 @@ public class P38Bomb : Bullet
     }
     protected override void Explosive()
     {
-        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().EffectSystem.ServeEffect(EffectCode.tres, transform.position);
+        SystemManager.Instance.GetCurrentSceneT<InGameScene>().EffectSystem.ServeEffect(EffectCode.tres, transform.position);
 
     }
 

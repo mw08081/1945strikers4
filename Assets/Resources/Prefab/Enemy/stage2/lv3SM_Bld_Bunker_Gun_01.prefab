@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 4453368405366620}
   - component: {fileID: 33187089035164352}
   - component: {fileID: 23879454151837234}
-  - component: {fileID: 95472430181707076}
   - component: {fileID: 65152423067446466}
   m_Layer: 0
   m_Name: lv3SM_Bld_Bunker_Gun_01
@@ -165,25 +164,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &95472430181707076
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608473851144456}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 43670bead1723c644bb911e998d5e733, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!65 &65152423067446466
 BoxCollider:
   m_ObjectHideFlags: 0

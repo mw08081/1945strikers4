@@ -48,7 +48,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().EffectSystem.ServeEffect(EffectCode.cero, transform.position);
+        SystemManager.Instance.GetCurrentSceneT<InGameScene>().EffectSystem.ServeEffect(EffectCode.cero, transform.position);
         Explosive();
 
         ReturnGameObject();
@@ -60,7 +60,7 @@ public class Bullet : MonoBehaviour
     {
         Resize();
         
-        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ReturnBullet(bulletCode, gameObject);
+        SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem.ReturnBullet(bulletCode, gameObject);
         gameObject.SetActive(false);
     }
 

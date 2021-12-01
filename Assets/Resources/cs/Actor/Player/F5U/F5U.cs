@@ -39,7 +39,7 @@ public class F5U : Player
         {
             for (int i = 0; i < power * 2; i++)
             {
-                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem
                     .ServeBullet((isP1 ? BulletCode.player1Bullet : BulletCode.player2Bullet), firePosition[i].position);
 
                 Bullet bullet = go.GetComponent<Bullet>();
@@ -86,7 +86,7 @@ public class F5U : Player
 
                     for (int i = 0; i < 2; i++)
                     {
-                        GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+                        GameObject go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem
                             .ServeBullet((isP1 ? BulletCode.player1SubBullet : BulletCode.player2SubBullet), firePosition[i + 3].position);
 
                         Bullet bullet = go.GetComponent<Bullet>();
@@ -105,11 +105,11 @@ public class F5U : Player
     {
         if (bomb >= 1 && !isBomb)
         {
-            F5UBomb bomber = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+            F5UBomb bomber = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem
                 .ServeBullet((isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), new Vector3(-4.39f, -3, -10f)).GetComponent<F5UBomb>();
             bomber.SetAppearDistPos((isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), -4.39f);
 
-            bomber = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+            bomber = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem
                 .ServeBullet((isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), new Vector3(3.81f, -3, -10.4f)).GetComponent<F5UBomb>();
             bomber.SetAppearDistPos((isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), 3.81f);
 

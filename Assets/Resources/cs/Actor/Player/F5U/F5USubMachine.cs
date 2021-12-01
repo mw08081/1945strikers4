@@ -45,7 +45,7 @@ public class F5USubMachine : MonoBehaviour
     {
         if(Time.time - lastShotTime > 0.15f)
         {
-            GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+            GameObject go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem
                 .ServeBullet((myPlayer.isP1 ? BulletCode.player1SubBullet2 : BulletCode.player2SubBullet2), transform.position);
             go.GetComponent<Bullet>().Fire((myPlayer.isP1 ? BulletCode.player1SubBullet2 : BulletCode.player2SubBullet2), dir.normalized, speed, dmg);
 

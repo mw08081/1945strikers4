@@ -45,6 +45,6 @@ public class Item : MonoBehaviour
     protected void ReturnGameObject()
     {
         gameObject.SetActive(false);
-        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().ItemSystem.ReturnItem(itemCode, gameObject);
+        SystemManager.Instance.GetCurrentSceneT<InGameScene>().ItemSystem.ReturnItem(itemCode, gameObject);
     }
 }

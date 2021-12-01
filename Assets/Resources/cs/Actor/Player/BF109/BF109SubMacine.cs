@@ -51,7 +51,7 @@ public class BF109SubMacine : MonoBehaviour
 
             for (int i = 0; i < 2; i++)
             {
-                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem
                     .ServeBullet((myPlayer.isP1 ? BulletCode.player1SubBullet : BulletCode.player2SubBullet), firePos.position);
                 Bullet bullet = go.GetComponentInChildren<Bullet>();
                 bullet.Fire((myPlayer.isP1 ? BulletCode.player1SubBullet : BulletCode.player2SubBullet), (dir - firePos.position).normalized, _subBulletSpeed, _subBulletDmg);
@@ -77,7 +77,7 @@ public class BF109SubMacine : MonoBehaviour
 
         while (Time.time - startTime < 8.0f)
         {
-            GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>()
+            GameObject go = SystemManager.Instance.GetCurrentSceneT<InGameScene>()
                 .BulletSystem.ServeBullet((myPlayer.isP1 ? BulletCode.player1SubBullet2 : BulletCode.player2SubBullet2), firePos.position);
 
             MeshRenderer[] bulletMeshRenderer =  go.GetComponentsInChildren<MeshRenderer>();
@@ -104,8 +104,8 @@ public class BF109SubMacine : MonoBehaviour
 
     IEnumerator DrawCircle()
     {
-        float xDiff = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().Player.transform.position.x;
-        float zDiff = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().Player.transform.position.z + 3;
+        float xDiff = SystemManager.Instance.GetCurrentSceneT<InGameScene>().Player.transform.position.x;
+        float zDiff = SystemManager.Instance.GetCurrentSceneT<InGameScene>().Player.transform.position.z + 3;
         float distance = 0;
         
         while (inCorout)

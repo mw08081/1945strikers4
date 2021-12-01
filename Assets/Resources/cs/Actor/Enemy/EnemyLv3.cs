@@ -60,7 +60,7 @@ public class EnemyLv3 : Enemy
         {
             for (int i = 0; i < bulletSpawnPosition.Length; i++)
             {
-                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet(BulletCode.enemyBulletM2, bulletSpawnPosition[i].position);
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem.ServeBullet(BulletCode.enemyBulletM2, bulletSpawnPosition[i].position);
 
                 Bullet bullet = go.GetComponent<Bullet>();
                 bullet.Fire(BulletCode.enemyBulletM2, (playerTransform.position - bulletSpawnPosition[i].position).normalized , bulletSpeed, dmg); 
@@ -84,13 +84,13 @@ public class EnemyLv3 : Enemy
         }
 
         gameObject.SetActive(false);
-        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().EnemySystem.ReturnEnemy(EnemyCode.lv3, gameObject);
+        SystemManager.Instance.GetCurrentSceneT<InGameScene>().EnemySystem.ReturnEnemy(EnemyCode.lv3, gameObject);
     }
 
     protected override void OnDead()
     {
         base.OnDead();
         gameObject.SetActive(false);
-        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().EnemySystem.ReturnEnemy(EnemyCode.lv3, gameObject);
+        SystemManager.Instance.GetCurrentSceneT<InGameScene>().EnemySystem.ReturnEnemy(EnemyCode.lv3, gameObject);
     }
 }

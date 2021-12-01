@@ -53,7 +53,7 @@ public class P38 : Player
             {
                 if (i == 5) break;
 
-                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem
                     .ServeBullet((isP1 ? BulletCode.player1Bullet : BulletCode.player2Bullet), firePosition[i].position);
                 
                 go.GetComponent<Bullet>().Fire((isP1 ? BulletCode.player1Bullet : BulletCode.player2Bullet), Vector3.forward, bulletSpeed, dmg);
@@ -80,7 +80,7 @@ public class P38 : Player
         {
             for (int i = 0; i < bomberPos.Length / 2; i++)
             {
-                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem
                     .ServeBullet((isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), bomberPos[i, 0]);
                 go.GetComponent<P38SubMachine>().SettingPos(bomberPos[i, 0], bomberPos[i, 1]);
             }

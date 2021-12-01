@@ -62,6 +62,6 @@ public class Actor : MonoBehaviour
     protected virtual void OnDead()
     {
         isDead = true;
-        SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().EffectSystem.ServeEffect(EffectCode.uno, transform.position);
+        SystemManager.Instance.GetCurrentSceneT<InGameScene>().EffectSystem.ServeEffect(EffectCode.uno, transform.position);
     }
 }

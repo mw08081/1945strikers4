@@ -77,7 +77,7 @@ public class P38SubMachine : MonoBehaviour
 
         if (Time.time - lastBombDropTime > 0.5f)
         {
-            GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+            GameObject go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem
                 .ServeBullet((myPlayer.isP1 ? BulletCode.player1SubBullet2 : BulletCode.player2SubBullet2), transform.position);
             go.GetComponent<Bullet>().Fire((myPlayer.isP1 ? BulletCode.player1SubBullet2 : BulletCode.player2SubBullet2), Vector3.forward, 0, 0);
             lastBombDropTime = Time.time;
@@ -135,7 +135,7 @@ public class P38SubMachine : MonoBehaviour
 
             for (int i = 0; i < 2; i++)
             {
-                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem
                     .ServeBullet((myPlayer.isP1 ? BulletCode.player1SubBullet : BulletCode.player2SubBullet) , firePos[i].position);
                 go.GetComponent<Bullet>().Fire((myPlayer.isP1 ? BulletCode.player1SubBullet : BulletCode.player2SubBullet), (enemyTransform.position - transform.position).normalized, bulletSpeed, bulletDmg);
             }
@@ -157,7 +157,7 @@ public class P38SubMachine : MonoBehaviour
 
         if (Vector3.Distance(transform.position, attackPos) > 15f)
         {
-            SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ReturnBullet((myPlayer.isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), gameObject);
+            SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem.ReturnBullet((myPlayer.isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), gameObject);
             gameObject.SetActive(false);
         }
             

@@ -48,7 +48,7 @@ public class BF109 : Player
                 if (power == 2)
                     tmp = i + 1;
 
-                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem
                         .ServeBullet((isP1 ? BulletCode.player1Bullet : BulletCode.player2Bullet), firePosition[tmp].position);
 
                 Bullet bullet = go.GetComponent<Bullet>();
@@ -95,7 +95,7 @@ public class BF109 : Player
             if (i > 60 && !isThrow)
             {
                 isThrow = true;
-                GameObject go = SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().BulletSystem.ServeBullet((isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), transform.position);
+                GameObject go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem.ServeBullet((isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), transform.position);
                 Bullet bullet = go.GetComponent<Bullet>();
                 bullet.Fire((isP1 ? BulletCode.player1Bomb : BulletCode.player2Bomb), Vector3.forward, 4, 1300);
             }

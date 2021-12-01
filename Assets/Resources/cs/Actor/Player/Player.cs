@@ -166,7 +166,7 @@ public class Player : Actor
             case ItemCode.powerUp:
                 if (power < 3)
                     power++;
-                SystemManager.Instance.GetCurrentSceneT<Stage1Scene>().TmpSystem.ServePowerUpTmp(transform.position);
+                SystemManager.Instance.GetCurrentSceneT<InGameScene>().TmpSystem.ServePowerUpTmp(transform.position);
                 break;
             case ItemCode.bomb:
                 if (bomb < 3)
