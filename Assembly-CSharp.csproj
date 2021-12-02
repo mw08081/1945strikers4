@@ -112,6 +112,7 @@
     <Compile Include="Assets\Resources\cs\Scene\TitleScene\TitleScene.cs" />
     <Compile Include="Assets\Resources\cs\System\InGameSystem\ScoreSystem.cs" />
     <Compile Include="Assets\Resources\cs\System\SystemManager.cs" />
+    <Compile Include="Assets\Resources\cs\BG\BackGroundImgScrolling.cs" />
     <Compile Include="Assets\Resources\cs\Scene\PlayerChoiceScene\PlayerChoiceScene.cs" />
     <Compile Include="Assets\Resources\cs\Scene\TitleScene\InSertCoinBlinking.cs" />
     <Compile Include="Assets\Resources\cs\Scene\SceneSystem\BaseScene.cs" />
@@ -122,9 +123,8 @@
     <Compile Include="Assets\Resources\cs\System\InGameSystem\TmpSystem.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Enemy\EnemyLv4.cs" />
     <Compile Include="Assets\Resources\cs\UI\TMP\PowerTMP.cs" />
+    <Compile Include="Assets\Resources\cs\Actor\Enemy\GroundEnemyLvU2.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
-    <Compile Include="Assets\Resources\cs\BG\BackGroundImgScrolling.cs" />
-    <Compile Include="Assets\Resources\cs\Actor\Enemy\GroundEnemyLv.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BaseResource\0BG\st1BgResource\Trees_WorldSpace_FREE\WorldSpaceTrees_Doc.txt" />

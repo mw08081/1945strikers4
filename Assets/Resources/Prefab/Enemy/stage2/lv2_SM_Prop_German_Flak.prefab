@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 33917886371627394}
   - component: {fileID: 23489228467347304}
   - component: {fileID: 6723762687967405172}
+  - component: {fileID: 7114433123505720684}
   m_Layer: 18
   m_Name: lv2_SM_Prop_German_Flak
   m_TagString: Untagged
@@ -210,6 +211,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.798639, y: 1.3808545, z: 6.0926123}
   m_Center: {x: -2.9587532e-10, y: 13.5, z: 0.039711718}
+--- !u!114 &7114433123505720684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371172496666792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b146323a4b425478b676bbdd395d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  isDead: 0
+  maxHp: 150
+  speed: 0
+  dmg: 100
+  score: 430
+  itemDropProbability: 0.14
+  lv: 1
+  status: 0
+  fireTransform: {fileID: 4893274321680588}
+  bulletSpeed: 14.3
+  attackIntervalMax: 3.1
+  attackIntervalMin: 1.99
+  attackProbability: 0.8
 --- !u!1 &1392526764932274
 GameObject:
   m_ObjectHideFlags: 0
