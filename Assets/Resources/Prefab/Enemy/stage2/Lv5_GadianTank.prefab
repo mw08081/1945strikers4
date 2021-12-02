@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3923074010312297597}
   - component: {fileID: 7766266431235024669}
   - component: {fileID: 8656203171534536624}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Range Finder Screws002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 8984527291030503695}
   - component: {fileID: 8701141646711548317}
   - component: {fileID: 3188045951169180543}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cooling Fan Cover00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 101358471182307798}
   - component: {fileID: 7971534443964792830}
   - component: {fileID: 3462933149871878614}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Driver/Co Viewports006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 6483548136919338897}
   - component: {fileID: 8063180587405220611}
   - component: {fileID: 2728689407362217895}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Antena mounts Turret004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 6539204668700278614}
   - component: {fileID: 2811732723937072823}
   - component: {fileID: 2666652372914643219}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Headlight mount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 4366527136668939431}
   - component: {fileID: 5927997703898637927}
   - component: {fileID: 6694101292329569298}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Viewport Cover004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 4438926880099026077}
   - component: {fileID: 4682379445223278154}
   - component: {fileID: 1339088176207319216}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Antena mounts Turret006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,7 +578,7 @@ GameObject:
   - component: {fileID: 7750493143590162133}
   - component: {fileID: 2393081008172902626}
   - component: {fileID: 8052000653059602767}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: maintenance hatches belly08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 5806926262210860787}
   - component: {fileID: 2370359269343877135}
   - component: {fileID: 7319721343318812744}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cable Clamps07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +740,7 @@ GameObject:
   - component: {fileID: 5070938905081736321}
   - component: {fileID: 6951203597705760678}
   - component: {fileID: 4719743537296654092}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: FIre Suppressor Exhausts002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -821,7 +821,7 @@ GameObject:
   - component: {fileID: 8665042622294061519}
   - component: {fileID: 8789200461096276328}
   - component: {fileID: 5724873086387019624}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Equipment Left Side03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -902,7 +902,7 @@ GameObject:
   - component: {fileID: 5586384818838960100}
   - component: {fileID: 6374713310754584338}
   - component: {fileID: 2646118157492654763}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Headlight mount 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -983,7 +983,7 @@ GameObject:
   - component: {fileID: 5681625399577947330}
   - component: {fileID: 29586349570204148}
   - component: {fileID: 252733208843722554}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Headlight Cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1064,7 +1064,7 @@ GameObject:
   - component: {fileID: 6741943162751115880}
   - component: {fileID: 4066950890182669210}
   - component: {fileID: 2432857371399780303}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Gun Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1145,7 +1145,7 @@ GameObject:
   - component: {fileID: 5570832374923554709}
   - component: {fileID: 730687099894770319}
   - component: {fileID: 1803307862387991868}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Viewport Cover003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1226,7 +1226,7 @@ GameObject:
   - component: {fileID: 946263646846561155}
   - component: {fileID: 6462990655840328849}
   - component: {fileID: 6885170599753713738}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: left side front wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1307,7 +1307,7 @@ GameObject:
   - component: {fileID: 4977159663042874657}
   - component: {fileID: 3702977276038289858}
   - component: {fileID: 52522632361380589}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cable Clamps01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1388,7 +1388,7 @@ GameObject:
   - component: {fileID: 5865084300621458673}
   - component: {fileID: 6068392923172650811}
   - component: {fileID: 747681837808423016}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: maintenance hatches belly10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1469,7 +1469,7 @@ GameObject:
   - component: {fileID: 4307596368994124816}
   - component: {fileID: 1645386179477820393}
   - component: {fileID: 5434754144424741078}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Gun armor bolts05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1550,7 +1550,7 @@ GameObject:
   - component: {fileID: 9061378555307227332}
   - component: {fileID: 1556127411139414954}
   - component: {fileID: 8581265056249113482}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Arms15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1631,7 +1631,7 @@ GameObject:
   - component: {fileID: 1718272313430779861}
   - component: {fileID: 7718268791448243319}
   - component: {fileID: 5028044419391673337}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Range Finder Screws
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1712,7 +1712,7 @@ GameObject:
   - component: {fileID: 8283161269231953582}
   - component: {fileID: 9069130689345399968}
   - component: {fileID: 7991766897233785785}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Range Finder Screws001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1793,7 +1793,7 @@ GameObject:
   - component: {fileID: 932696909216138609}
   - component: {fileID: 1531038648051751963}
   - component: {fileID: 4358932205643821862}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: left side rear wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1874,7 +1874,7 @@ GameObject:
   - component: {fileID: 5264191706327778443}
   - component: {fileID: 6373941647674828079}
   - component: {fileID: 7752084570684992195}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Arms13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1955,7 +1955,7 @@ GameObject:
   - component: {fileID: 4175829661482498224}
   - component: {fileID: 308158410337741268}
   - component: {fileID: 9117723383897620404}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Right08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2036,7 +2036,7 @@ GameObject:
   - component: {fileID: 5322651602060275146}
   - component: {fileID: 3035297140357757785}
   - component: {fileID: 7398230505218818026}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Turret lifting hooks016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2117,7 +2117,7 @@ GameObject:
   - component: {fileID: 5106697611080167565}
   - component: {fileID: 6889287799266104014}
   - component: {fileID: 7127653300029601645}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Left 06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2198,7 +2198,7 @@ GameObject:
   - component: {fileID: 7738613498195736654}
   - component: {fileID: 3929887641595654940}
   - component: {fileID: 3980242118447399297}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Towing Hooks02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2279,7 +2279,7 @@ GameObject:
   - component: {fileID: 2823834301258886994}
   - component: {fileID: 7446753842304553782}
   - component: {fileID: 1218018897666068563}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Turret mounts003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2360,7 +2360,7 @@ GameObject:
   - component: {fileID: 2342729458895187212}
   - component: {fileID: 1396505151937902040}
   - component: {fileID: 4238019675296884879}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Arms11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2441,7 +2441,7 @@ GameObject:
   - component: {fileID: 2013325905493269176}
   - component: {fileID: 5407620069968544804}
   - component: {fileID: 6857186840007906239}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Engine Access Doors00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2522,7 +2522,7 @@ GameObject:
   - component: {fileID: 3403413986803522794}
   - component: {fileID: 6525187595281325542}
   - component: {fileID: 3573213223476168877}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Arms05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2603,7 +2603,7 @@ GameObject:
   - component: {fileID: 488677606909719301}
   - component: {fileID: 3246792416644460957}
   - component: {fileID: 1800660532189852458}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Towing Hooks01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2684,7 +2684,7 @@ GameObject:
   - component: {fileID: 2034220519795950939}
   - component: {fileID: 6660267813776186554}
   - component: {fileID: 5149127091213099383}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Fire Suppressor mounts005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2765,7 +2765,7 @@ GameObject:
   - component: {fileID: 1353308057785301639}
   - component: {fileID: 6606242394635144959}
   - component: {fileID: 7235785069626203675}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Loaders Hatch001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2846,7 +2846,7 @@ GameObject:
   - component: {fileID: 3030904188817043918}
   - component: {fileID: 7499792651922935569}
   - component: {fileID: 7809717587249410274}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Arms06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2927,7 +2927,7 @@ GameObject:
   - component: {fileID: 7540499382792914543}
   - component: {fileID: 3163807453412024241}
   - component: {fileID: 4532452677353910952}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cooling Grid Cover01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3008,7 +3008,7 @@ GameObject:
   - component: {fileID: 6767699048391967691}
   - component: {fileID: 8847555203581334200}
   - component: {fileID: 8056825412509998444}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: maintenance hatches belly05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3089,7 +3089,7 @@ GameObject:
   - component: {fileID: 660695690552068974}
   - component: {fileID: 4925800979332097599}
   - component: {fileID: 4979865674387944929}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Right Skirts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3170,7 +3170,7 @@ GameObject:
   - component: {fileID: 207286631021803418}
   - component: {fileID: 172569922342589365}
   - component: {fileID: 4767668291355357022}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Right Side Turret Tracks008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3251,7 +3251,7 @@ GameObject:
   - component: {fileID: 8359130958305411949}
   - component: {fileID: 6272032322859626705}
   - component: {fileID: 5150021970867943126}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Headlight Hull mount001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3332,7 +3332,7 @@ GameObject:
   - component: {fileID: 9093116094000350262}
   - component: {fileID: 3856047848731846590}
   - component: {fileID: 4765248251384747474}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Arms02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3413,7 +3413,7 @@ GameObject:
   - component: {fileID: 9145852142009419336}
   - component: {fileID: 5824423049286724539}
   - component: {fileID: 7928178056470606012}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Left Side Drive Sprocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3494,7 +3494,7 @@ GameObject:
   - component: {fileID: 7648404907090437683}
   - component: {fileID: 4922004554334994331}
   - component: {fileID: 1840581398473710504}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Engine Access Doors01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3575,7 +3575,7 @@ GameObject:
   - component: {fileID: 3545946746155183530}
   - component: {fileID: 8796209252529662751}
   - component: {fileID: 8257124797369105990}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3656,7 +3656,7 @@ GameObject:
   - component: {fileID: 4100552017104281789}
   - component: {fileID: 6171093413140566082}
   - component: {fileID: 4501456899977518242}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Rear Mount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3737,7 +3737,7 @@ GameObject:
   - component: {fileID: 6483023875356657385}
   - component: {fileID: 3881489806366448195}
   - component: {fileID: 4719375904519890490}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Engine Access port
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3818,7 +3818,7 @@ GameObject:
   - component: {fileID: 8571017544226661492}
   - component: {fileID: 2268719160510564267}
   - component: {fileID: 6824897372942203161}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Equipment Left Side00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3899,7 +3899,7 @@ GameObject:
   - component: {fileID: 2605535220098597069}
   - component: {fileID: 8560818983063491355}
   - component: {fileID: 6338455400050098510}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Engine Door Szop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3980,7 +3980,7 @@ GameObject:
   - component: {fileID: 3557109168385007750}
   - component: {fileID: 3396337102343083839}
   - component: {fileID: 5509216957041837420}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cooling Fan Cover04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4061,7 +4061,7 @@ GameObject:
   - component: {fileID: 8913570167387133413}
   - component: {fileID: 5235479759841999587}
   - component: {fileID: 5854806901320531676}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Loader Viewport00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4142,7 +4142,7 @@ GameObject:
   - component: {fileID: 841771300350246166}
   - component: {fileID: 8023259619083516994}
   - component: {fileID: 2434234877651571246}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Gun holder lock bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4223,7 +4223,7 @@ GameObject:
   - component: {fileID: 5332572421923957616}
   - component: {fileID: 8706021003390355956}
   - component: {fileID: 2323490463380543074}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Right Side Turret Tracks004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4304,7 +4304,7 @@ GameObject:
   - component: {fileID: 725983016465717408}
   - component: {fileID: 8213136289554289749}
   - component: {fileID: 133208944704120063}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Right00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4385,7 +4385,7 @@ GameObject:
   - component: {fileID: 5285731024677150731}
   - component: {fileID: 7311893544800018854}
   - component: {fileID: 4057546143066283208}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Shovel mounts 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4466,7 +4466,7 @@ GameObject:
   - component: {fileID: 813451485379018220}
   - component: {fileID: 8143325955387540213}
   - component: {fileID: 847614428595602986}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Arms00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4547,7 +4547,7 @@ GameObject:
   - component: {fileID: 4614055236815049333}
   - component: {fileID: 5011934508025736994}
   - component: {fileID: 856232817283250176}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Gun armor bolts06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4628,7 +4628,7 @@ GameObject:
   - component: {fileID: 3155533130585006009}
   - component: {fileID: 3390706160418997324}
   - component: {fileID: 459948301605101758}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Gun armor bolts08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4709,7 +4709,7 @@ GameObject:
   - component: {fileID: 3105033775699763220}
   - component: {fileID: 5096075325192429750}
   - component: {fileID: 1345252363003162230}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Turret lifting hooks010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4790,7 +4790,7 @@ GameObject:
   - component: {fileID: 7276304665275243363}
   - component: {fileID: 7364142724579194138}
   - component: {fileID: 7225376193986014084}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Right03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4871,7 +4871,7 @@ GameObject:
   - component: {fileID: 2568362460821085515}
   - component: {fileID: 5451849108050594462}
   - component: {fileID: 6133767517089899793}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Hull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4952,7 +4952,7 @@ GameObject:
   - component: {fileID: 3440823653761493763}
   - component: {fileID: 1601516018020417931}
   - component: {fileID: 2738463884204349983}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: right side rear wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5033,7 +5033,7 @@ GameObject:
   - component: {fileID: 47605133397338900}
   - component: {fileID: 3805986239180331794}
   - component: {fileID: 8254840620664621956}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Fire Suppressor mounts006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5114,7 +5114,7 @@ GameObject:
   - component: {fileID: 9006268088283827247}
   - component: {fileID: 1639247831622741747}
   - component: {fileID: 635658584718941842}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Loader Viewport Cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5195,7 +5195,7 @@ GameObject:
   - component: {fileID: 4935483162102402038}
   - component: {fileID: 3316937216620912214}
   - component: {fileID: 1867924052042062606}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Plane337
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5276,7 +5276,7 @@ GameObject:
   - component: {fileID: 5034931743772980657}
   - component: {fileID: 5198316549790698955}
   - component: {fileID: 878639275793235084}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Range Finder Screws011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5357,7 +5357,7 @@ GameObject:
   - component: {fileID: 3145757977078141306}
   - component: {fileID: 7137357677651730657}
   - component: {fileID: 1004404610613050232}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Turret lifting hooks007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5438,7 +5438,7 @@ GameObject:
   - component: {fileID: 3764725098484952785}
   - component: {fileID: 2872389084835299213}
   - component: {fileID: 433061818186266129}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Storage Box Rear001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5519,7 +5519,7 @@ GameObject:
   - component: {fileID: 3338701723157555743}
   - component: {fileID: 2166683651127103928}
   - component: {fileID: 6214895192643437393}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Gun armor bolts04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5600,7 +5600,7 @@ GameObject:
   - component: {fileID: 1780494963291879055}
   - component: {fileID: 5281646533205523493}
   - component: {fileID: 16536691035079804}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Right Side Turret Tracks01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5681,7 +5681,7 @@ GameObject:
   - component: {fileID: 2799177971046055691}
   - component: {fileID: 2288706768790423355}
   - component: {fileID: 5040297953897896865}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Left 04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5762,7 +5762,7 @@ GameObject:
   - component: {fileID: 1275249136027544412}
   - component: {fileID: 8137789145237068093}
   - component: {fileID: 2777560031233576515}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Commanders Periscope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5843,7 +5843,7 @@ GameObject:
   - component: {fileID: 9054244062614408643}
   - component: {fileID: 1636942515488785364}
   - component: {fileID: 6612636217962267541}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Arms10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5924,7 +5924,7 @@ GameObject:
   - component: {fileID: 5858736811855342802}
   - component: {fileID: 8056886412647749070}
   - component: {fileID: 518742840891672295}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Right01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6005,7 +6005,7 @@ GameObject:
   - component: {fileID: 7811329426039114861}
   - component: {fileID: 8730545849606223668}
   - component: {fileID: 8126877344935681593}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cooling Grid Armor03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6086,7 +6086,7 @@ GameObject:
   - component: {fileID: 3748950985808635664}
   - component: {fileID: 7482278247193343376}
   - component: {fileID: 6948739962854289529}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Turret lifting hooks008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6167,7 +6167,7 @@ GameObject:
   - component: {fileID: 6432798667522411532}
   - component: {fileID: 1552873955509656426}
   - component: {fileID: 4576090833758376377}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Towing Hooks006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6248,7 +6248,7 @@ GameObject:
   - component: {fileID: 2490033509889552749}
   - component: {fileID: 5948427259737780118}
   - component: {fileID: 7247386947936253003}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Engine Access Doors02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6329,7 +6329,7 @@ GameObject:
   - component: {fileID: 6010175211681648710}
   - component: {fileID: 1646860987064781076}
   - component: {fileID: 9081183741327125268}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Left 08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6410,7 +6410,7 @@ GameObject:
   - component: {fileID: 612605470683734786}
   - component: {fileID: 6402425984889689239}
   - component: {fileID: 129612651949330177}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: maintenance hatches belly02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6491,7 +6491,7 @@ GameObject:
   - component: {fileID: 3546132413083969004}
   - component: {fileID: 7945880714791075086}
   - component: {fileID: 583326605083983272}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Bolt Cutter001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6572,7 +6572,7 @@ GameObject:
   - component: {fileID: 3119818741907896184}
   - component: {fileID: 8677216895230570059}
   - component: {fileID: 2320315699260178936}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cable Clamps00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6653,7 +6653,7 @@ GameObject:
   - component: {fileID: 543285032996431963}
   - component: {fileID: 6339407354590671545}
   - component: {fileID: 2449769821208698945}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Right Side Sprocket Drum Brakes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6734,7 +6734,7 @@ GameObject:
   - component: {fileID: 5827175383843064021}
   - component: {fileID: 6961480477076332354}
   - component: {fileID: 4434729994907179551}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cable Clamps03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6815,7 +6815,7 @@ GameObject:
   - component: {fileID: 2813024734062663999}
   - component: {fileID: 6641249169891550899}
   - component: {fileID: 5225374611726005038}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Hinges Loaders Hatch01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6896,7 +6896,7 @@ GameObject:
   - component: {fileID: 8824115649673030881}
   - component: {fileID: 4642000810713461907}
   - component: {fileID: 1352137972873601645}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: maintenance hatches belly13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6977,7 +6977,7 @@ GameObject:
   - component: {fileID: 2706583232911086945}
   - component: {fileID: 4589648670077584864}
   - component: {fileID: 8823692168012656953}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Gun holder hinge bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7058,7 +7058,7 @@ GameObject:
   - component: {fileID: 4737619860215201268}
   - component: {fileID: 7459204228486930443}
   - component: {fileID: 4083509847081007804}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Equipment Left Side01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7139,7 +7139,7 @@ GameObject:
   - component: {fileID: 1948131077118353618}
   - component: {fileID: 8848407094257753264}
   - component: {fileID: 5048158940215327441}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: maintenance hatches belly06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7218,7 +7218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3900172042604355589}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7447,7 +7447,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3900172043366392960}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7481,7 +7481,7 @@ GameObject:
   - component: {fileID: 499288403903569891}
   - component: {fileID: 5655165099854038705}
   - component: {fileID: 8185913933258675937}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Range Finder Screws009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7562,7 +7562,7 @@ GameObject:
   - component: {fileID: 3882837443294116231}
   - component: {fileID: 2505735149310532331}
   - component: {fileID: 5837714155937975797}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Turret lifting hooks003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7643,7 +7643,7 @@ GameObject:
   - component: {fileID: 7219774321551611986}
   - component: {fileID: 5769955956212541563}
   - component: {fileID: 2908414487891429719}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Gun armor bolts03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7724,7 +7724,7 @@ GameObject:
   - component: {fileID: 5223497990954480817}
   - component: {fileID: 7771232512445428768}
   - component: {fileID: 7576182895476767809}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Arms01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7805,7 +7805,7 @@ GameObject:
   - component: {fileID: 7085597505471636502}
   - component: {fileID: 2201450289902834637}
   - component: {fileID: 8838119355263493576}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Left 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7886,7 +7886,7 @@ GameObject:
   - component: {fileID: 6484227203259144112}
   - component: {fileID: 6528034597779087327}
   - component: {fileID: 8624728298467452546}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Right09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7967,7 +7967,7 @@ GameObject:
   - component: {fileID: 1108047473418110928}
   - component: {fileID: 4054630224735947455}
   - component: {fileID: 9178080664847012551}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8048,7 +8048,7 @@ GameObject:
   - component: {fileID: 4508929078553494053}
   - component: {fileID: 4331758141020335406}
   - component: {fileID: 5598612661190232229}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Loader Viewport01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8129,7 +8129,7 @@ GameObject:
   - component: {fileID: 2208119089833123598}
   - component: {fileID: 5404620633381357874}
   - component: {fileID: 7265196350388317154}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Storage Box Rear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8210,7 +8210,7 @@ GameObject:
   - component: {fileID: 867211123647196112}
   - component: {fileID: 4920415777517334277}
   - component: {fileID: 824951371366579784}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: maintenance hatches belly12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8291,7 +8291,7 @@ GameObject:
   - component: {fileID: 7172650357135847042}
   - component: {fileID: 8882579218718957443}
   - component: {fileID: 2447056114609577766}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Idler Arm Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8372,7 +8372,7 @@ GameObject:
   - component: {fileID: 8979880862910527397}
   - component: {fileID: 6697365751209927282}
   - component: {fileID: 7514953666165551379}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Shovel mounts 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8453,7 +8453,7 @@ GameObject:
   - component: {fileID: 6410618760181516856}
   - component: {fileID: 3625444922920585439}
   - component: {fileID: 1888009642540456154}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Arms12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8534,7 +8534,7 @@ GameObject:
   - component: {fileID: 4330589747633814368}
   - component: {fileID: 4084491333303105055}
   - component: {fileID: 7489347614059841855}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Right Side Turret Tracks003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8615,7 +8615,7 @@ GameObject:
   - component: {fileID: 6340732189076914439}
   - component: {fileID: 4959085064327418358}
   - component: {fileID: 1272118016534689122}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Fan Cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8696,7 +8696,7 @@ GameObject:
   - component: {fileID: 1953061373008029335}
   - component: {fileID: 7036327378025220978}
   - component: {fileID: 6777045642249711250}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Arms08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8777,7 +8777,7 @@ GameObject:
   - component: {fileID: 2767089278578861003}
   - component: {fileID: 1272007911409893935}
   - component: {fileID: 4756921438879320758}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Left 09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8858,7 +8858,7 @@ GameObject:
   - component: {fileID: 7370258824323318439}
   - component: {fileID: 2374012703786959048}
   - component: {fileID: 5266927900185829242}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Hinges Loaders Hatch02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8939,7 +8939,7 @@ GameObject:
   - component: {fileID: 8504361556937709056}
   - component: {fileID: 7661007543006175600}
   - component: {fileID: 2448123576073517304}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Range Finder Screws006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9020,7 +9020,7 @@ GameObject:
   - component: {fileID: 1237256386045043961}
   - component: {fileID: 1963490023837886451}
   - component: {fileID: 969898052638781868}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Gun armor bolts01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9101,7 +9101,7 @@ GameObject:
   - component: {fileID: 3304284094772220427}
   - component: {fileID: 2538288033499592133}
   - component: {fileID: 1922970175821025947}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Right Side Turret Tracks002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9182,7 +9182,7 @@ GameObject:
   - component: {fileID: 3188663431677444544}
   - component: {fileID: 4583686044263919261}
   - component: {fileID: 95011240507474141}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Arms03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9263,7 +9263,7 @@ GameObject:
   - component: {fileID: 5256772904830671013}
   - component: {fileID: 4468166525051547376}
   - component: {fileID: 6437420157381600808}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Gun armor bolts07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9344,7 +9344,7 @@ GameObject:
   - component: {fileID: 147143258511283443}
   - component: {fileID: 3050555680216983993}
   - component: {fileID: 716015271042581952}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Hinges Loaders Hatch00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9425,7 +9425,7 @@ GameObject:
   - component: {fileID: 5616356832639772490}
   - component: {fileID: 1882149625042910598}
   - component: {fileID: 4708163494491185828}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Gun armor bolts00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9506,7 +9506,7 @@ GameObject:
   - component: {fileID: 8145402694870400984}
   - component: {fileID: 3159162779803338085}
   - component: {fileID: 6814346180943240645}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Falme Superssor armored cover002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9587,7 +9587,7 @@ GameObject:
   - component: {fileID: 8239548186172868628}
   - component: {fileID: 4897846542448214073}
   - component: {fileID: 5040997784328201313}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Right07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9668,7 +9668,7 @@ GameObject:
   - component: {fileID: 2233021343672928645}
   - component: {fileID: 3526700418597490836}
   - component: {fileID: 8658426997998331658}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Gun Stabilizer00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9749,7 +9749,7 @@ GameObject:
   - component: {fileID: 8304616029642344115}
   - component: {fileID: 3529256962364694102}
   - component: {fileID: 2762837022465023481}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Left 05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9828,7 +9828,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5554788882139912329}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Lv5_GadianTank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9862,7 +9862,7 @@ GameObject:
   - component: {fileID: 5811833881866942909}
   - component: {fileID: 4706840963140077451}
   - component: {fileID: 4117543086871554253}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Lifting Hooks Engine Deck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9943,7 +9943,7 @@ GameObject:
   - component: {fileID: 5515277595518952553}
   - component: {fileID: 7251578546018685784}
   - component: {fileID: 6197143717998235686}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: maintenance hatches belly07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10024,7 +10024,7 @@ GameObject:
   - component: {fileID: 2657770272201578757}
   - component: {fileID: 3600015866123323048}
   - component: {fileID: 5584779597576317981}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Driver/Co Viewports007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10105,7 +10105,7 @@ GameObject:
   - component: {fileID: 7234416941100668269}
   - component: {fileID: 6044011723244009910}
   - component: {fileID: 7796584632457111753}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Right Side Spring Suspension03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10186,7 +10186,7 @@ GameObject:
   - component: {fileID: 4749120010597194846}
   - component: {fileID: 4815201671246575764}
   - component: {fileID: 6876760431326715455}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Right Side Drive Sprocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10267,7 +10267,7 @@ GameObject:
   - component: {fileID: 577224150739975582}
   - component: {fileID: 4963160741769458601}
   - component: {fileID: 144037861282950364}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Right side front wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10348,7 +10348,7 @@ GameObject:
   - component: {fileID: 2095006253589786488}
   - component: {fileID: 6475950809642284634}
   - component: {fileID: 3523017879333265084}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Turret lifting hooks009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10429,7 +10429,7 @@ GameObject:
   - component: {fileID: 7356584870973210534}
   - component: {fileID: 1666617110788341236}
   - component: {fileID: 134236395362691926}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Fire Suppressor mounts004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10510,7 +10510,7 @@ GameObject:
   - component: {fileID: 1495455500385211112}
   - component: {fileID: 1256519713430836065}
   - component: {fileID: 6957824173057868287}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Right11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10591,7 +10591,7 @@ GameObject:
   - component: {fileID: 6577654568347955678}
   - component: {fileID: 1893921243968337783}
   - component: {fileID: 5486976622356640619}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Headlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10672,7 +10672,7 @@ GameObject:
   - component: {fileID: 389277089912919400}
   - component: {fileID: 6550390534570328688}
   - component: {fileID: 6243443825232510365}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Left Skirts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10753,7 +10753,7 @@ GameObject:
   - component: {fileID: 4446615220881841677}
   - component: {fileID: 3192042675954884759}
   - component: {fileID: 1926142621797052240}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Gun Mantlet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10834,7 +10834,7 @@ GameObject:
   - component: {fileID: 3897301569930777614}
   - component: {fileID: 2900461553675031432}
   - component: {fileID: 4431485564114305977}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Range Finder Screws008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10915,7 +10915,7 @@ GameObject:
   - component: {fileID: 1788641594194391517}
   - component: {fileID: 7112746945739015347}
   - component: {fileID: 7579839718144049687}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cable Clamps04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10996,7 +10996,7 @@ GameObject:
   - component: {fileID: 3633136426121634657}
   - component: {fileID: 8077585933203610101}
   - component: {fileID: 9173883595994765858}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Arms14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11077,7 +11077,7 @@ GameObject:
   - component: {fileID: 2430378592911915583}
   - component: {fileID: 3259530767410917491}
   - component: {fileID: 2777503185915548810}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Headlight connector001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11158,7 +11158,7 @@ GameObject:
   - component: {fileID: 8983092644309256632}
   - component: {fileID: 1952063802942783789}
   - component: {fileID: 3950592490729999245}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Fire Suppressor mounts00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11239,7 +11239,7 @@ GameObject:
   - component: {fileID: 1807252299490971324}
   - component: {fileID: 4323128398180210029}
   - component: {fileID: 3753059226020752352}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Range Finder00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11320,7 +11320,7 @@ GameObject:
   - component: {fileID: 8827783131343492560}
   - component: {fileID: 4395961022219902452}
   - component: {fileID: 6209183108403110022}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Turret mounts006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11401,7 +11401,7 @@ GameObject:
   - component: {fileID: 9024458792892846549}
   - component: {fileID: 1219955287955122153}
   - component: {fileID: 5279198567746660321}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Commanders Hatch001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11482,7 +11482,7 @@ GameObject:
   - component: {fileID: 8203906189409656006}
   - component: {fileID: 2358835325419421450}
   - component: {fileID: 6267167578648687844}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Idler Wheel Arm left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11563,7 +11563,7 @@ GameObject:
   - component: {fileID: 4422593758718824630}
   - component: {fileID: 4487533561255008782}
   - component: {fileID: 8463470083204926585}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cooling Fan Cover008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11644,7 +11644,7 @@ GameObject:
   - component: {fileID: 2301012523791303398}
   - component: {fileID: 8142609338169319262}
   - component: {fileID: 2813235673292201696}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Arms09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11725,7 +11725,7 @@ GameObject:
   - component: {fileID: 8237775261333203490}
   - component: {fileID: 3859384420759278375}
   - component: {fileID: 8966593144174216342}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Arms04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11806,7 +11806,7 @@ GameObject:
   - component: {fileID: 2281495303772863138}
   - component: {fileID: 2953486732275547280}
   - component: {fileID: 4356708856987522139}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Plane336
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11887,7 +11887,7 @@ GameObject:
   - component: {fileID: 4798361753250228896}
   - component: {fileID: 5444219583587963144}
   - component: {fileID: 2910035834829275958}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: maintenance hatches belly11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11968,7 +11968,7 @@ GameObject:
   - component: {fileID: 2056522040034634372}
   - component: {fileID: 3372818829971302292}
   - component: {fileID: 8256674776071043561}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Right04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12049,7 +12049,7 @@ GameObject:
   - component: {fileID: 5302767064698484036}
   - component: {fileID: 2565140306888309238}
   - component: {fileID: 5500098124318459472}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Equipment Left Side02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12130,7 +12130,7 @@ GameObject:
   - component: {fileID: 7271788739911857250}
   - component: {fileID: 5331385007261202222}
   - component: {fileID: 268563779770760653}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Chain Tensioner Cover00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12211,7 +12211,7 @@ GameObject:
   - component: {fileID: 8298695350069495283}
   - component: {fileID: 1554620384646823453}
   - component: {fileID: 5866649053976653446}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Loarder Viewport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12292,7 +12292,7 @@ GameObject:
   - component: {fileID: 2780731244645572119}
   - component: {fileID: 6937637546287165945}
   - component: {fileID: 6232357351151328094}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Fuel/Oil Caps02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12373,7 +12373,7 @@ GameObject:
   - component: {fileID: 4231553672654233827}
   - component: {fileID: 4156556315095146266}
   - component: {fileID: 843746847989740309}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: 'Idler Wheel Left Side '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12454,7 +12454,7 @@ GameObject:
   - component: {fileID: 7720325139078584418}
   - component: {fileID: 5646959317716784108}
   - component: {fileID: 3928846496658897257}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cable Clamps08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12535,7 +12535,7 @@ GameObject:
   - component: {fileID: 2464488531336574577}
   - component: {fileID: 6248100836055174167}
   - component: {fileID: 3174601977999411843}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Right10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12616,7 +12616,7 @@ GameObject:
   - component: {fileID: 2894301755058436465}
   - component: {fileID: 4694333773024175399}
   - component: {fileID: 1527783026376615715}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Headlight Cable001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12697,7 +12697,7 @@ GameObject:
   - component: {fileID: 4104079704222481118}
   - component: {fileID: 3019166075886633978}
   - component: {fileID: 7792623614605982627}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Gun Stabilizer02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12778,7 +12778,7 @@ GameObject:
   - component: {fileID: 3697277083078434123}
   - component: {fileID: 3167641795018663778}
   - component: {fileID: 926577916043572592}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Headlight Rear mount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12859,7 +12859,7 @@ GameObject:
   - component: {fileID: 1373513263033521175}
   - component: {fileID: 407537361565909411}
   - component: {fileID: 2439202669692700653}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Viewport Cover005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12940,7 +12940,7 @@ GameObject:
   - component: {fileID: 3122986616336986986}
   - component: {fileID: 4721782741981898471}
   - component: {fileID: 8155320784829576296}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Rear Hull Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13021,7 +13021,7 @@ GameObject:
   - component: {fileID: 3261285422107139386}
   - component: {fileID: 2288492673774162341}
   - component: {fileID: 213555939066428018}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cable Clamps02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13102,7 +13102,7 @@ GameObject:
   - component: {fileID: 4265904534739197187}
   - component: {fileID: 4881347430175139157}
   - component: {fileID: 8347617742889296990}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Chain Tensioner Cover01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13183,7 +13183,7 @@ GameObject:
   - component: {fileID: 7502183644279298782}
   - component: {fileID: 8984411322176065186}
   - component: {fileID: 4320104775066702353}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Viewport Cover02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13264,7 +13264,7 @@ GameObject:
   - component: {fileID: 6412638959001411552}
   - component: {fileID: 1985132861705104311}
   - component: {fileID: 7401933037609540080}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: maintenance hatches belly00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13345,7 +13345,7 @@ GameObject:
   - component: {fileID: 1185827942405732090}
   - component: {fileID: 6960076298078315794}
   - component: {fileID: 5147263238784010859}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Left 07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13426,7 +13426,7 @@ GameObject:
   - component: {fileID: 5753430176836405908}
   - component: {fileID: 1475814711425490866}
   - component: {fileID: 8750407178105244150}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: maintenance hatches belly01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13507,7 +13507,7 @@ GameObject:
   - component: {fileID: 735099433753432860}
   - component: {fileID: 5576523338885655372}
   - component: {fileID: 3477462688482625906}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Right06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13588,7 +13588,7 @@ GameObject:
   - component: {fileID: 9097805575567273590}
   - component: {fileID: 5508404902330714096}
   - component: {fileID: 6758046454720141009}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Shovel01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13669,7 +13669,7 @@ GameObject:
   - component: {fileID: 5239761318858321087}
   - component: {fileID: 3426754032765600212}
   - component: {fileID: 5049003570269271900}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Left 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13750,7 +13750,7 @@ GameObject:
   - component: {fileID: 2332830531631084996}
   - component: {fileID: 7255120582403102830}
   - component: {fileID: 9213100220071013316}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Left 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13831,7 +13831,7 @@ GameObject:
   - component: {fileID: 3114651315456799953}
   - component: {fileID: 3702918521002669115}
   - component: {fileID: 4482506710718588998}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Range Finder Screws003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13912,7 +13912,7 @@ GameObject:
   - component: {fileID: 5000036158654793929}
   - component: {fileID: 2558919536816390237}
   - component: {fileID: 4290653454195227176}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: FIre Suppressor Exhausts003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13993,7 +13993,7 @@ GameObject:
   - component: {fileID: 4760941463965372751}
   - component: {fileID: 4782208235115290107}
   - component: {fileID: 160856132237942912}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Range Finder Screws007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14074,7 +14074,7 @@ GameObject:
   - component: {fileID: 1620990126906594832}
   - component: {fileID: 3124479721573584426}
   - component: {fileID: 2472895199602212366}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: 'Gun Armor '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14155,7 +14155,7 @@ GameObject:
   - component: {fileID: 4213930582847575969}
   - component: {fileID: 7893506958450891908}
   - component: {fileID: 1720047937065668020}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: maintenance hatches belly03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14236,7 +14236,7 @@ GameObject:
   - component: {fileID: 6686356239591095609}
   - component: {fileID: 2178350356836799519}
   - component: {fileID: 5435006340888848775}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Gun armor bolts09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14317,7 +14317,7 @@ GameObject:
   - component: {fileID: 1245866871233266341}
   - component: {fileID: 1711982948342339900}
   - component: {fileID: 5967661525515451849}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Engine Deck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14398,7 +14398,7 @@ GameObject:
   - component: {fileID: 4344964778227553752}
   - component: {fileID: 5763781610309665363}
   - component: {fileID: 8251055404339102721}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Range Finder01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14479,7 +14479,7 @@ GameObject:
   - component: {fileID: 3551343879893241367}
   - component: {fileID: 1865880014677636277}
   - component: {fileID: 4413875902896854499}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Left 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14560,7 +14560,7 @@ GameObject:
   - component: {fileID: 6370761707597195036}
   - component: {fileID: 5348978117732499451}
   - component: {fileID: 9091134707189790324}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Fuel/Oil Caps01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14641,7 +14641,7 @@ GameObject:
   - component: {fileID: 8994581405765954747}
   - component: {fileID: 8912544109192910887}
   - component: {fileID: 3253358591620930270}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Towing Hooks008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14722,7 +14722,7 @@ GameObject:
   - component: {fileID: 3758472990013442665}
   - component: {fileID: 3890758801167273456}
   - component: {fileID: 5730935773098580770}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Falme Superssor armored cover01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14803,7 +14803,7 @@ GameObject:
   - component: {fileID: 6708719507974792532}
   - component: {fileID: 8382543666535025316}
   - component: {fileID: 6666705173929836959}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cooling Grid Armor01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14884,7 +14884,7 @@ GameObject:
   - component: {fileID: 3536310390756548733}
   - component: {fileID: 3270059876235916640}
   - component: {fileID: 2127777611626985765}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cooling Fan Cover02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14965,7 +14965,7 @@ GameObject:
   - component: {fileID: 3636712787404632743}
   - component: {fileID: 801511527172591533}
   - component: {fileID: 1043876367125155384}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Arms07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15046,7 +15046,7 @@ GameObject:
   - component: {fileID: 5612967515536379390}
   - component: {fileID: 3780055461512496595}
   - component: {fileID: 2398862067192010792}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: maintenance hatches belly09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15127,7 +15127,7 @@ GameObject:
   - component: {fileID: 967998093963761493}
   - component: {fileID: 6755642882213523726}
   - component: {fileID: 7902417908899042100}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Rear Equipment 003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15208,7 +15208,7 @@ GameObject:
   - component: {fileID: 113059149601063403}
   - component: {fileID: 5584736783787180057}
   - component: {fileID: 667394142631380493}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Range Finder Screws013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15289,7 +15289,7 @@ GameObject:
   - component: {fileID: 3154785701680052977}
   - component: {fileID: 4666618441367516291}
   - component: {fileID: 1144420764877858163}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Range Finder Screws010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15370,7 +15370,7 @@ GameObject:
   - component: {fileID: 5137621931876714000}
   - component: {fileID: 7763912108879406138}
   - component: {fileID: 823153688584411464}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cable Clamps06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15451,7 +15451,7 @@ GameObject:
   - component: {fileID: 6405570293133663961}
   - component: {fileID: 8186810504951842426}
   - component: {fileID: 1719252775389604529}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: maintenance hatches belly04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15532,7 +15532,7 @@ GameObject:
   - component: {fileID: 491051922207877237}
   - component: {fileID: 122364849512918421}
   - component: {fileID: 9066284169284882553}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cooling Fan Cover006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15613,7 +15613,7 @@ GameObject:
   - component: {fileID: 7623375212542884269}
   - component: {fileID: 4189682511245439931}
   - component: {fileID: 4479207071157351101}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Idler Wheel Right Side
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15694,7 +15694,7 @@ GameObject:
   - component: {fileID: 7266900440018486193}
   - component: {fileID: 5041698251674645808}
   - component: {fileID: 4907111968958169124}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Left Side Sprocket Drum Brakes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15775,7 +15775,7 @@ GameObject:
   - component: {fileID: 8084067966179352908}
   - component: {fileID: 4035821058232492451}
   - component: {fileID: 3143682512451772965}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cable Clamps05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15856,7 +15856,7 @@ GameObject:
   - component: {fileID: 3952811963390838589}
   - component: {fileID: 3636094999999102254}
   - component: {fileID: 7111249712349161475}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Range Finder Screws012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15937,7 +15937,7 @@ GameObject:
   - component: {fileID: 731347898001919364}
   - component: {fileID: 7327195253074559541}
   - component: {fileID: 1697041901992455143}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Right05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16018,7 +16018,7 @@ GameObject:
   - component: {fileID: 4636302241607518407}
   - component: {fileID: 281000721205449963}
   - component: {fileID: 6074743745470018389}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Left 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16099,7 +16099,7 @@ GameObject:
   - component: {fileID: 8148113499917001375}
   - component: {fileID: 4190752234296698554}
   - component: {fileID: 6073787605653746350}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Exhaust Port
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16180,7 +16180,7 @@ GameObject:
   - component: {fileID: 7643100580115699316}
   - component: {fileID: 7597458738301011606}
   - component: {fileID: 1933419731562933914}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Right02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16261,7 +16261,7 @@ GameObject:
   - component: {fileID: 831457151489869328}
   - component: {fileID: 8363109884657990367}
   - component: {fileID: 3737247490463642675}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Gun armor bolts02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16342,7 +16342,7 @@ GameObject:
   - component: {fileID: 4493305551304556813}
   - component: {fileID: 5108314585070115563}
   - component: {fileID: 3816249175445054126}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cooling Fan Cover007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16423,7 +16423,7 @@ GameObject:
   - component: {fileID: 4593090934291461633}
   - component: {fileID: 1710880636042064631}
   - component: {fileID: 7155855814982367152}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cooling Grid Cover00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16504,7 +16504,7 @@ GameObject:
   - component: {fileID: 1348213738625574124}
   - component: {fileID: 6625955560948653199}
   - component: {fileID: 8159218983896752013}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Roadwheels Left 00
   m_TagString: Untagged
   m_Icon: {fileID: 0}

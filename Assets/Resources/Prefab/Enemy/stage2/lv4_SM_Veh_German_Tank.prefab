@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4874024261632458}
   - component: {fileID: 33312459394671078}
   - component: {fileID: 23430714920882212}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_r_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4665535111530166}
   - component: {fileID: 33593727554026476}
   - component: {fileID: 23395357863860192}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_l_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 4307773376004718}
   - component: {fileID: 33330818562544916}
   - component: {fileID: 23323441170175310}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_l_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 4237584589575326}
   - component: {fileID: 33498543392571006}
   - component: {fileID: 23677072720438434}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_l_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 4684362474943286}
   - component: {fileID: 33224154238015952}
   - component: {fileID: 23146315538644238}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_r_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 4321192384226334}
   - component: {fileID: 33093587913359334}
   - component: {fileID: 23962878868756022}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_r_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 4932913522815172}
   - component: {fileID: 33737051060838586}
   - component: {fileID: 23574511341304174}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_r_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,7 +578,7 @@ GameObject:
   - component: {fileID: 4486451726931386}
   - component: {fileID: 33898273820076848}
   - component: {fileID: 23031979567295384}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_r
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 4603357388208648}
   - component: {fileID: 33767107112178538}
   - component: {fileID: 23233752237977608}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_l_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +740,7 @@ GameObject:
   - component: {fileID: 4258165077906538}
   - component: {fileID: 33506361682609736}
   - component: {fileID: 23244154210335826}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_l_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -821,7 +821,9 @@ GameObject:
   - component: {fileID: 4450927904410622}
   - component: {fileID: 33441852685024892}
   - component: {fileID: 23926864293675750}
-  m_Layer: 0
+  - component: {fileID: 4077744982524140811}
+  - component: {fileID: 5514683034403418708}
+  m_Layer: 18
   m_Name: lv4_SM_Veh_German_Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -893,6 +895,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &4077744982524140811
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325726345117900}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &5514683034403418708
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325726345117900}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.8096004, y: 0.8, z: 6.326624}
+  m_Center: {x: 0, y: 8, z: -0.37439048}
 --- !u!1 &1346979511039492
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,7 +935,7 @@ GameObject:
   - component: {fileID: 4583096167948636}
   - component: {fileID: 33090577819408674}
   - component: {fileID: 23266358532079812}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_l_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -985,7 +1016,7 @@ GameObject:
   - component: {fileID: 4171430748696432}
   - component: {fileID: 33291698368297356}
   - component: {fileID: 23571718628404348}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_r_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1066,7 +1097,7 @@ GameObject:
   - component: {fileID: 4094593568629262}
   - component: {fileID: 33938812520898432}
   - component: {fileID: 23234818187110660}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_r_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,7 +1178,7 @@ GameObject:
   - component: {fileID: 4621886217128176}
   - component: {fileID: 33878864553392884}
   - component: {fileID: 23172924009867320}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_r_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1228,7 +1259,7 @@ GameObject:
   - component: {fileID: 4252475399856154}
   - component: {fileID: 33970329829718124}
   - component: {fileID: 23417527363236140}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_l_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1309,7 +1340,7 @@ GameObject:
   - component: {fileID: 4332887754447654}
   - component: {fileID: 33438689476918398}
   - component: {fileID: 23775539099951450}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1390,7 +1421,7 @@ GameObject:
   - component: {fileID: 4883164490941452}
   - component: {fileID: 33161404884112546}
   - component: {fileID: 23260095792310902}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1471,7 +1502,7 @@ GameObject:
   - component: {fileID: 4005462545550004}
   - component: {fileID: 33962843791522678}
   - component: {fileID: 23095936645024184}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_r_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1552,7 +1583,7 @@ GameObject:
   - component: {fileID: 4200090183193770}
   - component: {fileID: 33805982155424972}
   - component: {fileID: 23895299532868654}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_l_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1633,7 +1664,7 @@ GameObject:
   - component: {fileID: 4915916648482670}
   - component: {fileID: 33944211364898834}
   - component: {fileID: 23281391408204856}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Hatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1714,7 +1745,7 @@ GameObject:
   - component: {fileID: 4297132343015576}
   - component: {fileID: 33351186131423216}
   - component: {fileID: 23367515219050410}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_r_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1795,7 +1826,7 @@ GameObject:
   - component: {fileID: 4110749697201376}
   - component: {fileID: 33357159485359756}
   - component: {fileID: 23028238869282478}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1876,7 +1907,7 @@ GameObject:
   - component: {fileID: 4190959798301558}
   - component: {fileID: 33300866719944216}
   - component: {fileID: 23602459762283884}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_r_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1957,7 +1988,7 @@ GameObject:
   - component: {fileID: 4198898960468480}
   - component: {fileID: 33968085115733520}
   - component: {fileID: 23848946396788748}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_l_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2038,7 +2069,7 @@ GameObject:
   - component: {fileID: 4738982558474038}
   - component: {fileID: 33828784271636322}
   - component: {fileID: 23836367400393536}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Wheel_l_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2117,7 +2148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8288892792580256227}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Veh_German_Tank_01_Track_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2169,7 +2200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4619747118437040825}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: TurretPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

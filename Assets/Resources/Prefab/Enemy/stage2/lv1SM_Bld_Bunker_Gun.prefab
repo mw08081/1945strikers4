@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4478783523749584}
   - component: {fileID: 33790121821218048}
   - component: {fileID: 23134966728840158}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Prop_Turret_Barrel_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 33187089035164352}
   - component: {fileID: 23879454151837234}
   - component: {fileID: 65152423067446466}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: lv1SM_Bld_Bunker_Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 4945243296760340}
   - component: {fileID: 33457797297948122}
   - component: {fileID: 23490934435587176}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: SM_Prop_Turret_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
