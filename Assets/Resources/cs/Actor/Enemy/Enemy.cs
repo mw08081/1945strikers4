@@ -10,7 +10,7 @@ public class Enemy : Actor
     [SerializeField] int score;
     [SerializeField] float itemDropProbability;
 
-    protected Renderer renderer;
+    protected new Renderer renderer;
     Color originColor;
     Color dmgedColor;
 

@@ -181,14 +181,14 @@ public class Player : Actor
 
     protected override void OnBulletHitted(float dmg)
     {
-        if (!isInvincibility)
-            base.OnBulletHitted(dmg);
+        //if (!isInvincibility)
+        //    base.OnBulletHitted(dmg);
         Debug.Log("OnBulletDead");
     }
     protected override void OnCrash()
     {
-        if (!isInvincibility)
-            base.DecreaseHp(1);
+        //if (!isInvincibility)
+        //    base.DecreaseHp(1);
         Debug.Log("OnCrashDead");
     }
     protected override void DecreaseHp(float dmg)

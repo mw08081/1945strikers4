@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{AB532125-9FF5-C052-BBF1-6F3C76AE7E8D}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/cs/Actor/Enemy/GroundEnemy/GroundEnemyLvU4.cs">
+    <Files>
+      <File FileName="Assets/Resources/cs/Actor/Actor.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/cs/Actor/Enemy/Enemy.cs" Line="14" Column="23" />
+      <File FileName="Assets/Resources/cs/Actor/Enemy/GroundEnemy/GroundEnemy.cs" Line="51" Column="20" />
+      <File FileName="Assets/Resources/cs/Actor/Enemy/GroundEnemyLvU2.cs" Line="46" Column="25" />
+      <File FileName="Assets/Resources/cs/Actor/Enemy/GroundEnemy/GroundEnemyLvU4.cs" Line="14" Column="46" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="1945strikers4" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="cs" expanded="True">
+                  <Node name="Actor" expanded="True">
+                    <Node name="Enemy" expanded="True">
+                      <Node name="GroundEnemy" expanded="True">
+                        <Node name="GroundEnemyLvU4.cs" selected="True" />
+                      </Node>
+                    </Node>
+                    <Node name="Player" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="88158d56-d137-4c45-b651-39d6defff650" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
