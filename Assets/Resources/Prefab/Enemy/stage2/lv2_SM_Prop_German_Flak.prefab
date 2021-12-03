@@ -233,10 +233,13 @@ MonoBehaviour:
   lv: 1
   status: 0
   fireTransform: {fileID: 4893274321680588}
-  bulletSpeed: 14.3
+  fireCnt: 5
+  bulletSpeed: 12
+  attackIntervalInCoroutine: 0.5
   attackIntervalMax: 3.1
   attackIntervalMin: 1.99
-  attackProbability: 0.8
+  attackProbability: 0.65
+  destroyObject: {fileID: 1371172496666792, guid: 06188d40b6879794485f1d73dfb09ee0, type: 3}
 --- !u!1 &1392526764932274
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +346,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419248232742178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0, z: 1.637}
+  m_LocalPosition: {x: -0, y: 5.38, z: 6.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4706370092846944}

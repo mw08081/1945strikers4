@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 4453368405366620}
   - component: {fileID: 33187089035164352}
   - component: {fileID: 23879454151837234}
-  - component: {fileID: 65152423067446466}
   m_Layer: 0
   m_Name: lv1SM_Bld_Bunker_Gun_Destroy
   m_TagString: Untagged
@@ -109,7 +108,7 @@ Transform:
   m_GameObject: {fileID: 1608473851144456}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 50, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 4945243296760340}
   m_Father: {fileID: 0}
@@ -142,7 +141,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 22af96f9ba68eb54b9ce79bdf6661284, type: 2}
+  - {fileID: 2100000, guid: bc0c67c8bfd0bae448ba32c65a0974ca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -164,19 +163,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &65152423067446466
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608473851144456}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10.260483, y: 5.666896, z: 14.274174}
-  m_Center: {x: 0, y: 1.8267121, z: -3.797758}
 --- !u!1 &1919515003381348
 GameObject:
   m_ObjectHideFlags: 0
