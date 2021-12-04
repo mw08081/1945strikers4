@@ -823,6 +823,7 @@ GameObject:
   - component: {fileID: 23926864293675750}
   - component: {fileID: 4077744982524140811}
   - component: {fileID: 5514683034403418708}
+  - component: {fileID: 5817224035092492441}
   m_Layer: 18
   m_Name: lv4_SM_Veh_German_Tank
   m_TagString: Untagged
@@ -924,6 +925,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.8096004, y: 0.8, z: 6.326624}
   m_Center: {x: 0, y: 8, z: -0.37439048}
+--- !u!114 &5817224035092492441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325726345117900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd4016b7abd694ca694fa5ad4282f386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  isDead: 0
+  maxHp: 1050
+  speed: 0.5
+  dmg: 100
+  score: 100
+  itemDropProbability: 0.4
+  status: 0
+  fireTransform: {fileID: 6024898551900022125}
+  fireCnt: 3
+  bulletSpeed: 11
+  attackIntervalInCoroutine: 0
+  attackIntervalMax: 7.6
+  attackIntervalMin: 5.6
+  attackProbability: 0.6
+  destroyObject: {fileID: 1325726345117900, guid: 38b01da5e8451bb4aa950ecd26218e9e, type: 3}
+  isFixed: 0
 --- !u!1 &1346979511039492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,13 +1465,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562368342361224}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.14258844, y: -0, z: -0, w: 0.98978204}
   m_LocalPosition: {x: 0, y: -0.016434193, z: 1.5668995}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 6024898551900022125}
   m_Father: {fileID: 4619747118437040825}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -16.395, y: 0, z: 0}
 --- !u!33 &33161404884112546
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2139,6 +2170,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &488600921250260406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6024898551900022125}
+  m_Layer: 18
+  m_Name: FirePosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6024898551900022125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488600921250260406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.45, z: 5.31}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4883164490941452}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5102381230517730885
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ public class GroundEnemyLvU2 : GroundEnemy
         if (isDead)
             return;
 
-        if(isAttack)
+        if(isBoxIn)
         {
             if (!isFindTarget)
                 FindTarget();

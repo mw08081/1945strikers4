@@ -7,10 +7,24 @@ public class GroundEnemyLvU4 : GroundEnemy
     [SerializeField] bool isFixed;
     bool isFindTarget;
 
-    //if isFixed is true, cant move to anywhere
-    //if isAttack is true, will move to transform.forward slowly
+    protected override void Initializing()
+    {
+        base.Initializing();
+        isFixed = false;
+        isFindTarget = false;
+    }
 
-    //and add Lv3 Turret.cs, lv4Turret.cs
-    //and attach turret.cs to GroundEnemyLvU4
-    
+    protected override void Updating()
+    {
+        base.Updating();
+        if(isBoxIn && !isFixed)
+        {
+            MoveBody();
+        }
+    }
+
+    void MoveBody()
+    {
+        transform.position += transform.forward * speed * Time.deltaTime;
+    }
 }

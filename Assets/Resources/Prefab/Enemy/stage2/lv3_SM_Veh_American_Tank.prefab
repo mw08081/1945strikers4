@@ -1000,6 +1000,7 @@ GameObject:
   - component: {fileID: 23256611609516550}
   - component: {fileID: 54250169441170688}
   - component: {fileID: 65202945360588164}
+  - component: {fileID: -1628156025389815580}
   m_Layer: 18
   m_Name: lv3_SM_Veh_American_Tank
   m_TagString: Untagged
@@ -1101,6 +1102,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.434326, y: 0.85, z: 8.229688}
   m_Center: {x: 0.053138733, y: 8.7, z: 0.20760202}
+--- !u!114 &-1628156025389815580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498300578970242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd4016b7abd694ca694fa5ad4282f386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  isDead: 0
+  maxHp: 690
+  speed: 0.5
+  dmg: 100
+  score: 730
+  itemDropProbability: 0.33
+  status: 0
+  fireTransform: {fileID: 9137957767770171640}
+  fireCnt: 2
+  bulletSpeed: 11.2
+  attackIntervalInCoroutine: 0
+  attackIntervalMax: 5.3
+  attackIntervalMin: 4.1
+  attackProbability: 0.75
+  destroyObject: {fileID: 1914222424990736, guid: a1672100c360f0d4f8f1df35e39e986b, type: 3}
+  isFixed: 0
 --- !u!1 &1598830320772300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,7 +1321,8 @@ Transform:
   m_LocalRotation: {x: -0.14065088, y: -0, z: -0, w: 0.99005926}
   m_LocalPosition: {x: 0.029363172, y: 0.60886955, z: 0.9682692}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 9137957767770171640}
   m_Father: {fileID: 4264596865379642}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -16.171, y: 0, z: 0}
@@ -2415,6 +2446,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &973877302772773182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9137957767770171640}
+  m_Layer: 18
+  m_Name: FirePosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9137957767770171640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973877302772773182}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.09, z: 4.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4620108625005858}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8479910097556759553
 GameObject:
   m_ObjectHideFlags: 0

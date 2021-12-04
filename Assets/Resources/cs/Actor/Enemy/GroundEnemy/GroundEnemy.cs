@@ -19,18 +19,18 @@ public class GroundEnemy : Enemy
 
     [SerializeField] protected Transform fireTransform;
     protected Transform playerTransfrom;
-    [SerializeField] protected int fireCnt;
-    [SerializeField] protected float bulletSpeed;
+    [SerializeField] public int fireCnt;
+    [SerializeField] public float bulletSpeed;
     [SerializeField] protected float attackIntervalInCoroutine;
-    [SerializeField] protected float attackIntervalMax;
-    [SerializeField] protected float attackIntervalMin;
-    [SerializeField] protected float attackProbability;
+    [SerializeField] public float attackIntervalMax;
+    [SerializeField] public float attackIntervalMin;
+    [SerializeField] public float attackProbability;
     protected GameObject go;
     protected Bullet bullet;
     protected Vector3 attackDir;
     protected float attackInterval;
     protected float lastAttackTime;
-    protected bool isAttack;
+    public bool isBoxIn;
 
 
     [SerializeField] GameObject destroyObject;
@@ -61,10 +61,10 @@ public class GroundEnemy : Enemy
         switch (status)
         {
             case Status.BoxIn:
-                isAttack = true;
+                isBoxIn = true;
                 break;
             case Status.Dead:
-                isAttack = false;
+                isBoxIn = false;
                 break;
             case Status.BoxAfter:
                 Destroy(gameObject);
@@ -93,6 +93,7 @@ public class GroundEnemy : Enemy
 
     void GenerateDestroyedObject()
     {
+
         GameObject destroyedObject = Instantiate(destroyObject, generateFieldDestroyObject);
         destroyedObject.transform.position = transform.position;
         destroyedObject.transform.forward = transform.forward;
