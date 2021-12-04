@@ -1129,7 +1129,9 @@ MonoBehaviour:
   attackIntervalMax: 5.3
   attackIntervalMin: 4.1
   attackProbability: 0.75
+  isBoxIn: 0
   destroyObject: {fileID: 1914222424990736, guid: a1672100c360f0d4f8f1df35e39e986b, type: 3}
+  turretRenderer: {fileID: 23336722482166926}
   isFixed: 0
 --- !u!1 &1598830320772300
 GameObject:
@@ -1710,6 +1712,7 @@ GameObject:
   - component: {fileID: 4264596865379642}
   - component: {fileID: 33100378189990930}
   - component: {fileID: 23336722482166926}
+  - component: {fileID: 4686420616081912148}
   m_Layer: 18
   m_Name: SM_Veh_American_Tank_01_Turret
   m_TagString: Untagged
@@ -1783,6 +1786,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4686420616081912148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743977496771718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c4b7fbc3fde4d5f9463bfdd5ff4135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lv: 0
+  myBody: {fileID: -1628156025389815580}
+  firePosition: {fileID: 9137957767770171640}
 --- !u!1 &1765617657631170
 GameObject:
   m_ObjectHideFlags: 0

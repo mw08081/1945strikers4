@@ -11,8 +11,8 @@ public class Enemy : Actor
     [SerializeField] float itemDropProbability;
 
     protected new Renderer renderer;
-    Color originColor;
-    Color dmgedColor;
+    protected Color originColor;
+    protected Color dmgedColor;
 
     bool isHittedByP1;
 

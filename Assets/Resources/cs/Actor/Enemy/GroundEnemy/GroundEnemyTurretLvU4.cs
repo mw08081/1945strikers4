@@ -35,7 +35,11 @@ public class GroundEnemyTurretLvU4 : MonoBehaviour
             if (!isFindTarget)
                 FindTarget();
             else
+            {
                 Attack();
+                
+            }
+                
         }
     }
 
@@ -52,11 +56,12 @@ public class GroundEnemyTurretLvU4 : MonoBehaviour
 
     void Attack()
     {
+        transform.forward = new Vector3((targetTransform.position - firePosition.position).x, 0, (targetTransform.position - firePosition.position).z);
         if (Time.time - lastAttackTime < 5f)
             return;
 
         //AttackProbability
-
+        
         for (int i = -10; i < 30; i+=20)
         {
             lookAtAngle = Mathf.Acos(Vector3.Dot(Vector3.right, transform.forward));// * Mathf.Rad2Deg;
