@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyLv4 : Enemy
+public class EnemyLv4 : AirForceEnemy
 {
     [Header("----EnemyLv4 Field----")]
     [SerializeField] Transform[] bulletSpawnPosition;

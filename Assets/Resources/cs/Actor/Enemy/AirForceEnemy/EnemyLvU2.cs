@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyLvU2 : Enemy
+public class EnemyLvU2 : AirForceEnemy
 {
     public enum FormationCode : int
     {

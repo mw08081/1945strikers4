@@ -714,6 +714,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1925946102}
     m_Modifications:
+    - target: {fileID: -1628156025389815580, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
+      propertyPath: isFixed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1498300578970242, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_Name
       value: lv3_SM_Veh_American_Tank
@@ -1375,6 +1379,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1925946102}
     m_Modifications:
+    - target: {fileID: -1628156025389815580, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
+      propertyPath: isFixed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1498300578970242, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_Name
       value: lv3_SM_Veh_American_Tank
@@ -2606,6 +2614,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1925946102}
     m_Modifications:
+    - target: {fileID: -1628156025389815580, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
+      propertyPath: isFixed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1498300578970242, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_Name
       value: lv3_SM_Veh_American_Tank
@@ -3369,6 +3381,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1925946102}
     m_Modifications:
+    - target: {fileID: -1628156025389815580, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
+      propertyPath: isFixed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1498300578970242, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_Name
       value: lv3_SM_Veh_American_Tank
@@ -3984,7 +4000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4480466677387892, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.1
+      value: 4.28
       objectReference: {fileID: 0}
     - target: {fileID: 4480466677387892, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3992,7 +4008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4480466677387892, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 60.22
+      value: 60.26
       objectReference: {fileID: 0}
     - target: {fileID: 4480466677387892, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4190,7 +4206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4453368405366620, guid: e48dee96743df824a841935596922df1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.29
+      value: 12.39
       objectReference: {fileID: 0}
     - target: {fileID: 4453368405366620, guid: e48dee96743df824a841935596922df1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4198,7 +4214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4453368405366620, guid: e48dee96743df824a841935596922df1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.47
+      value: 28.42
       objectReference: {fileID: 0}
     - target: {fileID: 4453368405366620, guid: e48dee96743df824a841935596922df1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4407,6 +4423,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1925946102}
     m_Modifications:
+    - target: {fileID: -1628156025389815580, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
+      propertyPath: isFixed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1498300578970242, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_Name
       value: lv3_SM_Veh_American_Tank
@@ -4429,7 +4449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4480466677387892, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.19
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 4480466677387892, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4437,7 +4457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4480466677387892, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 41.84
+      value: 40.23
       objectReference: {fileID: 0}
     - target: {fileID: 4480466677387892, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6768,7 +6788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4480466677387892, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.7
+      value: 10.24
       objectReference: {fileID: 0}
     - target: {fileID: 4480466677387892, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6776,7 +6796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4480466677387892, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 105.8
+      value: 105.84
       objectReference: {fileID: 0}
     - target: {fileID: 4480466677387892, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6909,7 +6929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1900618502
 Transform:
   m_ObjectHideFlags: 0
@@ -7135,6 +7155,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1925946102}
     m_Modifications:
+    - target: {fileID: -1628156025389815580, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
+      propertyPath: isFixed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1498300578970242, guid: aecadca55bf08eb4f830011a3755299f, type: 3}
       propertyPath: m_Name
       value: lv3_SM_Veh_American_Tank

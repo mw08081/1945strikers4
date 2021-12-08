@@ -14,7 +14,7 @@ public class AttackModelInfo
     public float _bulletSpeed;
 }
 
-public class EnemyLv5 : Enemy
+public class EnemyLv5 : AirForceEnemy
 {
     [Header("----EnemyLv5 Field----")]
     [SerializeField] float lifeTime;

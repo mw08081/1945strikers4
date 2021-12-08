@@ -8,7 +8,7 @@ public class Enemy : Actor
     [SerializeField] protected float speed;
     [SerializeField] protected float dmg;
     [SerializeField] int score;
-    [SerializeField] float itemDropProbability;
+    [SerializeField] protected float itemDropProbability;
 
     protected new Renderer renderer;
     protected Color originColor;
@@ -94,7 +94,7 @@ public class Enemy : Actor
         SystemManager.Instance.ScoreSystem.CalcSc(isHittedByP1, score);
 
 
-        if (Random.Range(0.0f, 1.0f) >= (1 - itemDropProbability))
-            SystemManager.Instance.GetCurrentSceneT<InGameScene>().ItemSystem.ServeItem((ItemCode)Random.Range(0, 2), transform.position);
+        //if (Random.Range(0.0f, 1.0f) >= (1 - itemDropProbability))
+        //    SystemManager.Instance.GetCurrentSceneT<InGameScene>().ItemSystem.ServeItem((ItemCode)Random.Range(0, 2), transform.position);
     }
 }

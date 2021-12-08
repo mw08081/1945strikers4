@@ -12,7 +12,6 @@ public class GroundEnemyLvU4 : GroundEnemy
     protected override void Initializing()
     {
         base.Initializing();
-        isFixed = false;
         isFindTarget = false;
     }
 

@@ -75,7 +75,7 @@ public class BF109SubMacine : MonoBehaviour
         float startTime = Time.time;
         int colorIndex = 0;
 
-        while (Time.time - startTime < 8.0f)
+        while (Time.time - startTime < 6.0f)
         {
             GameObject go = SystemManager.Instance.GetCurrentSceneT<InGameScene>()
                 .BulletSystem.ServeBullet((myPlayer.isP1 ? BulletCode.player1SubBullet2 : BulletCode.player2SubBullet2), firePos.position);
@@ -115,7 +115,7 @@ public class BF109SubMacine : MonoBehaviour
                 for (int i = 0; i < 360; i+=8)
                 {
                     transform.position = new Vector3(Mathf.Cos(i * Mathf.Deg2Rad) + xDiff, -3, Mathf.Sin(i * Mathf.Deg2Rad) + zDiff + distance) * 1f;
-                    distance+=0.03f;
+                    distance+=0.015f;
                     yield return new WaitForSeconds(0.005f);
                 }
             }
@@ -124,7 +124,7 @@ public class BF109SubMacine : MonoBehaviour
                 for (int i = 180; i < 540; i+=8)
                 {
                     transform.position = new Vector3(Mathf.Cos(i * Mathf.Deg2Rad) + xDiff, -3, Mathf.Sin(i * Mathf.Deg2Rad) + +zDiff + distance) * 1f;
-                    distance+=0.03f;
+                    distance+=0.015f;
                     yield return new WaitForSeconds(0.005f);
                 }
             }    

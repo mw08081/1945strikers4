@@ -20,7 +20,17 @@ public class BF109Bomb : Bullet
 
         Enemy[] enemies = GameObject.FindObjectsOfType<Enemy>();
         for (int i = 0; i < enemies.Length; i++)
-            enemies[i].OnBomb(dmg);
+        {
+            if(enemies[i] is GroundEnemy)
+            {
+                GroundEnemy ge = enemies[i] as GroundEnemy;
+                if(ge.isBoxIn)
+                    enemies[i].OnBomb(dmg);
+            }
+            else
+                enemies[i].OnBomb(dmg);
+        }
+            
 
         Bullet[] bullets = GameObject.FindObjectsOfType<Bullet>();
         for (int i = 0; i < bullets.Length; i++)

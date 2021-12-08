@@ -86,6 +86,9 @@ public class GroundEnemy : Enemy
     {
         base.OnDead();
         SystemManager.Instance.GetCurrentSceneT<InGameScene>().EffectSystem.ServeEffect(EffectCode.tres, transform.position);
+        if (Random.Range(0.0f, 1.0f) >= (1 - itemDropProbability))
+            SystemManager.Instance.GetCurrentSceneT<InGameScene>().ItemSystem.ServeItem((ItemCode)Random.Range(0, 2), fireTransform.position);
+        
         GenerateDestroyedObject();
 
         Destroy(gameObject);

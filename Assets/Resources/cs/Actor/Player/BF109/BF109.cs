@@ -40,7 +40,7 @@ public class BF109 : Player
 
     protected override void Attack()
     {
-        if (Time.time - lastShotTime > 0.12f)
+        if (Time.time - lastShotTime > 0.1f)
         {
             for (int i = 0; i < power; i++)
             {
