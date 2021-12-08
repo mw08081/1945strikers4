@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
 
     //[Header("----Bullet Info----")]
     public BulletCode bulletCode;
-    protected Vector3 moveDir;
+    [SerializeField]     protected Vector3 moveDir;
     protected float bulletSpeed;
     protected float generateTime;
 

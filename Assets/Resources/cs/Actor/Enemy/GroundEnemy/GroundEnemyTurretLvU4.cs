@@ -56,24 +56,45 @@ public class GroundEnemyTurretLvU4 : MonoBehaviour
 
     void Attack()
     {
-        transform.forward = new Vector3((targetTransform.position - firePosition.position).x, 0, (targetTransform.position - firePosition.position).z);
-        if (Time.time - lastAttackTime < 5f)
+        if (Time.time - lastAttackTime < 3f)
             return;
+        StartCoroutine("AttackCoroutine");
+    }
 
-        //AttackProbability
+    IEnumerator AttackCoroutine()
+    {
+        lastAttackTime = Time.time;
         
-        for (int i = -10; i < 30; i+=20)
+        Vector3 originLookAtVector = transform.forward;
+        Vector3 lookAtVector = new Vector3((targetTransform.position - firePosition.position).x, 0, (targetTransform.position - firePosition.position).z);
+        for (float i = 0.1f; i < 0.5f; i+=0.1f)
         {
-            lookAtAngle = Mathf.Acos(Vector3.Dot(Vector3.right, transform.forward));// * Mathf.Rad2Deg;
+            transform.forward = Vector3.Lerp(originLookAtVector, lookAtVector, i*2);
 
-            attackDir = new Vector3(Mathf.Cos(lookAtAngle + i), 0, Mathf.Sin(lookAtAngle + i));
+            yield return new WaitForSeconds(0.1f);
+        }
 
-            go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem.ServeBullet(BulletCode.enemyBulletM1, firePosition.position);
-            bullet = go.GetComponent<Bullet>();
-            bullet.Fire(BulletCode.enemyBulletM1, attackDir, myBody.bulletSpeed, 100);
+        yield return new WaitForSeconds(0.01f);
+        for (int j = 0; j < myBody.fireCnt; j++)
+        {
+            for (int i = -5; i < 10; i += 10)
+            {
+
+                if (transform.position.z >= targetTransform.position.z)
+                    lookAtAngle = 360 - (Mathf.Acos(Vector3.Dot(Vector3.right, transform.forward)) * Mathf.Rad2Deg);
+                else
+                    lookAtAngle = Mathf.Acos(Vector3.Dot(Vector3.right, transform.forward)) * Mathf.Rad2Deg;
+                Debug.Log(lookAtAngle);
+
+                attackDir = new Vector3(Mathf.Cos((lookAtAngle + i) * Mathf.Deg2Rad), 0, Mathf.Sin((lookAtAngle + i) * Mathf.Deg2Rad));
+
+                go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem.ServeBullet(BulletCode.enemyBulletM1, firePosition.position);
+                bullet = go.GetComponent<Bullet>();
+                bullet.Fire(BulletCode.enemyBulletM1, attackDir, myBody.bulletSpeed, 100);
+            }
+            yield return new WaitForSeconds(0.4f);
         }
 
         lastAttackTime = Time.time;
-        //attackProbability re setting
     }
 }

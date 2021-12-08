@@ -22,9 +22,9 @@ public class GroundEnemy : Enemy
     [SerializeField] public int fireCnt;
     [SerializeField] public float bulletSpeed;
     [SerializeField] protected float attackIntervalInCoroutine;
-    [SerializeField] public float attackIntervalMax;
-    [SerializeField] public float attackIntervalMin;
-    [SerializeField] public float attackProbability;
+    [SerializeField] protected float attackIntervalMax;
+    [SerializeField] protected float attackIntervalMin;
+    [SerializeField] protected float attackProbability;
     protected GameObject go;
     protected Bullet bullet;
     protected Vector3 attackDir;
@@ -46,17 +46,18 @@ public class GroundEnemy : Enemy
 
     protected override void Updating()
     {
-        //base.Updating();
+        base.Updating();
         if (isDead)
             return;
 
         viewPortPosition = Camera.main.WorldToViewportPoint(transform.position);
-        if (viewPortPosition.y < 1)
-            status = Status.BoxIn;
-        else if (viewPortPosition.y < 0)
-            status = Status.BoxAfter;
-        else
+        if (viewPortPosition.y > 1)
             status = Status.BoxBefore;
+        else if(viewPortPosition.y > -0.2f)
+            status = Status.BoxIn;
+        else 
+            status = Status.BoxAfter;
+            
 
         switch (status)
         {

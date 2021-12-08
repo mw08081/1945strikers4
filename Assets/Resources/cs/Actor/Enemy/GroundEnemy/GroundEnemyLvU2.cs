@@ -60,9 +60,7 @@ public class GroundEnemyLvU2 : GroundEnemy
         if(Time.time - lastAttackTime > attackInterval)
         {
             if(Random.Range(0.0f, 1.0f) > (1 - attackProbability))
-            {
                 StartCoroutine("AttackModelLvU2");
-            }
 
             attackInterval = Random.Range(attackIntervalMin, attackIntervalMax);
             lastAttackTime = Time.time;
