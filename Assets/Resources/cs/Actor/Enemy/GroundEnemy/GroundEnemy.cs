@@ -40,8 +40,6 @@ public class GroundEnemy : Enemy
     {
         base.Initializing();
         status = Status.BoxBefore;
-
-        generateFieldDestroyObject = GameObject.Find("EnemySet").transform;
     }
 
     protected override void Updating()
@@ -97,7 +95,6 @@ public class GroundEnemy : Enemy
 
     void GenerateDestroyedObject()
     {
-
         GameObject destroyedObject = Instantiate(destroyObject, generateFieldDestroyObject);
         destroyedObject.transform.position = transform.position;
         destroyedObject.transform.forward = transform.forward;
