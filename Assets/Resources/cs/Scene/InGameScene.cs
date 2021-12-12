@@ -130,7 +130,7 @@ public class InGameScene : BaseScene
                 GameOver();
         }
 
-        if (Input.GetKeyDown(KeyCode.F2) && !SystemManager.Instance.isForDos)
+        if (Input.GetKeyDown(KeyCode.F) && !SystemManager.Instance.isForDos)
         {
             SystemManager.Instance.isForDos = true;
 

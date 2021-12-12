@@ -41,7 +41,7 @@ public class PlayerChoiceScene : BaseScene
 
     protected override void Updating()
     {
-        if (Input.GetKeyDown(KeyCode.F2))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             isForDos = true;
             SystemManager.Instance.isForDos = true;

@@ -13197,7 +13197,7 @@ GameObject:
   - component: {fileID: 5451566085072639764}
   - component: {fileID: 1346396324881150144}
   - component: {fileID: 3892988553336368326}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Lv5_GadianTank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13268,15 +13268,8 @@ MonoBehaviour:
   score: 0
   itemDropProbability: 0
   status: 0
+  attackModels: []
   fireTransform: {fileID: 0}
-  fireCnt: 0
-  bulletSpeed: 0
-  attackIntervalInCoroutine: 0
-  attackIntervalMax: 0
-  attackIntervalMin: 0
-  attackProbability: 0
-  isBoxIn: 0
-  destroyObject: {fileID: 0}
 --- !u!1 &7583639133748597513
 GameObject:
   m_ObjectHideFlags: 0

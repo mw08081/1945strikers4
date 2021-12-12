@@ -2,46 +2,60 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[System.Serializable]
+class AttackModel
+{
+    public string attackModelName;
+    public int fireCnt;
+    public float bulletSpeed;
+    public float lastAttackTime;
+    public float attackIntervalTime;
+    public float ellapedTime;
+}
 public class GroundEnemy : Enemy
 {
+    #region BasicProperty
     enum Status : int
     {
         BoxBefore = 0,
-        SearchPlayer,
+        PlayerSearch,
         BoxIn,
         Dead,
-        BoxAfter,
     }
     [Header("----GroundEnemy Field----")]
     [SerializeField] Status status;
     Vector3 viewPortPosition;
+    #endregion
 
+    #region StatusProperty
+    //Status.PlayerSearch
+    float lastPlayerSearchTime;
+    const float playerSearchIntervalTime = 7f;
+    //Status.BoxIn
+    Vector3 moveVector;
+    float lastSteeringTime;
+    const float steeringIntervalTime = 5f;
+    #endregion
 
-    [SerializeField] protected Transform fireTransform;
-    protected Transform playerTransfrom;
-    [SerializeField] public int fireCnt;
-    [SerializeField] public float bulletSpeed;
-    [SerializeField] protected float attackIntervalInCoroutine;
-    [SerializeField] protected float attackIntervalMax;
-    [SerializeField] protected float attackIntervalMin;
-    [SerializeField] protected float attackProbability;
-    protected GameObject go;
-    protected Bullet bullet;
-    protected Vector3 attackDir;
-    protected float attackInterval;
-    protected float lastAttackTime;
-    public bool isBoxIn;
-
-
-    [SerializeField] GameObject destroyObject;
-    Transform generateFieldDestroyObject;
+    #region AttackProperty
+    //Attack
+    [SerializeField] protected Transform[] fireTransform;
+    Player[] targets;
+    Transform targetTransform;
+    Vector3 attackDir;
+    [SerializeField] AttackModel[] attackModels;
+    bool isFindTarget;
+    //Bullet
+    GameObject go;
+    Bullet bullet;
+    #endregion
 
     protected override void Initializing()
     {
         base.Initializing();
         status = Status.BoxBefore;
     }
-
     protected override void Updating()
     {
         base.Updating();
@@ -49,31 +63,138 @@ public class GroundEnemy : Enemy
             return;
 
         viewPortPosition = Camera.main.WorldToViewportPoint(transform.position);
-        if (viewPortPosition.y > 1)
+        UpdatingMove();
+        UpdatingAttack();
+    }
+
+    #region  Moving
+    void UpdatingMove()
+    {
+        if (viewPortPosition.y > 0.8 && !isFindTarget)
             status = Status.BoxBefore;
-        else if(viewPortPosition.y > -0.2f)
-            status = Status.BoxIn;
-        else 
-            status = Status.BoxAfter;
-            
+        else
+        {
+            if (!isFindTarget)
+                status = Status.PlayerSearch;
+            else
+                status = Status.BoxIn;
+        }
+
 
         switch (status)
         {
+            case Status.BoxBefore:
+                UpdatingByStatusBoxBefore();
+                break;
+            case Status.PlayerSearch:
+                UpdatingByStatusPlayerSearch();
+                break;
             case Status.BoxIn:
-                isBoxIn = true;
+                UpdatingByStatusBoxIN();
                 break;
             case Status.Dead:
-                isBoxIn = false;
-                break;
-            case Status.BoxAfter:
-                Destroy(gameObject);
                 break;
             default:
                 break;
         }
     }
+    void UpdatingByStatusBoxBefore()
+    {
+        transform.position += -transform.forward * speed * Time.deltaTime;
+    }
+    void UpdatingByStatusPlayerSearch()
+    {
+        targets = FindObjectsOfType<Player>();
+        targetTransform = targets[Random.Range(0, targets.Length)].transform;
 
+        if(targetTransform != null)
+        {
+            status = Status.BoxIn;
+            isFindTarget = true;
+            lastSteeringTime = Time.time;
+        }
+    }
+    void UpdatingByStatusBoxIN()
+    {
+        UpdatingByStattusBoxInPlayerSearch();
+        UpdatingByStattusBoxInMoving();
+    }
+    void UpdatingByStattusBoxInPlayerSearch()
+    {
+        if (!(Time.time - lastPlayerSearchTime > playerSearchIntervalTime) || !SystemManager.Instance.isForDos)
+            return;
 
+        targetTransform = targets[Random.Range(0, targets.Length)].transform;
+    }
+    void UpdatingByStattusBoxInMoving()
+    {
+        if (viewPortPosition.y > 1)
+        {
+            moveVector = transform.forward * -1;
+            speed = 1;
+            lastSteeringTime = Time.time;
+        }
+
+        transform.position += moveVector * speed * Time.deltaTime;
+        if (Time.time - lastSteeringTime > steeringIntervalTime)
+        {
+            if (viewPortPosition.x >= 0.5)
+            {
+                if (Random.Range(0.0f, 1.0f) >= 0.5f)
+                    moveVector = transform.forward;
+                else
+                    moveVector = (transform.forward + transform.right * -1);
+            }
+            else
+            {
+                if (Random.Range(0.0f, 1.0f) >= 0.5f)
+                    moveVector = transform.forward;
+                else
+                    moveVector = (transform.forward + transform.right * 1);
+            }
+            speed = Random.Range(0.0f, 1.0f);
+            lastSteeringTime = Time.time;
+        }
+    }
+    #endregion
+
+    #region Attack
+    private void UpdatingAttack()
+    {
+        for (int i = 0; i < attackModels.Length; i++)
+        {
+            attackModels[i].ellapedTime = Time.time - attackModels[i].lastAttackTime;
+            if (Time.time - attackModels[i].lastAttackTime > attackModels[i].attackIntervalTime)
+            {
+                StartCoroutine(attackModels[i].attackModelName);
+                attackModels[i].lastAttackTime = Time.time;
+
+            }
+        }
+            
+                
+    }
+    IEnumerator attackModel1()
+    {
+        //attackModelA
+        int index = 0;
+
+        for (int i = 0; i < attackModels[index].fireCnt; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                attackDir = (targetTransform.position - fireTransform[j].position).normalized;
+
+                go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem.ServeBullet(BulletCode.enemyBulletM2, fireTransform[j].position);
+                go.GetComponent<Bullet>().Fire(BulletCode.enemyBulletM2, attackDir, attackModels[index].bulletSpeed, 100);
+            }
+            yield return new WaitForSeconds(0.5f);
+            attackModels[index].lastAttackTime = Time.time;
+        }
+    }
+    #endregion
+
+    #region Trigger
     protected override void OnBulletHitted(float dmg)
     {
         if (status == Status.BoxBefore)
@@ -85,18 +206,22 @@ public class GroundEnemy : Enemy
     {
         base.OnDead();
         SystemManager.Instance.GetCurrentSceneT<InGameScene>().EffectSystem.ServeEffect(EffectCode.tres, transform.position);
-        if (Random.Range(0.0f, 1.0f) >= (1 - itemDropProbability))
-            SystemManager.Instance.GetCurrentSceneT<InGameScene>().ItemSystem.ServeItem((ItemCode)Random.Range(0, 2), fireTransform.position);
-        
-        GenerateDestroyedObject();
+        StartCoroutine("FadeOutDestroy");
+    }
+    IEnumerator FadeOutDestroy()
+    {
+        Color _color = renderer.material.color;
+        while (_color.a > 0)
+        {
+            _color = renderer.material.color;
+            _color.a -= 0.005f;
 
+            renderer.material.color = _color;
+
+            yield return new WaitForSeconds(0.01f);
+        }
+        SystemManager.Instance.GetCurrentSceneT<InGameScene>().isBoseDead = true;
         Destroy(gameObject);
     }
-
-    void GenerateDestroyedObject()
-    {
-        GameObject destroyedObject = Instantiate(destroyObject, generateFieldDestroyObject);
-        destroyedObject.transform.position = transform.position;
-        destroyedObject.transform.forward = transform.forward;
-    }
+    #endregion
 }

@@ -77,7 +77,7 @@ public class Enemy : Actor
     {
         DecreaseHp(1250);
     }
-    public void OnBomb(float val)
+    public virtual void OnBomb(float val)
     {
         DecreaseHp(val);
     }

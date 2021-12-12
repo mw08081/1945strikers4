@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4030450895549192}
   - component: {fileID: 33083401624201350}
   - component: {fileID: 23442311504584424}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: rubber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4268408981967950}
   - component: {fileID: 33894759672811196}
   - component: {fileID: 23354522344662726}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 4810243474631984}
   - component: {fileID: 33371463470137876}
   - component: {fileID: 23305673155594200}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Antenna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
