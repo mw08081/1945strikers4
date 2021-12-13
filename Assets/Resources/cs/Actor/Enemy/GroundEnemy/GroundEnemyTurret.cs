@@ -60,22 +60,31 @@ public class GroundEnemyTurret : Enemy
         setHeadDir = (targetTransform.position - transform.position).normalized;
 
         if(isMainTurret)
-        {
-            float lookAtAngle = 360 - (Mathf.Acos(Vector3.Dot(Vector3.right, setHeadDir)) * Mathf.Rad2Deg);
-
-            if (lookAtAngle < 250 || lookAtAngle > 290)
-                return;
-            StartCoroutine("RotateHeadSlow");
-        }
+            StartCoroutine("ReadyAttackModel1");
         else
             transform.forward = new Vector3(setHeadDir.x, 0, setHeadDir.z);
     }
-    IEnumerator RotateHeadSlow()
+    IEnumerator ReadyAttackModel1()
     {
         Vector3 originVec = transform.forward;
+        float lookAtAngle;
+
         for (float progress = 0; progress < 1; progress+=Time.deltaTime)
         {
-            transform.forward = Vector3.Lerp(originVec, new Vector3(setHeadDir.x, 0, setHeadDir.z), progress);
+            lookAtAngle = 360 - (Mathf.Acos(Vector3.Dot(Vector3.right, -transform.forward)) * Mathf.Rad2Deg);
+            if (lookAtAngle >= 250 && lookAtAngle <= 290)
+                transform.forward = Vector3.Lerp(originVec, new Vector3(setHeadDir.x, 0, setHeadDir.z), progress);
+                
+            yield return null;
+        }
+
+        while (myBody.isAttackModel1)                      //shot
+            yield return null;
+
+        originVec = transform.forward;
+        for (float progress = 0; progress < 1; progress += Time.deltaTime)
+        {
+            transform.forward = Vector3.Lerp(originVec, -Vector3.forward, progress);
             yield return null;
         }
     }
@@ -84,18 +93,12 @@ public class GroundEnemyTurret : Enemy
         Vector3 originVec = transform.forward;
         for (float progress = 0; progress < 1; progress += Time.deltaTime)
         {
-            transform.forward = Vector3.Lerp(originVec, -Vector3.forward, progress);
-            yield return null;
-        }
-        originVec = transform.forward;
-        for (float progress = 0; progress < 1; progress += Time.deltaTime)
-        {
-            transform.forward = Vector3.Lerp(originVec, new Vector3(0, 0.7f, -1), progress);
+            transform.forward = Vector3.Lerp(originVec, new Vector3(0, 1, -1), progress);
             yield return null;
         }
 
-        //shot
-        yield return new WaitForSeconds(1.2f);
+        while (myBody.isAttackModel2)                      //shot
+            yield return null;
 
         originVec = transform.forward;
         for (float progress = 0; progress < 1; progress += Time.deltaTime)

@@ -45,7 +45,7 @@ public class GroundEnemy : Enemy
     Vector3 attackDir;
     [SerializeField] AttackModel[] attackModels;
     bool isFindTarget;
-    bool isAttaking;
+    bool isAttacking;
     public bool isAttackModel1;
     public bool isAttackModel2;
     //Bullet
@@ -57,7 +57,7 @@ public class GroundEnemy : Enemy
     {
         base.Initializing();
         status = Status.BoxBefore;
-        isAttaking = false;
+        isAttacking = false;
     }
     protected override void Updating()
     {
@@ -66,7 +66,8 @@ public class GroundEnemy : Enemy
             return;
 
         viewPortPosition = Camera.main.WorldToViewportPoint(transform.position);
-        UpdatingMove();
+        if(!isAttackModel2)
+            UpdatingMove();
         
         if(status == Status.BoxIn)
             UpdatingAttack();
@@ -172,10 +173,10 @@ public class GroundEnemy : Enemy
             attackModels[0].lastAttackTime = Time.time;
         }
 
-        int randAttack = Random.Range(1, 3);
-        if(Time.time - attackModels[randAttack].lastAttackTime > attackModels[randAttack].attackIntervalTime && !isAttaking)
+        int randAttack = Random.Range(2, 3);                    //  1   3
+        if(Time.time - attackModels[randAttack].lastAttackTime > attackModels[randAttack].attackIntervalTime && !isAttacking)
         {
-            isAttaking = true;
+            isAttacking = true;
             switch (randAttack)
             {
                 case 1:
@@ -189,11 +190,8 @@ public class GroundEnemy : Enemy
                 default:
                     break;
             }
-
             StartCoroutine(attackModels[randAttack].attackModelName);
         }
-
-
     }
     IEnumerator attackModel0()
     {
@@ -220,11 +218,14 @@ public class GroundEnemy : Enemy
 
         yield return new WaitForSeconds(attackModel1DelayTime);
         isAttackModel1 = false;
+
         for (int i = 0; i < attackModels[index].fireCnt; i++)
         {
             isAttackModel1 = false;
             attackDir = (targetTransform.position - fireTransform[2].position).normalized;
             float lookAtAngle = 360 - (Mathf.Acos(Vector3.Dot(Vector3.right, attackDir)) * Mathf.Rad2Deg);
+            if (lookAtAngle > 290) lookAtAngle = 290;
+            if (lookAtAngle < 250) lookAtAngle = 250;
 
             for (float a = -10; a < 20; a+=10)
             {
@@ -235,23 +236,35 @@ public class GroundEnemy : Enemy
             isAttackModel1 = true;
             yield return new WaitForSeconds(0.1f);
         }
-        attackModels[index].lastAttackTime = Time.time;
-        isAttackModel1 = false;
-
+        
         for (int i = 1; i < attackModels.Length; i++)
             attackModels[i].lastAttackTime = Time.time;
-        isAttaking = false;
+        isAttackModel1 = false;
+        isAttacking = false;
     }
     IEnumerator attackModel2()
     {
         int index = 2;
-        const float attackModel2DelayTime = 4f;
+        float shotDistance, shotPower;
+        const float attackModel2DelayTime = 2f;
         yield return new WaitForSeconds(attackModel2DelayTime);
-        isAttackModel2 = false;
 
+        for (int i = 0; i < attackModels[index].fireCnt; i++)
+        {
+            shotDistance = Random.Range(5.0f, 16.0f);
+            shotPower = Mathf.Sqrt(shotDistance * 9.87f);
+
+            go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem.ServeBullet(BulletCode.enemyBulletM4, fireTransform[3].position);
+            go.GetComponent<Bullet>().Fire(BulletCode.enemyBulletM4, transform.forward, attackModels[index].bulletSpeed, shotPower);
+
+            yield return new WaitForSeconds(1f);
+        }
+
+        yield return new WaitForSeconds(attackModel2DelayTime);
         for (int i = 1; i < attackModels.Length; i++)
             attackModels[i].lastAttackTime = Time.time;
-        isAttaking = false;
+        isAttacking = false;
+        isAttackModel2 = false;
     }
     #endregion
 

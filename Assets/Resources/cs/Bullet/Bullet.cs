@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    bool isFired = false;
+    protected bool isFired = false;
 
     //[Header("----Bullet Info----")]
     public BulletCode bulletCode;

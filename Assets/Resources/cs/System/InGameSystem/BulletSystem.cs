@@ -15,7 +15,8 @@ public enum BulletCode : int
     enemyBulletM1,
     enemyBulletM2,
     enemyBulletM3,
-    //enemyBulletM4,
+    enemyBulletM4,
+    enemyBulletM5,
 }
 
 public class BulletSystem : MonoBehaviour
@@ -47,8 +48,9 @@ public class BulletSystem : MonoBehaviour
         {"2", "Prefab/Bullet/BF109Bullet/BF109Bomb" },         //7
         {"30", "Prefab/Bullet/EnemyBullet/EnemyBulletM1" },    //8
         {"30", "Prefab/Bullet/EnemyBullet/EnemyBulletM2" },    //9
-        {"6", "Prefab/Bullet/EnemyBullet/EnemyBulletM3" },    //10
-        //{"5", "Prefab/Bullet/EnemyBullet/EnemyBulletM4" },    //10
+        {"0", "Prefab/Bullet/EnemyBullet/EnemyBulletM3" },    //10
+        {"0", "Prefab/Bullet/EnemyBullet/EnemyBulletM4" },    //11
+        {"0", "Prefab/Bullet/EnemyBullet/EnemyBulletM5" },    //11
     };
 
     

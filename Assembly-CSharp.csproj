@@ -127,7 +127,7 @@
     <Compile Include="Assets\Resources\cs\Actor\Enemy\AirForceEnemy\EnemyLv4.cs" />
     <Compile Include="Assets\Resources\cs\UI\TMP\PowerTMP.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
-    <Compile Include="Assets\Resources\cs\Bullet\EnemyBullet\EnemyBullet_V.cs" />
+    <Compile Include="Assets\Resources\cs\Bullet\EnemyBullet\EnemyBullet_M.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BaseResource\0BG\st1BgResource\Trees_WorldSpace_FREE\WorldSpaceTrees_Doc.txt" />
@@ -139,6 +139,7 @@
     <None Include="Assets\BaseResource\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\BaseResource\Effect\JMO Assets\WarFX\_Effects\MuzzleFlashes\!MuzzleFlash Differences.txt" />
     <None Include="Assets\BaseResource\Enemy\Super Spitfire\readme.txt" />
+    <None Include="Assets\BaseResource\Sayantan\Props\Small\CruiseMissile\ReadMe.txt" />
     <None Include="Assets\BaseResource\Enemy\Simple InterceptMissile&amp;TurretBehaviour\PolygonWar\Materials\Shader\Particle VertexLit Blended_Backface.shader" />
     <None Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Shaders\WFX_S Alpha-Specular TintColor.shader" />
     <None Include="Assets\BaseResource\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
