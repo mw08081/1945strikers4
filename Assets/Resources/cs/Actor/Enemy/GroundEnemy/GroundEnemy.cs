@@ -175,7 +175,7 @@ public class GroundEnemy : Enemy
             attackModels[0].lastAttackTime = Time.time;
         }
 
-        int randAttack = Random.Range(3, 4);                    //  1   4
+        int randAttack = Random.Range(1, 4);                    //  1   4
         if(Time.time - attackModels[randAttack].lastAttackTime > attackModels[randAttack].attackIntervalTime && !isAttacking)
         {
             isAttacking = true;
