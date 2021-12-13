@@ -207,3 +207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c72485df47318be4a929a7f42d8a7933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletCode: 10
+  moveDir: {x: 0, y: 0, z: 0}
+  dmg: 0

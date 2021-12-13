@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//EnemyBullet_R is Character Rotating
+//EnemyBullet_B is Character Bigger
 public class EnemyBullet_B : Bullet
 {
     float scale;

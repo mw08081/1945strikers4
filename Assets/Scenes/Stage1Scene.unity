@@ -57594,7 +57594,7 @@ MonoBehaviour:
   - {fileID: 4722848161958046634, guid: a2d8aefaf6a1bf14b9af5c437bc1e1ce, type: 3}
   - {fileID: 1366743620984186, guid: 126d81349741754428b3099a3631fead, type: 3}
   - {fileID: 196804, guid: 5d3550101caf3184d8ca900f0221ab06, type: 3}
-  isEnemyGeneration: 00010101
+  isEnemyGeneration: 0101010101
   enemySpawnPosition:
   - {fileID: 1225176745}
   - {fileID: 1947276927}

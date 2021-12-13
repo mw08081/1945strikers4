@@ -11,7 +11,6 @@ class AttackModel
     public float bulletSpeed;
     public float lastAttackTime;
     public float attackIntervalTime;
-    public float ellapedTime;
 }
 public class GroundEnemy : Enemy
 {
@@ -46,6 +45,9 @@ public class GroundEnemy : Enemy
     Vector3 attackDir;
     [SerializeField] AttackModel[] attackModels;
     bool isFindTarget;
+    bool isAttaking;
+    public bool isAttackModel1;
+    public bool isAttackModel2;
     //Bullet
     GameObject go;
     Bullet bullet;
@@ -55,6 +57,7 @@ public class GroundEnemy : Enemy
     {
         base.Initializing();
         status = Status.BoxBefore;
+        isAttaking = false;
     }
     protected override void Updating()
     {
@@ -64,13 +67,15 @@ public class GroundEnemy : Enemy
 
         viewPortPosition = Camera.main.WorldToViewportPoint(transform.position);
         UpdatingMove();
-        UpdatingAttack();
+        
+        if(status == Status.BoxIn)
+            UpdatingAttack();
     }
 
     #region  Moving
     void UpdatingMove()
     {
-        if (viewPortPosition.y > 0.8 && !isFindTarget)
+        if (viewPortPosition.y > 0.9 && !isFindTarget)
             status = Status.BoxBefore;
         else
         {
@@ -107,7 +112,7 @@ public class GroundEnemy : Enemy
         targets = FindObjectsOfType<Player>();
         targetTransform = targets[Random.Range(0, targets.Length)].transform;
 
-        if(targetTransform != null)
+        if (targetTransform != null)
         {
             status = Status.BoxIn;
             isFindTarget = true;
@@ -161,20 +166,36 @@ public class GroundEnemy : Enemy
     #region Attack
     private void UpdatingAttack()
     {
-        for (int i = 0; i < attackModels.Length; i++)
+        if (Time.time - attackModels[0].lastAttackTime > attackModels[0].attackIntervalTime)
         {
-            attackModels[i].ellapedTime = Time.time - attackModels[i].lastAttackTime;
-            if (Time.time - attackModels[i].lastAttackTime > attackModels[i].attackIntervalTime)
-            {
-                StartCoroutine(attackModels[i].attackModelName);
-                attackModels[i].lastAttackTime = Time.time;
-
-            }
+            StartCoroutine(attackModels[0].attackModelName);
+            attackModels[0].lastAttackTime = Time.time;
         }
-            
-                
+
+        int randAttack = Random.Range(1, 3);
+        if(Time.time - attackModels[randAttack].lastAttackTime > attackModels[randAttack].attackIntervalTime && !isAttaking)
+        {
+            isAttaking = true;
+            switch (randAttack)
+            {
+                case 1:
+                    isAttackModel1 = true;
+                    break;
+                case 2:
+                    isAttackModel2 = true;
+                    break;
+                case 3:
+                    break;
+                default:
+                    break;
+            }
+
+            StartCoroutine(attackModels[randAttack].attackModelName);
+        }
+
+
     }
-    IEnumerator attackModel1()
+    IEnumerator attackModel0()
     {
         //attackModelA
         int index = 0;
@@ -191,6 +212,46 @@ public class GroundEnemy : Enemy
             yield return new WaitForSeconds(0.5f);
             attackModels[index].lastAttackTime = Time.time;
         }
+    }
+    IEnumerator attackModel1()
+    {
+        int index = 1;
+        const float attackModel1DelayTime = 2f;
+
+        yield return new WaitForSeconds(attackModel1DelayTime);
+        isAttackModel1 = false;
+        for (int i = 0; i < attackModels[index].fireCnt; i++)
+        {
+            isAttackModel1 = false;
+            attackDir = (targetTransform.position - fireTransform[2].position).normalized;
+            float lookAtAngle = 360 - (Mathf.Acos(Vector3.Dot(Vector3.right, attackDir)) * Mathf.Rad2Deg);
+
+            for (float a = -10; a < 20; a+=10)
+            {
+                go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem.ServeBullet(BulletCode.enemyBulletM2, fireTransform[2].position);
+                go.GetComponent<Bullet>().Fire(BulletCode.enemyBulletM2, 
+                    new Vector3(Mathf.Cos((lookAtAngle + a) * Mathf.Deg2Rad), 0, Mathf.Sin((lookAtAngle + a) * Mathf.Deg2Rad)), attackModels[index].bulletSpeed, 100);
+            }
+            isAttackModel1 = true;
+            yield return new WaitForSeconds(0.1f);
+        }
+        attackModels[index].lastAttackTime = Time.time;
+        isAttackModel1 = false;
+
+        for (int i = 1; i < attackModels.Length; i++)
+            attackModels[i].lastAttackTime = Time.time;
+        isAttaking = false;
+    }
+    IEnumerator attackModel2()
+    {
+        int index = 2;
+        const float attackModel2DelayTime = 4f;
+        yield return new WaitForSeconds(attackModel2DelayTime);
+        isAttackModel2 = false;
+
+        for (int i = 1; i < attackModels.Length; i++)
+            attackModels[i].lastAttackTime = Time.time;
+        isAttaking = false;
     }
     #endregion
 

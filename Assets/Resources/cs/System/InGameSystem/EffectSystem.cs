@@ -16,6 +16,7 @@ public enum EffectCode : int
     dos,
     tres,
     quatro,
+    cinco,
 }
 
 public class EffectSystem : MonoBehaviour
@@ -49,7 +50,7 @@ public class EffectSystem : MonoBehaviour
         
     }
 
-    public void ServeEffect(EffectCode effectCode, Vector3 position)
+    public GameObject ServeEffect(EffectCode effectCode, Vector3 position)
     {
         if (effectQueueList[(int)effectCode].Count == 0)
         {
@@ -62,6 +63,8 @@ public class EffectSystem : MonoBehaviour
         GameObject go = effectQueueList[(int)effectCode].Dequeue();
         go.SetActive(true);
         go.transform.position = position;
+
+        return go;
     }
 
     public void ReturnEffect(EffectCode effectCode, GameObject gameObject)

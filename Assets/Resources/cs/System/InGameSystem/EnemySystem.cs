@@ -111,7 +111,7 @@ public class EnemySystem : MonoBehaviour
     }
     void GenerateBose()
     {
-        if (!isbose)
+        if (!isbose && isEnemyGeneration[4])
         {
             GameObject bose = Instantiate<GameObject>(enemyPrefabList[(int)EnemyCode.lv5]);
             bose.transform.position = enemySpawnPosition[0].position;

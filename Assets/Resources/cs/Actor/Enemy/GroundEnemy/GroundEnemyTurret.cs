@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GroundEnemyTurret : Enemy
 {
+    [SerializeField] GroundEnemy myBody;
     [SerializeField] bool isMainTurret;
 
     Player[] targets;
@@ -26,8 +27,22 @@ public class GroundEnemyTurret : Enemy
         base.Updating();
         if (SystemManager.Instance.isForDos && Time.time - lastPlayerSearchTime > playerSearchIntervalTime)
             SetTargetTransform();
-        if(targetTransform != null)
-            SethToTarget();
+        if (targetTransform != null)
+        {
+            if (isMainTurret)
+            {
+                if (myBody.isAttackModel1)
+                    SethToTarget();
+                else if(myBody.isAttackModel2)
+                    StartCoroutine("ReadyAttackModel2");
+                else
+                    return;
+            }
+            else
+                SethToTarget();
+        }
+            
+
     }
     void FindTarget()
     {
@@ -50,10 +65,44 @@ public class GroundEnemyTurret : Enemy
 
             if (lookAtAngle < 250 || lookAtAngle > 290)
                 return;
-            transform.forward = new Vector3(setHeadDir.x, 0, setHeadDir.z);
+            StartCoroutine("RotateHeadSlow");
         }
         else
             transform.forward = new Vector3(setHeadDir.x, 0, setHeadDir.z);
+    }
+    IEnumerator RotateHeadSlow()
+    {
+        Vector3 originVec = transform.forward;
+        for (float progress = 0; progress < 1; progress+=Time.deltaTime)
+        {
+            transform.forward = Vector3.Lerp(originVec, new Vector3(setHeadDir.x, 0, setHeadDir.z), progress);
+            yield return null;
+        }
+    }
+    IEnumerator ReadyAttackModel2()
+    {
+        Vector3 originVec = transform.forward;
+        for (float progress = 0; progress < 1; progress += Time.deltaTime)
+        {
+            transform.forward = Vector3.Lerp(originVec, -Vector3.forward, progress);
+            yield return null;
+        }
+        originVec = transform.forward;
+        for (float progress = 0; progress < 1; progress += Time.deltaTime)
+        {
+            transform.forward = Vector3.Lerp(originVec, new Vector3(0, 0.7f, -1), progress);
+            yield return null;
+        }
+
+        //shot
+        yield return new WaitForSeconds(1.2f);
+
+        originVec = transform.forward;
+        for (float progress = 0; progress < 1; progress += Time.deltaTime)
+        {
+            transform.forward = Vector3.Lerp(originVec, -Vector3.forward, progress);
+            yield return null;
+        }
     }
 
     #region OnDead
