@@ -54,6 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Resources\cs\BG\SmokeGenerator.cs" />
+    <Compile Include="Assets\Resources\cs\Bullet\EnemyBullet\EnemyBullet_C.cs" />
     <Compile Include="Assets\BaseResource\Item\Models_Bomb\AtomicBomb\RotateCam.cs" />
     <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\BF109\BF109Bomb.cs" />
     <Compile Include="Assets\Resources\cs\Bullet\Bullet.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\BF109\BF109SubBullet.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Spawn System\CFX_SpawnSystem.cs" />
     <Compile Include="Assets\BaseResource\0BG\st1BgResource\Water (Basic)\Scripts\WaterBasic.cs" />
+    <Compile Include="Assets\Resources\cs\Bullet\EnemyBullet\EnemyBullet_M.cs" />
     <Compile Include="Assets\Resources\cs\UI\PlayerLifeSpriteSet.cs" />
     <Compile Include="Assets\Resources\cs\Scene\PlayerChoiceScene\PlayerChoiceImg.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
@@ -127,7 +129,6 @@
     <Compile Include="Assets\Resources\cs\Actor\Enemy\AirForceEnemy\EnemyLv4.cs" />
     <Compile Include="Assets\Resources\cs\UI\TMP\PowerTMP.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
-    <Compile Include="Assets\Resources\cs\Bullet\EnemyBullet\EnemyBullet_M.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BaseResource\0BG\st1BgResource\Trees_WorldSpace_FREE\WorldSpaceTrees_Doc.txt" />

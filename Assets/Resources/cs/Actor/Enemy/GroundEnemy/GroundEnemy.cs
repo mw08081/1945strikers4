@@ -48,6 +48,8 @@ public class GroundEnemy : Enemy
     bool isAttacking;
     public bool isAttackModel1;
     public bool isAttackModel2;
+    BulletCode clusterBulletCode;
+    float clusterBulletSpeed;
     //Bullet
     GameObject go;
     Bullet bullet;
@@ -173,7 +175,7 @@ public class GroundEnemy : Enemy
             attackModels[0].lastAttackTime = Time.time;
         }
 
-        int randAttack = Random.Range(2, 3);                    //  1   3
+        int randAttack = Random.Range(3, 4);                    //  1   4
         if(Time.time - attackModels[randAttack].lastAttackTime > attackModels[randAttack].attackIntervalTime && !isAttacking)
         {
             isAttacking = true;
@@ -184,8 +186,6 @@ public class GroundEnemy : Enemy
                     break;
                 case 2:
                     isAttackModel2 = true;
-                    break;
-                case 3:
                     break;
                 default:
                     break;
@@ -265,6 +265,30 @@ public class GroundEnemy : Enemy
             attackModels[i].lastAttackTime = Time.time;
         isAttacking = false;
         isAttackModel2 = false;
+    }
+    IEnumerator attackModel3()
+    {
+        const float attackModel3DelayTime = 2f;
+        yield return new WaitForSeconds(attackModel3DelayTime);
+
+        const float doubleClusterProbability = 0.3f;
+        if (Random.Range(0.0f, 1.0f) >= (1 - doubleClusterProbability))
+        {
+            clusterBulletCode = BulletCode.enemyBulletM6;
+            clusterBulletSpeed = 5;
+        }
+        else
+        {
+            clusterBulletCode = BulletCode.enemyBulletM5;
+            clusterBulletSpeed = 15;
+        }
+        go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem.ServeBullet(clusterBulletCode, fireTransform[2].position);
+        go.GetComponent<Bullet>().Fire(clusterBulletCode, -Vector3.forward, clusterBulletSpeed, 100);
+        
+        yield return new WaitForSeconds(attackModel3DelayTime);
+        for (int i = 1; i < attackModels.Length; i++)
+            attackModels[i].lastAttackTime = Time.time;
+        isAttacking = false;
     }
     #endregion
 

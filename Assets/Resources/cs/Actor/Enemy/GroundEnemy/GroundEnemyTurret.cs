@@ -33,7 +33,7 @@ public class GroundEnemyTurret : Enemy
             {
                 if (myBody.isAttackModel1)
                     SethToTarget();
-                else if(myBody.isAttackModel2)
+                else if (myBody.isAttackModel2)
                     StartCoroutine("ReadyAttackModel2");
                 else
                     return;

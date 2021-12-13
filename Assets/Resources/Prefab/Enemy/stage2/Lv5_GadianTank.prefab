@@ -5587,7 +5587,7 @@ MonoBehaviour:
     fireCnt: 3
     bulletSpeed: 25
     lastAttackTime: 0
-    attackIntervalTime: 5
+    attackIntervalTime: 3.5
   - attackModelName: attackModel2
     fireCnt: 3
     bulletSpeed: 25
@@ -5595,11 +5595,12 @@ MonoBehaviour:
     attackIntervalTime: 5
   - attackModelName: attackModel3
     fireCnt: 1
-    bulletSpeed: 25
+    bulletSpeed: 10
     lastAttackTime: 0
     attackIntervalTime: 5
   isAttackModel1: 0
   isAttackModel2: 0
+  isAttackModel3: 0
 --- !u!1 &3007771284682147364
 GameObject:
   m_ObjectHideFlags: 0

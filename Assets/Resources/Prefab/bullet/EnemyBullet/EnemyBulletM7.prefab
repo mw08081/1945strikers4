@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 7367644835450517053}
   - component: {fileID: -8675109889379609740}
   m_Layer: 13
-  m_Name: EnemyBulletM5
+  m_Name: EnemyBulletM7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,9 +207,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e43c4e589581a0440aa8a07a4596d9c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletCode: 12
+  bulletCode: 14
   moveDir: {x: 0, y: 0, z: 0}
   dmg: 0
-  clusterBulletSpeed: 15
-  circleCnt: 4
+  clusterBulletSpeed: 5
+  circleCnt: 2
   isDoubleCluster: 0

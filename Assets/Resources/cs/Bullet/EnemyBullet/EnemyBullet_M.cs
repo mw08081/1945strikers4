@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//EnemyBullet_M is Character Missile
 public class EnemyBullet_M : Bullet
 {
     Rigidbody rb;
@@ -12,9 +13,6 @@ public class EnemyBullet_M : Bullet
         isAddForce = false;
         moveDir = transform.forward;
         rb = GetComponent<Rigidbody>();
-
-        
-
     }
 
     protected override void Special()

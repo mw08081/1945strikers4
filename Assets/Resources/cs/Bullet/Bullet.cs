@@ -32,7 +32,6 @@ public class Bullet : MonoBehaviour
                 ReturnGameObject();
         }
     }
-
     protected virtual void Special() { }
 
     public void Fire(BulletCode _bulletCode, Vector3 _moveDir, float _bulletSpeed, float _dmg)
@@ -53,7 +52,6 @@ public class Bullet : MonoBehaviour
 
         ReturnGameObject();
     }
-
     protected virtual void Explosive() { } //For Bullet - Bomb
 
     public virtual void ReturnGameObject()
@@ -63,6 +61,5 @@ public class Bullet : MonoBehaviour
         SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem.ReturnBullet(bulletCode, gameObject);
         gameObject.SetActive(false);
     }
-
     protected virtual void Resize() { } //For Bullet - EnemyBullet_B
 }
