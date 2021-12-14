@@ -28,6 +28,7 @@
   - ViewPortPosition
   - Resources
   - BackGroudnImg offSet Scrolling
+  - PlayerPrefs
   - For Two Player (feat. AddComponent<>())
 - MatheMatical
   - Angle between A, B Vector  
