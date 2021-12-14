@@ -39,7 +39,7 @@ public class LoadingScene : BaseScene
     {
         UpdatingStr();
 
-        if (Time.time - startTime > 1f && !isCalled)
+        if (Time.time - startTime > 2.3f && !isCalled)
         {
             isCalled = true;
             SceneController.Instance.CallNextScene();

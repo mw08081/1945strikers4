@@ -40,7 +40,7 @@ public class EnemyLv5 : AirForceEnemy
 
         if(!isArived)
             UpdateInitiating();
-        if (!isDead)
+        if (!isDead && isArived)
         {
             TrackingPlayerTransform();
             UpdateAttack();

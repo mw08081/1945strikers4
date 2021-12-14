@@ -175,9 +175,11 @@ public class GroundEnemy : Enemy
             attackModels[0].lastAttackTime = Time.time;
         }
 
-        int randAttack = Random.Range(1, 4);                    //  1   4
-        if(Time.time - attackModels[randAttack].lastAttackTime > attackModels[randAttack].attackIntervalTime && !isAttacking)
+        
+        if(Time.time - attackModels[1].lastAttackTime > attackModels[1].attackIntervalTime && !isAttacking)
         {
+            int randAttack = Random.Range(1, 4);                    //  1   4
+            Debug.Log(randAttack);
             isAttacking = true;
             switch (randAttack)
             {
@@ -271,7 +273,7 @@ public class GroundEnemy : Enemy
         const float attackModel3DelayTime = 2f;
         yield return new WaitForSeconds(attackModel3DelayTime);
 
-        const float doubleClusterProbability = 0.3f;
+        const float doubleClusterProbability = 0.45f;
         if (Random.Range(0.0f, 1.0f) >= (1 - doubleClusterProbability))
         {
             clusterBulletCode = BulletCode.enemyBulletM6;

@@ -25,8 +25,11 @@ public class SystemManager : MonoBehaviour
             return scoreSystem;
         }
     }
+    public int StageInfo { get; set; }
     public float PlayerHp { get; set; }
     public float Player2Hp { get; set; }
+    public int PlayerPower { get; set; }
+    public int Player2Power { get; set; }
 
     public BaseScene CurrentScene { get; set; }
 
@@ -46,7 +49,11 @@ public class SystemManager : MonoBehaviour
 
     void Start()
     {
-        
+        StageInfo = 0;
+        PlayerHp = 3;
+        Player2Hp = 3;
+        PlayerPower = 1;
+        Player2Power = 1;
     }
 
     void Update()

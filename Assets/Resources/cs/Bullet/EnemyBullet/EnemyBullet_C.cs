@@ -47,7 +47,6 @@ public class EnemyBullet_C : Bullet
         {
             for (int j = stAngle; j < 360 + stAngle; j+=45)
             {
-                Debug.Log(j);
                 go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem.ServeBullet(BulletCode.enemyBulletM1, transform.position);
                 go.GetComponent<Bullet>().Fire(BulletCode.enemyBulletM1, new Vector3(Mathf.Cos(j * Mathf.Deg2Rad), 0, Mathf.Sin(j * Mathf.Deg2Rad)), clusterBulletSpeed, 100);
             }
@@ -64,7 +63,6 @@ public class EnemyBullet_C : Bullet
         {
             for (int j = stAngle; j < 360 + stAngle; j += 120)
             {
-                Debug.Log(j);
                 go = SystemManager.Instance.GetCurrentSceneT<InGameScene>().BulletSystem.ServeBullet(BulletCode.enemyBulletM7, transform.position);
                 go.GetComponent<Bullet>().Fire(BulletCode.enemyBulletM7, new Vector3(Mathf.Cos(j * Mathf.Deg2Rad), 0, Mathf.Sin(j * Mathf.Deg2Rad)), clusterBulletSpeed, 100);
             }

@@ -88,27 +88,23 @@ public class InGameScene : BaseScene
         gameStartTime = Time.time;
         isBoseDead = false;
 
+        GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player1PrefabIndex]);
+        playerGameObject.AddComponent<Player1Controller>();
+        playerGameObject.transform.position = new Vector3(0, -3, -15);
+        player = playerGameObject.GetComponent<Player>();
+        player.isP1 = true;
+        player.hp = SystemManager.Instance.PlayerHp;
+        player.power = SystemManager.Instance.PlayerPower;
+
         if (SystemManager.Instance.isForDos)
         {
-            GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player1PrefabIndex]);
-            playerGameObject.AddComponent<Player1Controller>();
-            playerGameObject.transform.position = new Vector3(0, -3, -15);
-            player = playerGameObject.GetComponent<Player>();
-            player.isP1 = true;
-
-
             playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player2PrefabIndex]);
             playerGameObject.AddComponent<Player2Controller>();
             playerGameObject.transform.position = new Vector3(0, -3, -15);
             player2 = playerGameObject.GetComponent<Player>();
             player2.isP1 = false;
-        }
-        else
-        {
-            GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player1PrefabIndex]);
-            playerGameObject.AddComponent<Player1Controller>();
-            playerGameObject.transform.position = new Vector3(0, -3, -15);
-            player = playerGameObject.GetComponent<Player>();
+            player2.hp = SystemManager.Instance.Player2Hp;
+            player2.power = SystemManager.Instance.Player2Power;
         }
     }
 
@@ -151,8 +147,19 @@ public class InGameScene : BaseScene
 
     void NextStage()
     {
-        //SystemManager.Instance.SaveGameData(player.hp);
-        SceneController.Instance.ChangeLoadingScene(SceneNameCont.Stage2Scene);
+        SystemManager.Instance.PlayerHp = player.hp;
+        SystemManager.Instance.PlayerPower = player.power;
+        if (SystemManager.Instance.isForDos)
+        {
+            SystemManager.Instance.Player2Hp = player2.hp;
+            SystemManager.Instance.Player2Power = player2.power;
+        }
+
+        SystemManager.Instance.StageInfo++;
+        if(SystemManager.Instance.StageInfo == 1)
+            SceneController.Instance.ChangeLoadingScene(SceneNameCont.Stage2Scene);
+        else
+            SceneController.Instance.ChangeLoadingScene(SceneNameCont.Stage3Scene);
     }
 
     void GameOver()

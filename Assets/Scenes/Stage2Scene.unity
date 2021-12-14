@@ -160,7 +160,7 @@ MonoBehaviour:
   - {fileID: 4722848161958046634, guid: a2d8aefaf6a1bf14b9af5c437bc1e1ce, type: 3}
   - {fileID: 1366743620984186, guid: 126d81349741754428b3099a3631fead, type: 3}
   - {fileID: 196804, guid: 5d3550101caf3184d8ca900f0221ab06, type: 3}
-  isEnemyGeneration: 0000000000
+  isEnemyGeneration: 0100000100
   enemySpawnPosition:
   - {fileID: 439068906}
   - {fileID: 594247640}

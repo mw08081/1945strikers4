@@ -8,7 +8,7 @@ public class Player : Actor
     public bool isP1;
     [SerializeField] Vector3 moveDir;
     public float speed;
-    [SerializeField] protected int power;
+    [SerializeField] public int power;
     [SerializeField] public int bomb;
 
     bool isInvincibility;
@@ -181,15 +181,15 @@ public class Player : Actor
 
     protected override void OnBulletHitted(float dmg)
     {
-        //if (!isInvincibility)
-        //    base.OnBulletHitted(dmg);
-        Debug.Log("OnBulletDead");
+        if (!isInvincibility)
+            base.OnBulletHitted(dmg);
+        //Debug.Log("OnBulletDead");
     }
     protected override void OnCrash()
     {
-        //if (!isInvincibility)
-        //    base.DecreaseHp(1);
-        Debug.Log("OnCrashDead");
+        if (!isInvincibility)
+            base.DecreaseHp(1);
+        //Debug.Log("OnCrashDead");
     }
     protected override void DecreaseHp(float dmg)
     {
