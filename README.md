@@ -3,8 +3,8 @@
 
 ## What I learned  
 - Linguistic & OnEditor
-  - ViewPortPosition
   - Scene Load
+  - ViewPortPosition
   - Resources
   - BackGroudnImg offSet Scrolling
   - For Two Player (feat. AddComponent<>())
