@@ -7,7 +7,7 @@
 
 게임소개 - 모작 : 1945Strikers 시리즈에 이은 네번째 작품으로 정해진 패턴이 아닌 알고리즘에 의한 게임 플레이가 핵심이다. 총 2가지 스테이지와 3가지 스트라이커스로 구성되어있다
 
-### SCENE - MAIN_TITLE & PLAYER_CHOICE  
+### SCENE - MAIN_TITLE & CHOOSE_PLAYER  
 ![PlayerChoice](https://user-images.githubusercontent.com/58582985/146001339-09db4837-d7b8-4bef-9b3c-674d56f4add1.gif) 
 ### SCENE - INGAME(PLAYER)
 ![INGAMEF5U](https://user-images.githubusercontent.com/58582985/146014710-b768be8b-2d64-45c2-94e5-06e45a3077e0.gif)
