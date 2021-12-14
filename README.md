@@ -11,6 +11,7 @@
 - MatheMatical
   - Angle between A, B Vector  
   - Parabolic motion
+  - Circle Moving
 - Some Tips
   - Serializiable Class
   - FindObjectOfType<>() / FindObjectsOfType<>()
@@ -18,3 +19,12 @@
   - Layer
   
 ## What is lacking
+- Linguistic
+  - NetworkManager
+- MatheMatical
+  - Vector3Angle vs Quaternion
+  - Vector3 Move
+- On Editor
+  - BGM & EffectSound
+  - Terrain
+  - ParticleSystem
