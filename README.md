@@ -25,11 +25,11 @@
 ## What I learned  
 - Linguistic
   - Scene Load
-  - ViewPortPosition
+  - ViewPort Position
   - Resources
-  - BackGroudnImg offSet Scrolling
+  - BackGroundImage Offset Scrolling
   - PlayerPrefs
-  - For Two Player (feat. AddComponent<>())
+  - For Two People (feat. AddComponent<>())
 - MatheMatical
   - Angle between A, B Vector  
   - Parabolic motion
@@ -40,6 +40,20 @@
   - Renderer
   - Layer
   
+### SceneLoad
+### ViewPort Position
+### Resources
+### BackGroundImage Offset Scrolling
+### PlayerPrefs
+### For Two People
+### Angle between A, B Vector  
+### Parabolic motion
+### Circle Moving
+### Serializiable Class
+### FindObjectOfType<>() / FindObjectsOfType<>()
+### Renderer
+### Layer
+
 ## What is lacking
 - Linguistic
   - NetworkManager
@@ -50,3 +64,11 @@
   - BGM & EffectSound
   - Terrain
   - ParticleSystem
+
+### NetworkManager
+### Vector3Angle vs Quaternion
+### Vector3 Move
+### BGM & EffectSound
+### Terrain
+### ParticleSystem
+
