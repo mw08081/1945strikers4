@@ -56,10 +56,10 @@ public class SceneController : MonoBehaviour
 
     public void CallNextScene()
     {
-        StartCoroutine("LoadSceneAsync");
+        StartCoroutine("AsyncSceneLoad");
     }
 
-    IEnumerator LoadSceneAsync()
+    IEnumerator AsyncSceneLoad()
     {
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(NextSceneName, LoadSceneMode.Single);
 

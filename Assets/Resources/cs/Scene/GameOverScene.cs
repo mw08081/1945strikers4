@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class GameOverScene : BaseScene
 {
-    [SerializeField] ScoreData scoreData;
-    public ScoreData ScoreData
-    {
-        get { return scoreData; }
-    }
+    //[SerializeField] ScoreData scoreData;
+    //public ScoreData ScoreData
+    //{
+    //    get { return scoreData; }
+    //}
  
     protected override void Initializing()
     {
