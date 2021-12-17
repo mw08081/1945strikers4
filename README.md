@@ -41,6 +41,9 @@
   - Layer
   
 ### SceneLoad
+씬을 로드하는 두가지 방식을 이용하였다 비동기로드와 동기로드이다 
+
+다음 씬의 리소스가 무겁지 않다면 바로 씬을 로드할 수 있으나 만약 무거울경우 씬을 비동기적으로 호출하여 
 ### ViewPort Position
 ### Resources
 ### BackGroundImage Offset Scrolling
