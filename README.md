@@ -33,20 +33,55 @@ LoadScene을 동기로드하고, 다음 씬을 LoadScene에서 비동기적 호�
 using UnityEngine.SceneManagement;
 ...
 //동기로드
-SceneManager.LoadScene(String sceneName);
+SceneManager.LoadScene(string sceneName);
 
 //비동기로드
-IEnumerator AsyncSceneLoad()
-{
-      AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(String sceneName, LoadSceneMode loadSceneMode);
+...
+      StartCoroutine("AsyncLoadSceneCoroutine");
+...
 
-      while(asyncOperation.isDone)
+IEnumerator AsyncLoadSceneCoroutine()
+{
+      AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(string sceneName, LoadSceneMode loadSceneMode);
+
+      while(!asyncOperation.isDone)
       {
             yield return null;
       }
       Debug.Log("Scene Load Coplete!! : " + NextSceneName);
 }
 ```
+그렇다면 비동기로드에 사용되는 AsyncOperatioin의 변수에 대해 살펴보자  
+- allowSceneActivation : 씬 전환을 허용한다
+- isDone : 씬 로드 완료 여부(읽기전용)
+- priority : 우선순위를 설정
+- progress : 씬 로드 진행상황을 0~1값으로 표현한다(읽기전용)  
+
+한 가지 주의할 점은 allowSceneActivation은 단순히 씬 전환을 허용하는 것이 아닌, 완료여부도 같이 결정한다  
+다시 말해, 씬로드가 완료되어도 allowSceneActivation이 false라면 isDone 또한 false인 셈이다  
+따라서 아래와 같이 !asyncOperation.isDone의 반복 안에서 입력을 통해 allowSceneActivation을 허용해줘야한다  
+```C#
+IEnumerator AsyncLoadSceneCoroutine()
+{
+    AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(string sceneName, LoadSceneMode loadSceneMode);
+    asyncOperation.allowSceneActivation = false;
+
+    while (!asyncOperation.isDone)
+    {
+        if (asyncOperation.progress >= 0.9f)
+        {
+            Debug.Log("AsyncLoadScene is complete!  " + nextSceneName + "  Press Space to NextScene");
+            if (Input.GetKeyDown(KeyCode.Space))
+                asyncOperation.allowSceneActivation = true;
+        }
+        yield return null;
+    }
+}
+```
+이때 progress가 0.9이상일 때를 씬 로드가 끝난 시점으로 하는데 그것에 대해서는 정확하게 잘 모르겠다  
+또 progress는 로딩씬 임의의 Slider의 value값으로 설정해준다면 진행상황을 sliderBar로 확인해볼 수 있다 
+
++++ 자세한 SceneLoad Project link : 
 
 ### ViewPort Position
 ### Resources
