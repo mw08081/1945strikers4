@@ -9,13 +9,9 @@
 - MatheMatical
   - Angle between A, B Vector  
   - Parabolic motion
-  - Circle Moving
 - Some Tips
   - Resources Prefab Cache
   - Serializiable Class
-  - FindObjectOfType<>() / FindObjectsOfType<>()
-  - Renderer
-  - Layer
   
 ### SceneLoad
 씬을 로드하는 방식으로 비동기로드와 동기로드, 두가지 방식을 이용하였다  
@@ -190,9 +186,41 @@ playerGameObject.AddComponent<Player1Controller>();
    
 　  
 ### Angle between A, B Vector  
-### Parabolic motion
-### Circle Moving(feat. Mathf.Cos(float Rad), Mathf.Sin(float Rad))
+두 벡터가 이루는 사이각을 구하는 방법은 벡터의 내적을 활용하는 것이다   
+두 벡터의 성분값을 알면 사잇각을 계산할 수 있다  
+  
+두 벡터의 내적은 `a · b = a1*b1 + a2*b2 = |a||b| * cosΘ` 이므로  
+a = (1, 0), b = (0.5, -0.5) 의 내적을 계산하면 0.5이다   
+  
+따라서 a, b벡터가 단위벡터이면, |a|, |b|는 1이고 cosΘ = 0.5, Θ = 𝝿 / 4(45°)  
+  
+이를 C#에서는 다음과 같이 표현할 수 있다.
+```C#
+Vector3 a = new Vector3(1, 0, 0);
+Vector3 b = new Vector3(0.5f, 0, -0.5f);
 
+float betweenAngle = Mathf.Acos(Vector3.Dot(a, b)) * Mathf.RadToDeg;
+```
+사잇각(betweenAngle)은 내적결과를 Acos함수를 통해 각도를 얻을 수 있다  
+이때 반드시 Acos값에 Mathf.RadToDeg값을 곱해줘야지 라디안 각도를 얻을 수 있다  
+
+다음은 Acos에 대한 C# Docs이다  
+<img width="695" alt="스크린샷 2021-12-04 오후 4 17 49" src="https://user-images.githubusercontent.com/58582985/144701396-3b9d3f10-2c72-4916-a8b7-1e7c50ccda5c.png">  
+　 
+  
+### Parabolic motion
+포물선운동의 수학적 계산을 활용하면 미리 원하는 비행거리를 위한 각도와 힘을 계산할 수 있다  
+각도가 정해져 있는 경우라면 힘만을 조절하면되고, 힘이 정해진 경우라면 각도를 조절하면 될 듯하다  
+  
+프로젝트에서는 각도가 45도일때 힘을 계산했다  
+`비행거리 = Sin(2 * θ) * V^2 / g`이므로 Sin(2 * θ)는 1이 되고, 따라서 `비행거리 = V^2 / g`인 셈이다  
+
++++ 포물선 운동의 최대높이와 최대거리 공식  
+https://github.com/mw08081/MathNPhysics2D#1-%ED%9E%98%EA%B3%BC-%EC%9A%B4%EB%8F%99force--motion  
++++ 비행거리에 따른 힘 계산 - IEnumerator attackModel2()  
+https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/Actor/Enemy/GroundEnemy/GroundEnemy.cs
+　  
+　  
 ### Resources Object Cache
 앞써 배운 Resources를 동일한 Object에 대해서 지속적으로 호출한다면 생각보다 무거운 프로그램이 된다  
 그래서 에디터에서 직접 할당한 Object의 경우에는 별도의 Cache가 필요하지 않을 듯하나 Resources Object에 대해서 Cache작업을 해두면 좋을 듯하다  
@@ -254,11 +282,22 @@ void SetObjectPooling()
 }
 ```
 　  
-　  
 ### Serializiable Class
-### FindObjectOfType<>() / FindObjectsOfType<>()
-### Renderer
-### Layer
+유니티 상에 클래스를 통째로 표시하는 방법이다  
+  
+방법은 다음과 같다  
+```C#
+[System.Serializable]
+class AttackModel
+{
+    public string className;
+    public int fireCnt;
+    public float fireInterval;
+}
+
+...
+[SerializeField] AttackModel[] attackModels;
+```
 
 ## What is lacking
 - Linguistic
