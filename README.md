@@ -11,6 +11,7 @@
   - Parabolic motion
   - Circle Moving
 - Some Tips
+  - Resources Prefab Cache
   - Serializiable Class
   - FindObjectOfType<>() / FindObjectsOfType<>()
   - Renderer
@@ -117,21 +118,71 @@ Resources는 미리 오브젝트(reference)를 에디터상에서 할당해두�
 GameObject go = Resources.Load<T>(string path);
 ```
 단 Asset의 경로는 Assets/Resources라는 폴더를 만든 후 Resources 디렉토리의 경로까지 생략한 다음부터 사용해주면 된다  
-`ej) Prefab/Bullet/...`  
+`ej) Prefab/Bullet/...`
 　  
 　  
-### Resources Object Cache
-앞써 배운 Resources를 동일한 Object에 대해서 지속적으로 호출한다면 생각보다 무거운 프로그램이 된다  
-그래서 Resources Object에 대해서 Cache작업을 해두면 좋을 듯하다  
-　  
-에디터에서 직접 할당한 Object의 경우에는 별도의 Cache가 필요하지 않을 듯하나 
-
 ### BackGroundImage Offset Scrolling
 ### PlayerPrefs
 ### For Two People
 ### Angle between A, B Vector  
 ### Parabolic motion
 ### Circle Moving
+
+### Resources Object Cache
+앞써 배운 Resources를 동일한 Object에 대해서 지속적으로 호출한다면 생각보다 무거운 프로그램이 된다  
+그래서 에디터에서 직접 할당한 Object의 경우에는 별도의 Cache가 필요하지 않을 듯하나 Resources Object에 대해서 Cache작업을 해두면 좋을 듯하다  
+　  
+활용하는 방법은 다음과 같다
+```C#
+//using Dictionary<T, T>
+using System.Collections.Generic;
+
+Dictionary<string, GameObject> prefabPathCacheDic = new Dictionary<string, GameObject>();      //패스캐시 딕셔너리
+List<Queue<GameObject>> objectPoolingList = new List<Queue<GameObject>>();                  //오브젝트풀링 리스트
+
+//prefabPath Cache Function
+GameObject PrefabLoad(string resourcePath)
+{
+    GameObject go = null;
+    if(prefabPathCacheDic.ContainsKey(resourcePath))                //해당 패스로 이미 prefab이 캐시되어있을 경우
+    {
+        go = prefabPathCacheDic[resourcePath];
+    }
+    else                                                            //해당 패스로 이미 prefab이 캐시되어있지 않을 경우
+    {
+        go = Resources.Load<GameObject>(resourcePath);
+        
+        if(!go)
+        {
+            Debug.LogError("Load Error");
+            return null;
+        }
+        prefabPathCacheDic.Add(resourcePath, go);
+    }
+    GameObejct instantiateGo = Instantiate(go, transform);
+    
+    return instantiateGo;
+}
+
+//ObjectPooling Function
+void SetObjectPooling()
+{
+    GameObejct go = null;
+    for(int i = 0; i < N; i++)                              //N = 생성할 objectPoolingList 개수
+    {
+        objectPoolingList.add(new Queue<GameObject>());
+        for(int j = 0; j < 10; j++)                         //임의적으로 모든 오브젝트를 10씩 생성하여 Queue에 삽입
+        {
+              go = PrefabLoad(prefabPath);
+              
+              go.SetActive(false);                          //ObjectPooling 비활성화
+              objectPoolingList[i].Enqueue(go);             //ObejctPooling Queue에 삽입
+        }
+    }
+}
+```
+　  
+　  
 ### Serializiable Class
 ### FindObjectOfType<>() / FindObjectsOfType<>()
 ### Renderer
