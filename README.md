@@ -155,10 +155,9 @@ https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/BG/BackGr
 ### PlayerPrefs
 PlayerPrefs는 기본적인 데이터 저장에 용이하다  
 다만 보안성이 굉장이 낮으므로 옵션값과 같은 데이터를 저장하는 것이 좋다  
-　  
+  
 해당 프로젝트에서는 PlayerPrefs를 활용해보는 차원에서 플레이어의 점수를 저장했다  
 활용방법은 다음과 같다  
-
 ```C#
 PlayerPrefs.SetString(string key, string val);
 PlayerPrefs.SetInt(string key, int val);
@@ -168,8 +167,10 @@ string strTmp = PlayerPrefs.GetString(string key);
 int iTmp = PlayerPrefs.GetInt(string key);
 float fTmp = PlayerPrefs.GetFloat(string key);
 ```
++++ PlayerPrefs 활용  
+https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/UI/BestStrikersPanel.cs  
 　  
-　  
+   
 ### For Two People
 ### Angle between A, B Vector  
 ### Parabolic motion
@@ -178,7 +179,7 @@ float fTmp = PlayerPrefs.GetFloat(string key);
 ### Resources Object Cache
 앞써 배운 Resources를 동일한 Object에 대해서 지속적으로 호출한다면 생각보다 무거운 프로그램이 된다  
 그래서 에디터에서 직접 할당한 Object의 경우에는 별도의 Cache가 필요하지 않을 듯하나 Resources Object에 대해서 Cache작업을 해두면 좋을 듯하다  
-　  
+  
 활용하는 방법은 다음과 같다
 ```C#
 //using Dictionary<T, T>
