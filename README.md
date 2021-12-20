@@ -82,7 +82,7 @@ IEnumerator AsyncLoadSceneCoroutine()
 (링크)
 　   
 　   
-### ViewPort Position
+### 2. ViewPort Position
 ViewPort Position이란 유니티상의 3d world가 2d 출력화면에 출력될 때, 해당 화면에서의 좌표를 의미한다  
 좌하단을 (0, 0), 우상단을 (1.0, 1.0)으로 인식하는 것이다  
   
@@ -105,7 +105,7 @@ https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/Actor/Pla
 https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/Actor/Enemy/GroundEnemy/GroundEnemy.cs
 　  
 　  
-### Resources
+### 3. Resources
 Resources는 미리 오브젝트(reference)를 에디터상에서 할당해두지 않더라도 유동적으로 원하는 오브젝트를 할당할 수 있다  
 이는 고정적인 오브젝트 할당이 아닌 사용자의 선택에 따른 오브젝트 할당과 같이 유동적인 오브젝트 할당을 수행한다  
   
@@ -117,7 +117,7 @@ GameObject go = Resources.Load<T>(string path);
 `ej) Prefab/Bullet/...`
 　  
 　  
-### BackGroundImage Offset Scrolling
+### 4. BackGroundImage Offset Scrolling
 동일한 배경 세개 배치하여 배경을 스크롤하는 방법도 있다  
 그러나 배경이 단순한 이미지일 경우 이미지의 offset을 활용하여 한 개의 배경만으로도 스크롤할 수 있다  
   
@@ -148,7 +148,7 @@ void BackGroundScrolling()
 https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/BG/BackGroundImgScrolling.cs
 　  
 　  
-### PlayerPrefs
+### 5. PlayerPrefs
 PlayerPrefs는 기본적인 데이터 저장에 용이하다  
 다만 보안성이 굉장이 낮으므로 옵션값과 같은 데이터를 저장하는 것이 좋다  
   
@@ -167,7 +167,7 @@ float fTmp = PlayerPrefs.GetFloat(string key);
 https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/UI/BestStrikersPanel.cs  
 　  
    
-### For Two People
+### 6. For Two People
 한 키보드에서 두 명의 플레이어가 게임하는 방법에 대해 고민해봤다  
 한 명은 방향키, 또 다른 한 명은 w,a,s,d로 게임하는 방법이다  
   
@@ -185,7 +185,7 @@ playerGameObject.AddComponent<Player1Controller>();
 ``` 
    
 　  
-### Angle between A, B Vector  
+### 7. Angle between A, B Vector  
 두 벡터가 이루는 사이각을 구하는 방법은 벡터의 내적을 활용하는 것이다   
 두 벡터의 성분값을 알면 사잇각을 계산할 수 있다  
   
@@ -208,7 +208,7 @@ float betweenAngle = Mathf.Acos(Vector3.Dot(a, b)) * Mathf.RadToDeg;
 <img width="695" alt="스크린샷 2021-12-04 오후 4 17 49" src="https://user-images.githubusercontent.com/58582985/144701396-3b9d3f10-2c72-4916-a8b7-1e7c50ccda5c.png">  
 　 
   
-### Parabolic motion
+### 8. Parabolic motion
 포물선운동의 수학적 계산을 활용하면 미리 원하는 비행거리를 위한 각도와 힘을 계산할 수 있다  
 각도가 정해져 있는 경우라면 힘만을 조절하면되고, 힘이 정해진 경우라면 각도를 조절하면 될 듯하다  
   
@@ -221,7 +221,7 @@ https://github.com/mw08081/MathNPhysics2D#1-%ED%9E%98%EA%B3%BC-%EC%9A%B4%EB%8F%9
 https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/Actor/Enemy/GroundEnemy/GroundEnemy.cs
 　  
 　  
-### Resources Object Cache
+### 9. Resources Object Cache
 앞써 배운 Resources를 동일한 Object에 대해서 지속적으로 호출한다면 생각보다 무거운 프로그램이 된다  
 그래서 에디터에서 직접 할당한 Object의 경우에는 별도의 Cache가 필요하지 않을 듯하나 Resources Object에 대해서 Cache작업을 해두면 좋을 듯하다  
   
@@ -282,7 +282,7 @@ void SetObjectPooling()
 }
 ```
 　  
-### Serializiable Class
+### 10. Serializiable Class
 유니티 상에 클래스를 통째로 표시하는 방법이다  
   
 방법은 다음과 같다  
