@@ -172,6 +172,23 @@ https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/UI/BestSt
 　  
    
 ### For Two People
+한 키보드에서 두 명의 플레이어가 게임하는 방법에 대해 고민해봤다  
+한 명은 방향키, 또 다른 한 명은 w,a,s,d로 게임하는 방법이다  
+  
+player1는 방향키를 입력했을 때, player의 이동벡터를 변경해주고
+player2는 w,a,s,d를 입력했을 때, player2의 이동벡터를 변경해주는 방식이다
+해당 방식은 `moveDir = new Vector3(Input.GetAxis("Vertical"), 0, Input.GetAxis("Horizontal"));`을 활용을 하지 못하고 직접 이동벡터를 만들어서 활용해야한다  
+  
++++ Input.GetAxix()를 활용하지 않고 이동벡터를 만드는 방법  
+https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/Actor/Player/Player1Controller.cs  
+
+다만 player Object가 정해져 있지않고 나중에 Instantiate된다면 아래와 같이 AddComponent<>()를 통해 controller.cs를 붙여줘야한다  
+```C#
+GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player1PrefabIndex]);
+playerGameObject.AddComponent<Player1Controller>();
+``` 
+   
+　  
 ### Angle between A, B Vector  
 ### Parabolic motion
 ### Circle Moving(feat. Mathf.Cos(float Rad), Mathf.Sin(float Rad))
