@@ -64,11 +64,11 @@ IEnumerator AsyncLoadSceneCoroutine()
 IEnumerator AsyncLoadSceneCoroutine()
 {
     AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(string sceneName, LoadSceneMode loadSceneMode);
-    asyncOperation.allowSceneActivation = false;
+    asyncOperation.allowSceneActivation = false;            //씬 전환 false
 
     while (!asyncOperation.isDone)
     {
-        if (asyncOperation.progress >= 0.9f)
+        if (asyncOperation.progress >= 0.9f)                //로드 완료
         {
             Debug.Log("AsyncLoadScene is complete!  " + nextSceneName + "  Press Space to NextScene");
             if (Input.GetKeyDown(KeyCode.Space))
@@ -81,9 +81,10 @@ IEnumerator AsyncLoadSceneCoroutine()
 이때 progress가 0.9이상일 때를 씬 로드가 끝난 시점으로 하는데 그것에 대해서는 정확하게 잘 모르겠다  
 또 progress는 로딩씬 임의의 Slider의 value값으로 설정해준다면 진행상황을 sliderBar로 확인해볼 수 있다 
 
-+++ 자세한 SceneLoad Project link : 
-
-
++++ 자세한 SceneLoad Project link  
+(링크)
+　   
+　   
 ### ViewPort Position
 ViewPort Position이란 유니티상의 3d world가 2d 출력화면에 출력될 때, 해당 화면에서의 좌표를 의미한다  
 좌하단을 (0, 0), 우상단을 (1.0, 1.0)으로 인식하는 것이다  
@@ -105,9 +106,26 @@ viewportPosition = Camera.main.ViewportToWorldPoint(viewportPosition);
 https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/Actor/Player/Player.cs
 - Enemy의 status 전환 - protected override void Updating()  
 https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/Actor/Enemy/GroundEnemy/GroundEnemy.cs
-
-
+　  
+　  
 ### Resources
+Resources는 미리 오브젝트(reference)를 에디터상에서 할당해두지 않더라도 유동적으로 원하는 오브젝트를 할당할 수 있다  
+이는 고정적인 오브젝트 할당이 아닌 사용자의 선택에 따른 오브젝트 할당과 같이 유동적인 오브젝트 할당을 수행한다  
+　  
+활용하는 방법은 다음과 같다
+```C#
+GameObject go = Resources.Load<T>(string path);
+```
+단 Asset의 경로는 Assets/Resources라는 폴더를 만든 후 Resources 디렉토리의 경로까지 생략한 다음부터 사용해주면 된다  
+`ej) Prefab/Bullet/...`  
+　  
+　  
+### Resources Object Cache
+앞써 배운 Resources를 동일한 Object에 대해서 지속적으로 호출한다면 생각보다 무거운 프로그램이 된다  
+그래서 Resources Object에 대해서 Cache작업을 해두면 좋을 듯하다  
+　  
+에디터에서 직접 할당한 Object의 경우에는 별도의 Cache가 필요하지 않을 듯하나 
+
 ### BackGroundImage Offset Scrolling
 ### PlayerPrefs
 ### For Two People
