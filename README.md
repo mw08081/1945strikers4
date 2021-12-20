@@ -140,6 +140,13 @@ using System.Collections.Generic;
 Dictionary<string, GameObject> prefabPathCacheDic = new Dictionary<string, GameObject>();      //패스캐시 딕셔너리
 List<Queue<GameObject>> objectPoolingList = new List<Queue<GameObject>>();                  //오브젝트풀링 리스트
 
+void Start()
+{
+    ...
+    SetObjectPooling();
+    ...
+}
+
 //prefabPath Cache Function
 GameObject PrefabLoad(string resourcePath)
 {
