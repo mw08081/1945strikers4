@@ -335,14 +335,14 @@ class AttackModel
 
 ## What is lacking
 - Linguistic
-  - Option Menu
+  - Option Menu(to be added)
   - NetworkManager
-  - esolution
+  - Resolution
 - MatheMatical
   - Vector3Angle vs Quaternion
-  - Vector3 Move
+  - Vector3 Move(to be added)
 - On Editor
-  - BGM & EffectSound
+  - BGM & EffectSound(to be added)
   - Terrain
   - ParticleSystem
 
