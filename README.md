@@ -164,10 +164,12 @@ PlayerPrefs.SetString(string key, string val);
 PlayerPrefs.SetInt(string key, int val);
 PlayerPrefs.SetFloat(string key, float val);
 
-PlayerPrefs.GetString(string key);
-PlayerPrefs.GetInt(string key);
-PlayerPrefs.GetFloat(string key);
+string strTmp = PlayerPrefs.GetString(string key);
+int iTmp = PlayerPrefs.GetInt(string key);
+float fTmp = PlayerPrefs.GetFloat(string key);
 ```
+　  
+　  
 ### For Two People
 ### Angle between A, B Vector  
 ### Parabolic motion
