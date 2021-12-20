@@ -13,7 +13,7 @@
   - Resources Prefab Cache
   - Serializiable Class
   
-### SceneLoad
+### 1. SceneLoad
 씬을 로드하는 방식으로 비동기로드와 동기로드, 두가지 방식을 이용하였다  
   
 씬의 동기로드의 경우 하나의 작업을 요청한 후에 작업이 완료되어야만 다음 작업을 시작하는 방식이다 
