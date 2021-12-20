@@ -122,6 +122,34 @@ GameObject go = Resources.Load<T>(string path);
 　  
 　  
 ### BackGroundImage Offset Scrolling
+동일한 배경 세개 배치하여 배경을 스크롤하는 방법도 있다  
+그러나 배경이 단순한 이미지일 경우 이미지의 offset을 활용하여 한 개의 배경만으로도 스크롤할 수 있다  
+
+방법은 다음과 같다
+```C#
+[SerializeField] MeshRenderer bg;
+[SerializeField] float speed;
+float offsetY;
+
+void Update()
+{
+    BackGroundScrolling();
+}
+
+void BackGroundScrolling()
+{
+    offsetY += (float)speed * Time.deltaTime;
+    offsetY = offsetY % 1.0f;
+
+    Vector2 offset = new Vector2(0, offsetY);
+
+    bg.material.SetTextureOffset("_MainTex", offset);
+}
+```
++++ bgImg Scrolling  
+https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/BG/BackGroundImgScrolling.cs
+　  
+　  
 ### PlayerPrefs
 ### For Two People
 ### Angle between A, B Vector  
