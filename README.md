@@ -83,7 +83,30 @@ IEnumerator AsyncLoadSceneCoroutine()
 
 +++ 자세한 SceneLoad Project link : 
 
+
 ### ViewPort Position
+ViewPort Position이란 유니티상의 3d world가 2d 출력화면에 출력될 때, 해당 화면에서의 좌표를 의미한다  
+좌하단을 (0, 0), 우상단을 (1.0, 1.0)으로 인식하는 것이다  
+　  
+사용하는 방법은 다음과 같다
+```C#
+Vector3 worldPosition;
+Vector3 viewportPosition;
+
+worldPosition = transform.position;
+viewportPosition = Camera.main.WorldToViewportPoint(worldPosition);
+
+viewportPosition = Camera.main.ViewportToWorldPoint(viewportPosition);
+```
+이때 viewport Position은 z값이 카메라와의 거리를 의미하므로 2d좌표가 3d좌표로 변환이 가능한 것이며 애초에 viewportPosition도 3d좌표인 점을 기억하자  
+　  
+이번 프로젝트에서는 두가지 부분에서 viewPort Position을 활용할 수 있었다
+- Player의 이동가능 범위 제한 - void LimitPlayerPosition()  
+https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/Actor/Player/Player.cs
+- Enemy의 status 전환 - protected override void Updating()  
+https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/Actor/Enemy/GroundEnemy/GroundEnemy.cs
+
+
 ### Resources
 ### BackGroundImage Offset Scrolling
 ### PlayerPrefs
