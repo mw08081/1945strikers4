@@ -6,12 +6,6 @@ using UnityEngine.UI;
 
 public class GameOverScene : BaseScene
 {
-    //[SerializeField] ScoreData scoreData;
-    //public ScoreData ScoreData
-    //{
-    //    get { return scoreData; }
-    //}
- 
     protected override void Initializing()
     {
         SystemManager.Instance.CurrentScene = this;
@@ -23,7 +17,7 @@ public class GameOverScene : BaseScene
         if (Input.GetKeyDown(KeyCode.F1))
         {
             ClearGameData();
-            SceneController.Instance.ChangeLoadingScene(SceneNameCont.PlayerchoiceScene);
+            SceneController.Instance.GotoMainScene();
         }
             
     }

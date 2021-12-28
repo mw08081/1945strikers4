@@ -166,4 +166,9 @@ public class InGameScene : BaseScene
     {
         SceneController.Instance.ChangeLoadingScene(SceneNameCont.GameOverScene);
     }
+
+    public void ShowOptionPanel()
+    {
+        PanelSystem.GetPanel(typeof(OptionPanel)).ShowPanel();
+    }
 }

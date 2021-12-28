@@ -48,6 +48,11 @@ public class SceneController : MonoBehaviour
 
     }
 
+    public void GotoMainScene()
+    {
+        SceneManager.LoadScene(SceneNameCont.TitleScene);
+    }
+
     public void ChangeLoadingScene(string _nextSceneName)
     {
         NextSceneName = _nextSceneName;
