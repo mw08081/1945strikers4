@@ -17,6 +17,8 @@ public class GameOverScene : BaseScene
         if (Input.GetKeyDown(KeyCode.F1))
         {
             ClearGameData();
+            PanelSystem.DestroyPanel(typeof(OptionPanel));
+
             SceneController.Instance.GotoMainScene();
         }
             

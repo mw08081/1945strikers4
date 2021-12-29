@@ -24,12 +24,12 @@ public class BasePanel : MonoBehaviour
 
     }
 
-    public void ShowPanel()
+    public virtual void ShowPanel()
     {
         gameObject.SetActive(true);
     }
 
-    public void ClosePanel()
+    public virtual void ClosePanel()
     {
         gameObject.SetActive(false);
     }

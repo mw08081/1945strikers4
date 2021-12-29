@@ -10,6 +10,18 @@ public class OptionPanel : BasePanel
         ClosePanel();
     }
 
+    public override void ShowPanel()
+    {
+        base.ShowPanel();
+        Time.timeScale = 0f;
+    }
+
+    public override void ClosePanel()
+    {
+        base.ClosePanel();
+        Time.timeScale = 1f;
+    }
+
     public void GotoMain()
     {
         ClosePanel();
