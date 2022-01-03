@@ -235,7 +235,7 @@ MonoBehaviour:
   - {fileID: 4722848161958046634, guid: a2d8aefaf6a1bf14b9af5c437bc1e1ce, type: 3}
   - {fileID: 1366743620984186, guid: 126d81349741754428b3099a3631fead, type: 3}
   - {fileID: 196804, guid: 5d3550101caf3184d8ca900f0221ab06, type: 3}
-  isEnemyGeneration: 0000000000
+  isEnemyGeneration: 0101000000
   enemySpawnPosition:
   - {fileID: 439068906}
   - {fileID: 594247640}
@@ -1243,7 +1243,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 35121d671185b4b1489da7dd0cf1f6f3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0

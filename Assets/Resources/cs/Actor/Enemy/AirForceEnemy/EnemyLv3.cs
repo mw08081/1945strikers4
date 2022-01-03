@@ -48,10 +48,15 @@ public class EnemyLv3 : AirForceEnemy
     void UpdateMove()
     {
         Vector3 refVec = Vector3.zero;
+        
         if (isOut)
             transform.position = Vector3.SmoothDamp(transform.position, OutPosition, ref refVec, 0.1f);
         else
             transform.position = Vector3.SmoothDamp(transform.position, moveArea, ref refVec, 0.1f);    
+        
+        /*
+        if(isOut)
+            transform.position = Vector3.Lerp(transform.position)*/
     }
 
     void UpdateAttack()

@@ -314,9 +314,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
+  isDead: 0
   isP1: 0
   moveDir: {x: 0, y: 0, z: 0}
-  speed: 12
+  speed: 12.5
   power: 1
   bomb: 1
   firePosition:

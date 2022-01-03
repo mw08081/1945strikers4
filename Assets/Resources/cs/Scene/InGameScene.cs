@@ -170,7 +170,7 @@ public class InGameScene : BaseScene
     public void ShowOptionPanel()
     {
         PanelSystem.GetPanel(typeof(OptionPanel)).ShowPanel();
-        Time.timeScale = 0.02f;
+        
     }
 
     public void SetVolume(float value)
