@@ -6,7 +6,7 @@
 > ![1945Strikers4MainTitle](https://user-images.githubusercontent.com/58582985/145998095-5d40821b-87b7-4261-9ba2-0c83b5307b37.PNG)  
 
 게임소개 - 모작 : 1945Strikers 시리즈에 이은 네번째 작품으로 정해진 패턴이 아닌 알고리즘에 의한 게임 플레이가 핵심이다. 총 2가지 스테이지와 3종류 스트라이커스로 구성되어있다  
-게임 설명 영상 링크 - https://www.youtube.com/watch?v=FpyQ5dJYX7U&t=7s
+게임 설명 영상 링크 - https://www.youtube.com/watch?v=FpyQ5dJYX7U&t=7s  
 
 ### SCENE - MAIN_TITLE & CHOOSE_PLAYER  
 ![PlayerChoice](https://user-images.githubusercontent.com/58582985/146001339-09db4837-d7b8-4bef-9b3c-674d56f4add1.gif) 
