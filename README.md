@@ -47,6 +47,8 @@
   (https://github.com/mw08081/1945strikers4/blob/main/README.md#9-resources-object-cache)
   - Serializiable Class  
   (https://github.com/mw08081/1945strikers4/blob/main/README.md#10-serializiable-class)
+  - Time Pause
+  ()
   
 ### 1. SceneLoad
 씬을 로드하는 방식으로 비동기로드와 동기로드, 두가지 방식을 이용하였다  
@@ -333,10 +335,29 @@ class AttackModel
 ...
 [SerializeField] AttackModel[] attackModels;
 ```
+### 11. Time Pause(Option Menu)
+보통 게임에서 모서리에 있는 옵션을 열 경우, 게임은 일시 정지하게 된다. 해당 기능을 구현하는 방법은 다음과 같다.
+```c#
+public override void ShowPanel()
+{
+    base.ShowPanel();
+    Time.timeScale = 0f;
+}
+
+public override void ClosePanel()
+{
+    base.ClosePanel();
+    Time.timeScale = 1f;
+}
+```
+option을 열었을 때, ShowPanel()함수를 통해 option창이 열린다.  
+이때, 동시에 `Time.timeScale`을 0f로 설정해주면 된다.  
+해제할때에는 1f로 설정해주면 되는 듯하다  
+
++++ 참고) https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/UI/OptionPanel.cs  
 
 ## What is lacking
 - Linguistic
-  - Option Menu(to be added)
   - NetworkManager
   - Resolution
 - MatheMatical
@@ -347,11 +368,12 @@ class AttackModel
   - Terrain
   - ParticleSystem
 
-### Option Menu
 ### NetworkManager
-### 
+### Resolution
 ### Vector3Angle vs Quaternion
 ### Vector3 Move
 ### BGM & EffectSound
 ### Terrain
 ### ParticleSystem
+
+### Panel System
