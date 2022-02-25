@@ -48,7 +48,7 @@
   - Serializiable Class  
   (https://github.com/mw08081/1945strikers4/blob/main/README.md#10-serializiable-class)
   - Time Pause
-  ()
+  (https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/UI/OptionPanel.cs)
   
 ### 1. SceneLoad
 씬을 로드하는 방식으로 비동기로드와 동기로드, 두가지 방식을 이용하였다  
