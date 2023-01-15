@@ -25,30 +25,19 @@
 　  
 ## What I learned  
 - Linguistic
-  - Scene Load  
-  (https://github.com/mw08081/1945strikers4/blob/main/README.md#1-sceneload)
-  - ViewPort Position  
-  (https://github.com/mw08081/1945strikers4/blob/main/README.md#2-viewport-position)
-  - Resources  
-  (https://github.com/mw08081/1945strikers4/blob/main/README.md#3-resources)
-  - BackGroundImage Offset Scrolling  
-  (https://github.com/mw08081/1945strikers4/blob/main/README.md#4-backgroundimage-offset-scrolling)
-  - PlayerPrefs  
-  (https://github.com/mw08081/1945strikers4/blob/main/README.md#5-playerprefs)
-  - For Two People (feat. AddComponent<>())  
-  (https://github.com/mw08081/1945strikers4/blob/main/README.md#6-for-two-people)
+  - [Scene Load](https://github.com/mw08081/1945strikers4/blob/main/README.md#1-sceneload)
+  - [ViewPort Position](https://github.com/mw08081/1945strikers4/blob/main/README.md#2-viewport-position)
+  - [Resources](https://github.com/mw08081/1945strikers4/blob/main/README.md#3-resources)
+  - [BackGroundImage Offset Scrolling](https://github.com/mw08081/1945strikers4/blob/main/README.md#4-backgroundimage-offset-scrolling)
+  - [PlayerPrefs](https://github.com/mw08081/1945strikers4/blob/main/README.md#5-playerprefs)
+  - [For Two People (feat. AddComponent<>())](https://github.com/mw08081/1945strikers4/blob/main/README.md#6-for-two-people)
 - MatheMatical
-  - Angle between A, B Vector  
-  (https://github.com/mw08081/1945strikers4/blob/main/README.md#7-angle-between-a-b-vector)
-  - Parabolic motion  
-  (https://github.com/mw08081/1945strikers4/blob/main/README.md#8-parabolic-motion)
+  - [Angle between A, B Vector](https://github.com/mw08081/1945strikers4/blob/main/README.md#7-angle-between-a-b-vector)
+  - [Parabolic motion](https://github.com/mw08081/1945strikers4/blob/main/README.md#8-parabolic-motion)
 - Some Tips
-  - Resources Prefab Cache  
-  (https://github.com/mw08081/1945strikers4/blob/main/README.md#9-resources-object-cache)
-  - Serializiable Class  
-  (https://github.com/mw08081/1945strikers4/blob/main/README.md#10-serializiable-class)
-  - Time Pause
-  (https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/UI/OptionPanel.cs)
+  - [Resources Prefab Cache](https://github.com/mw08081/1945strikers4/blob/main/README.md#9-resources-object-cache)
+  - [Serializiable Class](https://github.com/mw08081/1945strikers4/blob/main/README.md#10-serializiable-class)
+  - [Time Pause](https://github.com/mw08081/1945strikers4/blob/main/Assets/Resources/cs/UI/OptionPanel.cs)
   
 ### 1. SceneLoad
 씬을 로드하는 방식으로 비동기로드와 동기로드, 두가지 방식을 이용하였다  
