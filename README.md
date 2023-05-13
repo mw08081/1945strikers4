@@ -1,7 +1,7 @@
 ## 개요
-1. [InGame]()
-2. [What I learned]()
-3. [What i need]()
+1. [InGame](https://github.com/mw08081/1945strikers4/blob/main/README.md#scene---main_title--choose_player)
+2. [What I learned](https://github.com/mw08081/1945strikers4/blob/main/README.md#what-i-learned)
+3. [What i lacking](https://github.com/mw08081/1945strikers4/blob/main/README.md#what-is-lacking)
 
 ### SCENE - MAIN_TITLE & CHOOSE_PLAYER  
 ![PlayerChoice](https://user-images.githubusercontent.com/58582985/146001339-09db4837-d7b8-4bef-9b3c-674d56f4add1.gif) 
