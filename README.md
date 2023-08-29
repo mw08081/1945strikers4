@@ -344,20 +344,9 @@ option을 열었을 때, ShowPanel()함수를 통해 option창이 열린다.
 - Linguistic
   - NetworkManager
   - Resolution
-- MatheMatical
-  - Vector3Angle vs Quaternion
-  - Vector3 Move(to be added)
 - On Editor
   - BGM & EffectSound(to be added)
-  - Terrain
-  - ParticleSystem
 
 ### NetworkManager
 ### Resolution
-### Vector3Angle vs Quaternion
-### Vector3 Move
 ### BGM & EffectSound
-### Terrain
-### ParticleSystem
-
-### Panel System
