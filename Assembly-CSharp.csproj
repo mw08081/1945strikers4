@@ -70,7 +70,7 @@
     <Compile Include="Assets\Resources\cs\Actor\Player\F5U\F5USubMachine.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Player\Player.cs" />
     <Compile Include="Assets\Resources\cs\UI\PlayerStatePanel.cs" />
-    <Compile Include="Assets\Resources\cs\System\ScoreData.cs" />
+    <Compile Include="Assets\GameSource\BaseSystem\GameManger\ScoreData.cs" />
     <Compile Include="Assets\Resources\cs\Scene\InGameScene.cs" />
     <Compile Include="Assets\Resources\cs\Scene\PlayerChoiceScene\Player2Choice.cs" />
     <Compile Include="Assets\Resources\cs\BG\BackGround.cs" />
@@ -91,13 +91,13 @@
     <Compile Include="Assets\Resources\cs\Item\Item.cs" />
     <Compile Include="Assets\Resources\cs\Scene\GameOverScene.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Player\Player2Controller.cs" />
-    <Compile Include="Assets\Resources\cs\System\InGameSystem\EffectSystem.cs" />
+    <Compile Include="Assets\GameSource\BaseSystem\System\EffectSystem.cs" />
     <Compile Include="Assets\Resources\cs\Etc\EffectLifeTime.cs" />
-    <Compile Include="Assets\Resources\cs\System\InGameSystem\EnemySystem.cs" />
+    <Compile Include="Assets\GameSource\BaseSystem\System\EnemySystem.cs" />
     <Compile Include="Assets\Resources\cs\Bullet\PlayerBullet\F5U\F5UBomb.cs" />
     <Compile Include="Assets\Resources\cs\UI\BasePanel.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Player\F5U\F5U.cs" />
-    <Compile Include="Assets\Resources\cs\System\InGameSystem\ItemSystem.cs" />
+    <Compile Include="Assets\GameSource\BaseSystem\System\ItemSystem.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
     <Compile Include="Assets\Resources\cs\Scene\SceneSystem\SceneController.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Player\BF109\BF109SubMacine.cs" />
@@ -120,8 +120,8 @@
     <Compile Include="Assets\Resources\cs\Scene\PlayerChoiceScene\Player1Choice.cs" />
     <Compile Include="Assets\Resources\cs\Scene\TitleScene\TitleScene.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Enemy\GroundEnemy\GroundEnemy.cs" />
-    <Compile Include="Assets\Resources\cs\System\InGameSystem\ScoreSystem.cs" />
-    <Compile Include="Assets\Resources\cs\System\SystemManager.cs" />
+    <Compile Include="Assets\GameSource\BaseSystem\System\ScoreSystem.cs" />
+    <Compile Include="Assets\GameSource\BaseSystem\GameManger\SystemManager.cs" />
     <Compile Include="Assets\Resources\cs\BG\BackGroundImgScrolling.cs" />
     <Compile Include="Assets\Resources\cs\Scene\PlayerChoiceScene\PlayerChoiceScene.cs" />
     <Compile Include="Assets\Resources\cs\Scene\TitleScene\InSertCoinBlinking.cs" />
@@ -129,8 +129,8 @@
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\Resources\cs\Item\BouncingItem.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Enemy\AirForceEnemy\EnemyLv3.cs" />
-    <Compile Include="Assets\Resources\cs\System\InGameSystem\BulletSystem.cs" />
-    <Compile Include="Assets\Resources\cs\System\InGameSystem\TmpSystem.cs" />
+    <Compile Include="Assets\GameSource\BaseSystem\System\BulletSystem.cs" />
+    <Compile Include="Assets\GameSource\BaseSystem\System\TmpSystem.cs" />
     <Compile Include="Assets\Resources\cs\Actor\Enemy\AirForceEnemy\EnemyLv4.cs" />
     <Compile Include="Assets\Resources\cs\UI\TMP\PowerTMP.cs" />
     <Compile Include="Assets\BaseResource\Effect\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />

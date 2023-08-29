@@ -17,8 +17,10 @@ public class Player : Actor
 
     protected override void Initializing()
     {
+        Debug.Log(transform.rotation);
         isP1 = true;
         Launch();
+        Debug.Log(transform.rotation);
         base.hp = 3;
 
         isBomb = false;
