@@ -36,7 +36,7 @@ public class PlayerChoiceScene : BaseScene
     protected override void Initializing()
     {
         isForDos = false;
-        SystemManager.Instance.CurrentScene = this;
+        GameManager.Instance.CurrentScene = this;
     }
 
     protected override void Updating()
@@ -44,7 +44,7 @@ public class PlayerChoiceScene : BaseScene
         if (Input.GetKeyDown(KeyCode.F))
         {
             isForDos = true;
-            SystemManager.Instance.isForDos = true;
+            GameManager.Instance.isForDos = true;
         }
         
         if(isForDos)
@@ -53,17 +53,17 @@ public class PlayerChoiceScene : BaseScene
             {
                 if(playerCnt == 0)
                 {
-                    SystemManager.Instance.Player1PrefabIndex = player1Choice.index;
+                    GameManager.Instance.Player1PrefabIndex = player1Choice.index;
                     Player2Choice.gameObject.SetActive(true);
                     playerCnt++;
                 }
-                else if(playerCnt == 1 && SystemManager.Instance.Player1PrefabIndex == player2Choice.index)
+                else if(playerCnt == 1 && GameManager.Instance.Player1PrefabIndex == player2Choice.index)
                 {
                     return;
                 }
                 else
                 {
-                    SystemManager.Instance.Player2PrefabIndex = player2Choice.index;
+                    GameManager.Instance.Player2PrefabIndex = player2Choice.index;
                     SceneController.Instance.ChangeLoadingScene(SceneNameCont.Stage1Scene);
                 }
             }
@@ -72,7 +72,7 @@ public class PlayerChoiceScene : BaseScene
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                SystemManager.Instance.Player1PrefabIndex = player1Choice.index;
+                GameManager.Instance.Player1PrefabIndex = player1Choice.index;
                 SceneController.Instance.ChangeLoadingScene(SceneNameCont.Stage1Scene);
             }
         }

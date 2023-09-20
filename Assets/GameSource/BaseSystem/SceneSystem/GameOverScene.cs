@@ -8,7 +8,7 @@ public class GameOverScene : BaseScene
 {
     protected override void Initializing()
     {
-        SystemManager.Instance.CurrentScene = this;
+        GameManager.Instance.CurrentScene = this;
 
     }
 
@@ -26,18 +26,18 @@ public class GameOverScene : BaseScene
 
     void ClearGameData()
     {
-        SystemManager.Instance.ScoreSystem.ClearScore();            //점수 초기화
-        SystemManager.Instance.isForDos = false;                    //최초 1인용으로 실행
+        GameManager.Instance.ScoreSystem.ClearScore();            //점수 초기화
+        GameManager.Instance.isForDos = false;                    //최초 1인용으로 실행
 
-        SystemManager.Instance.Player1PrefabIndex = 2;              //선택 스트라이커 정보 초기화
-        SystemManager.Instance.Player2PrefabIndex = 0;
+        GameManager.Instance.Player1PrefabIndex = 2;              //선택 스트라이커 정보 초기화
+        GameManager.Instance.Player2PrefabIndex = 0;
 
-        SystemManager.Instance.PlayerHp = 3;                        //플레이어 정보 초기화
-        SystemManager.Instance.Player2Hp = 3;
-        SystemManager.Instance.PlayerPower = 1;
-        SystemManager.Instance.Player2Power = 1;
+        GameManager.Instance.PlayerHp = 3;                        //플레이어 정보 초기화
+        GameManager.Instance.Player2Hp = 3;
+        GameManager.Instance.PlayerPower = 1;
+        GameManager.Instance.Player2Power = 1;
 
-        SystemManager.Instance.StageInfo = 0;                       //스테이지 정보 초기화
+        GameManager.Instance.StageInfo = 0;                       //스테이지 정보 초기화
     }
 
 }

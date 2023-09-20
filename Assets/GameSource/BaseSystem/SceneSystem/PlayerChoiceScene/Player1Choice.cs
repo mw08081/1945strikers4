@@ -36,7 +36,7 @@ public class Player1Choice : MonoBehaviour
                 transform.position += Vector3.right * movingDistance;
                 index++;
 
-                SystemManager.Instance.GetCurrentSceneT<PlayerChoiceScene>().PlayerChoiceImg.UpdatePlayerChoice(index);
+                GameManager.Instance.GetCurrentSceneT<PlayerChoiceScene>().PlayerChoiceImg.UpdatePlayerChoice(index);
             }
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
@@ -48,7 +48,7 @@ public class Player1Choice : MonoBehaviour
                 transform.position -= Vector3.right * movingDistance;
                 index--;
 
-                SystemManager.Instance.GetCurrentSceneT<PlayerChoiceScene>().PlayerChoiceImg.UpdatePlayerChoice(index);
+                GameManager.Instance.GetCurrentSceneT<PlayerChoiceScene>().PlayerChoiceImg.UpdatePlayerChoice(index);
             }
         }
 

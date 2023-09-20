@@ -62,26 +62,22 @@ public class BulletSystem : MonoBehaviour
     void Start()
     {
         for (int i = 0; i < 4; i++)
-            bulletMakingInfo[i, 1] = playerBulletResourcePath[i, SystemManager.Instance.Player1PrefabIndex];
+            bulletMakingInfo[i, 1] = playerBulletResourcePath[i, GameManager.Instance.Player1PrefabIndex];
         
-        if(SystemManager.Instance.isForDos)                                                             //If isFTP, Instantiate using Player2PrefabIndex
+        if(GameManager.Instance.isForDos)                                                             //If isFTP, Instantiate using Player2PrefabIndex
         {
             for (int i = 0; i < 4; i++)
-                bulletMakingInfo[i + 4, 1] = playerBulletResourcePath[i, SystemManager.Instance.Player2PrefabIndex];
+                bulletMakingInfo[i + 4, 1] = playerBulletResourcePath[i, GameManager.Instance.Player2PrefabIndex];
         }
         else
         {
-            if(SystemManager.Instance.Player1PrefabIndex == 0)                                          //Prepare AfterInputFTP
+            if(GameManager.Instance.Player1PrefabIndex == 0)                                          //Prepare AfterInputFTP
                 for (int i = 0; i < 4; i++)                                                                     //when P1 is BF109, set p2BulletModel to F5U
-                    bulletMakingInfo[i + 4, 1] = playerBulletResourcePath[i, 2];
+                    bulletMakingInfo[i + 4, 1] = playerBulletResourcePath[i, 2];                                //p2 's bullet default value == p1
         }
         SettingBullet();
     }
 
-    void Update()
-    {
-
-    }
 
     #region ####BulletCache####
     GameObject PrefabLoad(string resourcePath)
@@ -97,7 +93,7 @@ public class BulletSystem : MonoBehaviour
             go = Resources.Load<GameObject>(resourcePath);
             if(!go)
             {
-                Debug.LogError("Load Error!");
+                Debug.LogError("Load Error! : " + resourcePath);
                 return null;
             }
             bulletPrefabCache.Add(resourcePath, go);

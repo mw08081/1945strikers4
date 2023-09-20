@@ -4,7 +4,8 @@ using UnityEngine;
 
 public enum EnemyCode : int
 {
-    lv1 = 0,
+    lv0 = 0,
+    lv1,
     lv2,
     lv3,
     lv4,
@@ -16,6 +17,7 @@ public class EnemySystem : MonoBehaviour
     [SerializeField] float boseGeneratingTime;
     [SerializeField] float enemyGeneratingTime;
     [SerializeField] GameObject[] enemyPrefabList;
+    [SerializeField] Dictionary<EnemyCode, List<GameObject>> enemyDic;
     [SerializeField] bool[] isEnemyGeneration;
     [SerializeField] Transform[] enemySpawnPosition;
     [SerializeField] Transform[] formationSpawnPositions;
@@ -27,13 +29,13 @@ public class EnemySystem : MonoBehaviour
     float elapsedTime;
     bool isbose = false;
     
-    float[,] enemySpawnInfo = new float[5, 4]
+    float[,] enemySpawnInfo = new float[5, 5]           //보스 제외 lv0~lv4
     {
-        {0, 0, 0, 0 },                      //row 0 : SpawnInterval Info
-        {0, 0, 0, 0 },                      //row 1 : LastSpawnTime Info
-        {1.0f, 2.0f, 7.1f, 9.55f },         //row 2 : RandomSpawnMinimumInterval
-        {2.0f, 3.0f, 8.1f, 13.44f },        //row 3 : RandomSpawnMaximumInterval
-        {0.8f, 0.7f, 1.0f, 1.0f }           //row 4 : SpawnProbability Info
+        {0, 0, 0, 0, 0 },                      //row 0 : SpawnInterval Info
+        {0, 0, 0, 0, 0 },                      //row 1 : LastSpawnTime Info
+        {1.0f, 1.0f, 2.0f, 7.1f, 9.55f },         //row 2 : RandomSpawnMinimumInterval
+        {2.0f,2.0f, 3.0f, 8.1f, 13.44f },        //row 3 : RandomSpawnMaximumInterval
+        {0.9f, 0.8f, 0.7f, 1.0f, 1.0f }           //row 4 : SpawnProbability Info
     };
     float lastGenerateFormationTime;
 
@@ -78,7 +80,7 @@ public class EnemySystem : MonoBehaviour
 
     void Update()
     {
-        elapsedTime = Time.time - SystemManager.Instance.GetCurrentSceneT<InGameScene>().gameStartTime;
+        elapsedTime = Time.time - GameManager.Instance.GetCurrentSceneT<InGameScene>().gameStartTime;
      
         if (elapsedTime > boseGeneratingTime)
             GenerateBose();
@@ -96,7 +98,7 @@ public class EnemySystem : MonoBehaviour
             if(Time.time - enemySpawnInfo[1, i] > enemySpawnInfo[0, i]                  //row(1) : lastSpawnTime    //row(2) : spawnInterval
                 && Random.Range(0.0f, 1.0f) > (1 - enemySpawnInfo[4, i]))               //row(4) : spawnProbability
             {
-                if (i > 1 && elapsedTime < 7)                   //block Generating lv3,4 before elapsedTime(7)
+                if (i > 2 && elapsedTime < 7)                   //block Generating lv3,4 before elapsedTime(7)
                     break;
 
                 if (i < 2)                                      //lv 1,2 spawn at(0)

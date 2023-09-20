@@ -84,27 +84,27 @@ public class InGameScene : BaseScene
 
     protected override void Initializing()
     {
-        SystemManager.Instance.CurrentScene = this;
+        GameManager.Instance.CurrentScene = this;
         gameStartTime = Time.time;
         isBoseDead = false;
 
-        GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player1PrefabIndex]);
+        GameObject playerGameObject = Instantiate(PlayerPrefab[GameManager.Instance.Player1PrefabIndex]);
         playerGameObject.AddComponent<Player1Controller>();
-        playerGameObject.transform.position = new Vector3(0, -3, -15);
+        playerGameObject.transform.position = GameManager.Instance.respawnPos;
         player = playerGameObject.GetComponent<Player>();
         player.isP1 = true;
-        player.hp = SystemManager.Instance.PlayerHp;
-        player.power = SystemManager.Instance.PlayerPower;
+        player.hp = GameManager.Instance.PlayerHp;
+        player.power = GameManager.Instance.PlayerPower;
 
-        if (SystemManager.Instance.isForDos)
+        if (GameManager.Instance.isForDos)
         {
-            playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player2PrefabIndex]);
+            playerGameObject = Instantiate(PlayerPrefab[GameManager.Instance.Player2PrefabIndex]);
             playerGameObject.AddComponent<Player2Controller>();
-            playerGameObject.transform.position = new Vector3(0, -3, -15);
+            playerGameObject.transform.position = GameManager.Instance.respawnPos;
             player2 = playerGameObject.GetComponent<Player>();
             player2.isP1 = false;
-            player2.hp = SystemManager.Instance.Player2Hp;
-            player2.power = SystemManager.Instance.Player2Power;
+            player2.hp = GameManager.Instance.Player2Hp;
+            player2.power = GameManager.Instance.Player2Power;
         }
     }
 
@@ -115,7 +115,7 @@ public class InGameScene : BaseScene
         if (isBoseDead || gameElapedTime > 100 || Input.GetKeyDown(KeyCode.F12))
             NextStage();
 
-        if (SystemManager.Instance.isForDos)
+        if (GameManager.Instance.isForDos)
         {
             if (player.hp <= 0 && player2.hp <= 0)
                 GameOver();
@@ -126,9 +126,9 @@ public class InGameScene : BaseScene
                 GameOver();
         }
 
-        if (Input.GetKeyDown(KeyCode.F) && !SystemManager.Instance.isForDos)
+        if (Input.GetKeyDown(KeyCode.F) && !GameManager.Instance.isForDos)
         {
-            SystemManager.Instance.isForDos = true;
+            GameManager.Instance.isForDos = true;
 
             GenerateP2InGame();
         }
@@ -136,27 +136,27 @@ public class InGameScene : BaseScene
 
     void GenerateP2InGame()
     {
-        SystemManager.Instance.SetP2PrefabIndex();
+        GameManager.Instance.SetP2PrefabIndex();
 
-        GameObject playerGameObject = Instantiate(PlayerPrefab[SystemManager.Instance.Player2PrefabIndex]);
+        GameObject playerGameObject = Instantiate(PlayerPrefab[GameManager.Instance.Player2PrefabIndex]);
         playerGameObject.AddComponent<Player2Controller>();
-        playerGameObject.transform.position = new Vector3(0, -3, -15);
+        playerGameObject.transform.position = GameManager.Instance.respawnPos;
         player2 = playerGameObject.GetComponent<Player>();
         player2.isP1 = false;
     }
 
     void NextStage()
     {
-        SystemManager.Instance.PlayerHp = player.hp;
-        SystemManager.Instance.PlayerPower = player.power;
-        if (SystemManager.Instance.isForDos)
+        GameManager.Instance.PlayerHp = player.hp;
+        GameManager.Instance.PlayerPower = player.power;
+        if (GameManager.Instance.isForDos)
         {
-            SystemManager.Instance.Player2Hp = player2.hp;
-            SystemManager.Instance.Player2Power = player2.power;
+            GameManager.Instance.Player2Hp = player2.hp;
+            GameManager.Instance.Player2Power = player2.power;
         }
 
-        SystemManager.Instance.StageInfo++;
-        if(SystemManager.Instance.StageInfo == 1)
+        GameManager.Instance.StageInfo++;
+        if(GameManager.Instance.StageInfo == 1)
             SceneController.Instance.ChangeLoadingScene(SceneNameCont.Stage2Scene);
         else
             SceneController.Instance.ChangeLoadingScene(SceneNameCont.Stage3Scene);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BaseScene : MonoBehaviour
 {
-    void Start()
+    void Awake()
     {
         Initializing();
     }
