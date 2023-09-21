@@ -15,11 +15,11 @@ C:/Users/presi/Desktop/project/unity/1945strikers4
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51585
+51610
 Successfully changed project path to: C:/Users/presi/Desktop/project/unity/1945strikers4
 C:/Users/presi/Desktop/project/unity/1945strikers4
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 31.28 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 31.32 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.30f1 (1fb1bf06830e)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity 2020.3.30f1/Editor/Data/Resources/UnitySubsystems
@@ -37,37 +37,37 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity 2020.3.30f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity 2020.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity 2020.3.30f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56676
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56712
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity 2020.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001741 seconds.
+Registered in 0.001795 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 37.39 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 30.72 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.400 seconds
+- Completed reload, in  0.385 seconds
 Domain Reload Profiling:
-	ReloadAssembly (400ms)
+	ReloadAssembly (385ms)
 		BeginReloadAssembly (47ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (303ms)
+		EndReloadAssembly (288ms)
 			LoadAssemblies (45ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (89ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (19ms)
-			SetupLoadedEditorAssemblies (129ms)
+			RebuildScriptCaches (18ms)
+			SetupLoadedEditorAssemblies (116ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (38ms)
-				BeforeProcessingInitializeOnLoad (13ms)
-				ProcessInitializeOnLoadAttributes (56ms)
+				RefreshPlugins (31ms)
+				BeforeProcessingInitializeOnLoad (11ms)
+				ProcessInitializeOnLoadAttributes (53ms)
 				ProcessInitializeOnLoadMethodAttributes (18ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -75,34 +75,34 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002809 seconds.
+Registered in 0.002759 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.653 seconds
+- Completed reload, in  0.643 seconds
 Domain Reload Profiling:
-	ReloadAssembly (653ms)
-		BeginReloadAssembly (101ms)
+	ReloadAssembly (644ms)
+		BeginReloadAssembly (104ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (15ms)
-		EndReloadAssembly (508ms)
-			LoadAssemblies (66ms)
+			CreateAndSetChildDomain (16ms)
+		EndReloadAssembly (496ms)
+			LoadAssemblies (68ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (163ms)
+			SetupTypeCache (159ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (201ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (199ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (56ms)
-				ProcessInitializeOnLoadAttributes (128ms)
+				BeforeProcessingInitializeOnLoad (55ms)
+				ProcessInitializeOnLoadAttributes (127ms)
 				ProcessInitializeOnLoadMethodAttributes (6ms)
 				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
@@ -121,7 +121,7 @@ System memory in use before: 85.3 MB.
 System memory in use after: 85.4 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2097.
-Total: 2.221600 ms (FindLiveObjects: 0.113500 ms CreateObjectMapping: 0.043600 ms MarkObjects: 2.001700 ms  DeleteObjects: 0.062200 ms)
+Total: 2.105900 ms (FindLiveObjects: 0.096600 ms CreateObjectMapping: 0.037300 ms MarkObjects: 1.910300 ms  DeleteObjects: 0.061100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -137,5 +137,11 @@ AssetImportParameters requested are different than current active one (requested
 Received Import Request.
   path: Assets/Cube.prefab
   artifactKey: Guid(dbc89c2c87a243941a242db2c1b6ccf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cube.prefab using Guid(dbc89c2c87a243941a242db2c1b6ccf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c65836ea524da5ad3f6f36c0a213cc9d') in 0.074996 seconds 
+Start importing Assets/Cube.prefab using Guid(dbc89c2c87a243941a242db2c1b6ccf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fdf24392591ecb15d15d42e4674a9c6') in 0.063707 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.485945 seconds.
+  path: Assets/Cube.prefab
+  artifactKey: Guid(dbc89c2c87a243941a242db2c1b6ccf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cube.prefab using Guid(dbc89c2c87a243941a242db2c1b6ccf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04b6c339e8acec12d7120ba1031772c9') in 0.011893 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
