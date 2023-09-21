@@ -1,135 +1,161 @@
+Unity Editor version:    2020.3.30f1 (1fb1bf06830e)
+Branch:                  2020.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 13.4 (Build 22F66)
+Darwin version:          22.5.0
+Architecture:            x86_64
+Running under Rosetta:   YES
+Available memory:        16384 MB
 Using pre-set license
-Built from '2020.3/staging' branch; Version is '2020.3.30f1 (1fb1bf06830e) revision 2077119'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'ko' Physical Memory: 16310 MB
-BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+Pro License: NO
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity 2020.3.30f1\Editor\Unity.exe
+/Applications/Unity/Unity.app/Contents/MacOS/Unity
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/presi/Desktop/project/unity/1945strikers4
+/Users/jeongminwoo/projects/unity/1945strikers4
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51610
-Successfully changed project path to: C:/Users/presi/Desktop/project/unity/1945strikers4
-C:/Users/presi/Desktop/project/unity/1945strikers4
+58140
+Successfully changed project path to: /Users/jeongminwoo/projects/unity/1945strikers4
+/Users/jeongminwoo/projects/unity/1945strikers4
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 31.32 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 39.53 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.30f1 (1fb1bf06830e)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2020.3.30f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/presi/Desktop/project/unity/1945strikers4/Assets
+[Subsystems] Discovering subsystems at path /Applications/Unity/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/jeongminwoo/projects/unity/1945strikers4/Assets
 GfxDevice: creating device client; threaded=0
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2488)
-    Vendor:   
-    VRAM:     8031 MB
-    Driver:   31.0.15.3667
+2023-09-21 22:15:57.929 Unity[34408:484725] (null) preferred device: Apple M1 (high power)
+2023-09-21 22:15:57.929 Unity[34408:484725] Metal devices available: 1
+2023-09-21 22:15:57.929 Unity[34408:484725] 0: Apple M1 (high power)
+2023-09-21 22:15:57.929 Unity[34408:484725] Using device Apple M1 (high power)
+Initializing Metal device caps: Apple M1
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity 2020.3.30f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity 2020.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity 2020.3.30f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56712
+Mono path[0] = '/Applications/Unity/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56408
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity 2020.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001795 seconds.
+Register platform support module: /Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.000427 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 30.72 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 39.69 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.385 seconds
+- Completed reload, in  1.070 seconds
 Domain Reload Profiling:
-	ReloadAssembly (385ms)
-		BeginReloadAssembly (47ms)
+	ReloadAssembly (1070ms)
+		BeginReloadAssembly (78ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (288ms)
-			LoadAssemblies (45ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (895ms)
+			LoadAssemblies (76ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (89ms)
+			SetupTypeCache (151ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (18ms)
-			SetupLoadedEditorAssemblies (116ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (470ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (31ms)
-				BeforeProcessingInitializeOnLoad (11ms)
-				ProcessInitializeOnLoadAttributes (53ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
+				RefreshPlugins (40ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (259ms)
+				ProcessInitializeOnLoadMethodAttributes (89ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002759 seconds.
+Registered in 0.000958 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.643 seconds
+- Completed reload, in  1.729 seconds
 Domain Reload Profiling:
-	ReloadAssembly (644ms)
-		BeginReloadAssembly (104ms)
+	ReloadAssembly (1730ms)
+		BeginReloadAssembly (207ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (28ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (496ms)
-			LoadAssemblies (68ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (1448ms)
+			LoadAssemblies (153ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (159ms)
+			SetupTypeCache (258ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (199ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (800ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (55ms)
-				ProcessInitializeOnLoadAttributes (127ms)
-				ProcessInitializeOnLoadMethodAttributes (6ms)
-				AfterProcessingInitializeOnLoad (6ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (164ms)
+				ProcessInitializeOnLoadAttributes (601ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
+				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
 Platform modules already initialized, skipping
+Validating Project structure ... 0.010826 seconds.
+Shader import version has changed; will reimport all shaders...
+Upgrading shader files ...0.025132 seconds.
+Application.AssetDatabase Initial Script Refresh Start
+RefreshInfo: InitialScriptRefreshV2(NoUpdateAssetOptions) scanfilter:  ... 1 filters
+RefreshProfiler: Total: 0.000ms
+Application.AssetDatabase Initial Script Refresh End
+Application.AssetDatabase.Refresh Start
+Application.AssetDatabase.Refresh End
+RefreshInfo: StopAssetImportingV2(ForceSynchronousImport) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Launching external process: /Applications/Unity/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.03 seconds
+Initializing Unity extensions:
+2023-09-21 22:16:01.382 Unity[34408:484725] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x7fd4d9012d70 Font Asset, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+2023-09-21 22:16:01.385 Unity[34408:484725] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x7fd4d9010b70 Font Asset, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1641 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 85.3 MB.
-System memory in use after: 85.4 MB.
+Unloading 1642 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 69.4 MB.
+System memory in use after: 68.7 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2097.
-Total: 2.105900 ms (FindLiveObjects: 0.096600 ms CreateObjectMapping: 0.037300 ms MarkObjects: 1.910300 ms  DeleteObjects: 0.061100 ms)
+Unloading 151 unused Assets to reduce memory usage. Loaded Objects now: 2118.
+Total: 2.299500 ms (FindLiveObjects: 0.073209 ms CreateObjectMapping: 0.032208 ms MarkObjects: 1.781417 ms  DeleteObjects: 0.412125 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
@@ -137,11 +163,52 @@ AssetImportParameters requested are different than current active one (requested
 Received Import Request.
   path: Assets/Cube.prefab
   artifactKey: Guid(dbc89c2c87a243941a242db2c1b6ccf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cube.prefab using Guid(dbc89c2c87a243941a242db2c1b6ccf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fdf24392591ecb15d15d42e4674a9c6') in 0.063707 seconds 
+Start importing Assets/Cube.prefab using Guid(dbc89c2c87a243941a242db2c1b6ccf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e1cffd77ec9009f6597c44af59d4467') in 0.190853 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.485945 seconds.
-  path: Assets/Cube.prefab
-  artifactKey: Guid(dbc89c2c87a243941a242db2c1b6ccf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cube.prefab using Guid(dbc89c2c87a243941a242db2c1b6ccf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04b6c339e8acec12d7120ba1031772c9') in 0.011893 seconds 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+  Time since last request: 42.909805 seconds.
+  path: Assets/Scenes/Stage1Scene/LightingData.asset
+  artifactKey: Guid(8f3e653cd804e944d97007fa520b3c32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Stage1Scene/LightingData.asset using Guid(8f3e653cd804e944d97007fa520b3c32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2ef661546c7f5dfbc6be5bd6337a72a') in 0.358762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Scenes/Stage1Scene/Lightmap-0_comp_dir.png
+  artifactKey: Guid(3c79f55ff4e225c4e9445e3b39185e90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Stage1Scene/Lightmap-0_comp_dir.png using Guid(3c79f55ff4e225c4e9445e3b39185e90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c94048ce0775eae49a1076bb47e03ae') in 0.321046 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Scenes/Stage1Scene/ReflectionProbe-0.exr
+  artifactKey: Guid(cc5a2564a4a5db54e83057d428149f5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Stage1Scene/ReflectionProbe-0.exr using Guid(cc5a2564a4a5db54e83057d428149f5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '554f50de0969adcb5dc371b5e93b26f1') in 0.546255 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Scenes/Stage1Scene/Lightmap-0_comp_light.exr
+  artifactKey: Guid(8a134f13356e13843b131ffe43405731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Stage1Scene/Lightmap-0_comp_light.exr using Guid(8a134f13356e13843b131ffe43405731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eafb55a9eef16bd71e8f844f0621a44b') in 0.041510 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/Scenes/Stage1Scene/Lightmap-0_comp_shadowmask.png
+  artifactKey: Guid(d7c2ce2ec00267e4ea7166ce482705e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Stage1Scene/Lightmap-0_comp_shadowmask.png using Guid(d7c2ce2ec00267e4ea7166ce482705e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b4996000b853fc197866278711a1593') in 0.005832 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.625017 seconds.
+  path: Assets/Scenes/Stage2Scene/LightingData.asset
+  artifactKey: Guid(b6172e4ffd21f4540bd4698f2061cd10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Stage2Scene/LightingData.asset using Guid(b6172e4ffd21f4540bd4698f2061cd10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48471a252fb25c1c682434ad1f7732fc') in 0.005522 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Scenes/Stage2Scene/ReflectionProbe-0.exr
+  artifactKey: Guid(b76a42684082b774e967176469cfbca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Stage2Scene/ReflectionProbe-0.exr using Guid(b76a42684082b774e967176469cfbca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f9f0bc47704cdaf86d37c2a8beecaf9') in 0.018160 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.955343 seconds.
+  path: Assets/Scenes/Stage3Scene.unity
+  artifactKey: Guid(2b4cc0f125098d1408cc241e8f417611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Stage3Scene.unity using Guid(2b4cc0f125098d1408cc241e8f417611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f58a796757a488817e8ebe801f3534c') in 0.000939 seconds 
