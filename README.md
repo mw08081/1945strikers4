@@ -1,4 +1,4 @@
-## 개요
+## 개요 
 1. [InGame](https://github.com/mw08081/1945strikers4/blob/main/README.md#scene---main_title--choose_player)
 2. [What I learned](https://github.com/mw08081/1945strikers4/blob/main/README.md#what-i-learned)
 3. [What i lacking](https://github.com/mw08081/1945strikers4/blob/main/README.md#what-is-lacking)
