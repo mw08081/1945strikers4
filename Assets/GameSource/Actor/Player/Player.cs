@@ -14,7 +14,7 @@ public class Player : Actor
 
     readonly float LAUNCH_DURATION = 1f;
 
-    bool isInvincibility;       //¹«Àû»óÅÂ¸¦ ÀÇ¹Ì
+    bool isInvincibility;       //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¸ï¿½ ï¿½Ç¹ï¿½
 
     protected bool isBomb;
 
@@ -52,6 +52,8 @@ public class Player : Actor
         
         while(launchElpasedTime < LAUNCH_DURATION)
         {
+            launchElpasedTime += Time.deltaTime;
+            Debug.Log("player launcer " + launchElpasedTime + " " + transform.position);
             transform.position = Vector3.Lerp(GameManager.Instance.respawnPos, Vector3.zero, launchElpasedTime/ LAUNCH_DURATION);
 
             yield return null;
@@ -82,7 +84,7 @@ public class Player : Actor
 
     void ReLaunch()
     {
-        transform.position = GameManager.Instance.respawnPos;       //ºÎÈ°ÁöÁ¡
+        transform.position = GameManager.Instance.respawnPos;       //ï¿½ï¿½È°ï¿½ï¿½ï¿½ï¿½
         Launch();
         
         //isArrived = false;

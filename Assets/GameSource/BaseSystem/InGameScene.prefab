@@ -366,7 +366,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28088368014169127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: 23}
+  m_LocalPosition: {x: 0, y: 28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 28088368243294755}
@@ -423,11 +423,11 @@ MonoBehaviour:
   boseGeneratingTime: 61
   enemyGeneratingTime: 3
   enemyPrefabList:
-  - {fileID: 8820540885735213155, guid: 81cff90a4aca74645933d560cf43963d, type: 3}
-  - {fileID: 7563219355798503490, guid: 636e7b48a98a08240b6f0ef0d7e1b370, type: 3}
-  - {fileID: 4722848161958046634, guid: a2d8aefaf6a1bf14b9af5c437bc1e1ce, type: 3}
-  - {fileID: 1366743620984186, guid: 126d81349741754428b3099a3631fead, type: 3}
-  - {fileID: 196804, guid: 5d3550101caf3184d8ca900f0221ab06, type: 3}
+  - {fileID: 6203361044020897476, guid: 18343c5deb8e2624dbf3d16fae4611f3, type: 3}
+  - {fileID: 4184109599666884735, guid: 9e67a9b8f5d1516449af2874b82dc127, type: 3}
+  - {fileID: 1398531728657802164, guid: 3ba3f36b6069ce74ebe594e6323e6e25, type: 3}
+  - {fileID: 1578745242093001783, guid: e85be1eee1f67f74eb7eaa9584324203, type: 3}
+  - {fileID: 2030238001057175204, guid: 587f70a2f197f684ca2ca565b23dc9b6, type: 3}
   isEnemyGeneration: 0101010101
   enemySpawnPosition:
   - {fileID: 28088368014169126}
@@ -508,7 +508,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28088368602133745}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13, y: -3, z: 10}
+  m_LocalPosition: {x: -18, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 28088368243294755}
@@ -538,7 +538,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28088368716232655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13, y: -3, z: 10}
+  m_LocalPosition: {x: 18, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 28088368243294755}
